@@ -1,3 +1,4 @@
+
 # Download Configuration
 
 In your terminal, download the Conjur quick-start configuration:
@@ -6,13 +7,11 @@ In your terminal, download the Conjur quick-start configuration:
 
 # Pull Image
 Pull all the required Docker images from DockerHub
-
 docker-compose can do this for you automatically:
-
 
 `docker-compose pull`{{execute}}
 
-#Generate Master Key
+# Generate Master Key
 Generate your master data key and load it into the environment:
 
 `docker-compose run --no-deps --rm conjur data-key generate > data_key
