@@ -1,0 +1,26 @@
+{
+  "title": "Deploying Conjur on Kubernetes",
+  "description": "Learning how to deploy Conjur Open Source and secure apps on Kubernetes",
+  "details": {
+    "steps": [
+      { "title": "Step 1 - Deploy Conjur on Kubernetes", "text": "step1.md" },
+      { "title": "Step 2 - Secure apps on Kubernetes", "text": "step2.md" },
+     
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mPreparing your environment.   It will take about 2 minutes.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
