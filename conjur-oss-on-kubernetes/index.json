@@ -4,8 +4,7 @@
   "details": {
     "steps": [
       { "title": "Step 1 - Deploy Conjur on Kubernetes", "text": "step1.md" },
-      { "title": "Step 2 - Secure apps on Kubernetes", "text": "step2.md" },
-     
+      { "title": "Step 2 - Secure apps on Kubernetes", "text": "step2.md" }
     ],
     "intro": {
       "text": "intro.md",
