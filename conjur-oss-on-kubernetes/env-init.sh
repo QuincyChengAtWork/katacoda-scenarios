@@ -1,4 +1,4 @@
-https://github.com/cyberark/kubernetes-conjur-deploy.git
+git clone https://github.com/cyberark/kubernetes-conjur-deploy.git
 
 #docker pull postgres:9.3
 #docker pull conjurinc/cli5
