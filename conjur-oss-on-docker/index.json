@@ -18,7 +18,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "uimessage1": "Getting your environment ready.  It will take a few minutes"
   },
   "backend": {
     "imageid": "docker"
