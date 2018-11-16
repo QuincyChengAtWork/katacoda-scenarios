@@ -3,9 +3,10 @@
   "description": "Learning how to deploy Conjur Open Source on a Docker host ",
   "details": {
     "steps": [
-      { "title": "Prepare to launch", "text": "step1.md" },
-      { "title": "Install and Configure", "text": "step2.md" },
-      { "title": "Connect", "text": "step3.md" }
+      { "title": "Step 1 - Prepare to launch", "text": "step1.md" },
+      { "title": "Step 2 - Install and Configure", "text": "step2.md" },
+      { "title": "Step 3 - Connect", "text": "step3.md" }
+      { "title": "Step 4 - Explore", "text": "step3.md" }
     ],
     "intro": {
       "text": "intro.md",
