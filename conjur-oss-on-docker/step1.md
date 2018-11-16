@@ -1,6 +1,5 @@
 
 # Download Configuration
-
 In your terminal, download the Conjur quick-start configuration:
 
 `curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml`{{execute}}
