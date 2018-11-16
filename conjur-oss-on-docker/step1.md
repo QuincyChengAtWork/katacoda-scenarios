@@ -14,6 +14,7 @@ docker-compose can do this for you automatically:
 Generate your master data key and load it into the environment:
 
 `docker-compose run --no-deps --rm conjur data-key generate > data_key`{{execute}}
+
 `export CONJUR_DATA_KEY="$(< data_key)"`{{execute}}
 
 > Prevent data loss:
