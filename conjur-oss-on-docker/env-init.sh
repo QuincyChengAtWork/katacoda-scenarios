@@ -1,1 +1,1 @@
-curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml
+git clone https://github.com/katacoda/scenario-example
