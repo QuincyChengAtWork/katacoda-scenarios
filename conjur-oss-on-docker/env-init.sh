@@ -1,1 +1,3 @@
-git clone https://github.com/katacoda/scenario-example
+docker pull postgres:9.3
+docker pull conjurinc/cli5
+docker pull conjurinc/cli5
