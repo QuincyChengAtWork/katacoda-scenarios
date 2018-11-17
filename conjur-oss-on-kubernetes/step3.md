@@ -1,6 +1,6 @@
-# Introduction to the Secretless Broker on Kubernetes
 
-## Description: Secretless Broker
+
+## Secretless Broker
 
 Secrets are used to provide privileged access to protected resources.
 The Secretless Broker pushes the trust boundary of secrets away from application code into a privileged process that's designed with security best practices in mind. The Secretless Broker provides a local interface for application code to transparently consume protected resources.
