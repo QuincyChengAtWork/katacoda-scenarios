@@ -11,8 +11,7 @@ curl \
   -i \
   -d '{"name": "Mr. Snuggles"}' \
   -H "Content-Type: application/json" \
-  ${APPLICATION_URL}/pet
-`{{execute}}
+  ${APPLICATION_URL}/pet`{{execute}}
 
 ```bash
 HTTP/1.1 201 
@@ -24,9 +23,7 @@ Date: Thu, 23 Aug 2018 12:57:45 GMT
 `GET /pets` to retrieve notes
 
 `APPLICATION_URL=$(. ./admin_config.sh; echo ${APPLICATION_URL})
-
-curl -i ${APPLICATION_URL}/pets
-`{{execute}}
+curl -i ${APPLICATION_URL}/pets`{{execute}}
 
 ```
 HTTP/1.1 200 
@@ -48,9 +45,7 @@ The rotator script:
 
 To see graceful rotation in action, poll the endpoint to retrieve the list of pets (`GET /pets`) in a separate terminal before rotating:
 
-`
-APPLICATION_URL=$(. ./admin_config.sh; echo ${APPLICATION_URL})
-
+`APPLICATION_URL=$(. ./admin_config.sh; echo ${APPLICATION_URL})
 while true
 do
     echo "Retrieving pets"
@@ -60,8 +55,8 @@ do
     echo "..."
     echo ""
     sleep 3
-done
-`{{execute}}
+done`{{execute}}
+
 ```
 Retrieving pets
 HTTP/1.1 200 
@@ -78,9 +73,7 @@ Date: Thu, 23 Aug 2018 12:58:43 GMT
 ```
 To rotate the database password (note: you are acting as an admin user), run the following with your own value for `[new password value]`:
 
-`
-./rotate_password.sh [new password value]
-`{{execute}}
+`./rotate_password.sh [new password value]`{{execute}}
 
 ```
 ALTER ROLE
