@@ -1,4 +1,3 @@
-### Try it out!
 
 That's it! You've configured your application to connect to PostgreSQL via the Secretless Broker, and we can try it out to validate that it's working as expected.
 
