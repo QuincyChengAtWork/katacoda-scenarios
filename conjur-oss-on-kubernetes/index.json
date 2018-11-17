@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       { "title": "Step 1 - Install Conjur on Kubernetes using Helm", "text": "step1.md" },
-      { "title": "Step 2 - Configure Conjur on Kubernetes", "text": "step2.md" }
+      { "title": "Step 2 - Configure Conjur on Kubernetes", "text": "step2.md" },
       { "title": "Step 3 - Secure apps on Kubernetes", "text": "step3.md" }
     ],
     "intro": {
