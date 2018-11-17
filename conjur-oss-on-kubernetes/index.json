@@ -24,7 +24,7 @@
   "environment": {
     "uilayout": "terminal",
     "icon":"fa-kubernetes",
-    "uimessage1": "\u001b[32mPreparing your environment. It will take a 2-3 minutes.\u001b[m\r\n"
+    "uimessage1": "\u001b[32mPreparing your environment. It will take a few minutes.\u001b[m\r\n"
   },
   "backend": {
     "imageid": "kubernetes"
