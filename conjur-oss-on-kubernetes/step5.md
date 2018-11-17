@@ -1,4 +1,4 @@
-### Steps for the non-privileged user (i.e. developer)
+
 
 **Note:** None of these steps require the information in `admin_config.sh` - the person deploying the application needs to know _nothing_ about the secret values required to connect to the PostgreSQL database!!
 
