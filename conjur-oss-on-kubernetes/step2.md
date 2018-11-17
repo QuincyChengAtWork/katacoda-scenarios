@@ -1,7 +1,8 @@
 
 ## 1. Get the application URL by running these commands:
   `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
-  kubectl port-forward $POD_NAME 8080:80 &`{{execute}}
+  kubectl port-forward $POD_NAME 8080:80 &
+  `{{execute}}
 
 Visit https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
