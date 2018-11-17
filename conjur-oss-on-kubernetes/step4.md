@@ -13,7 +13,7 @@ These steps make use of the **admin_config.sh** file, which stores the database 
   Run the following script to deploy a PostgreSQL instance  using a **StatefulSet** in the **quick-start-backend-ns** namespace:
 
   ```bash
-  `cd cd ~/secretless-broker/demos/k8s-demo/
+  `cd ~/secretless-broker/demos/k8s-demo/
   ./01_create_db.sh`{{execute}}
   ```
     ```
