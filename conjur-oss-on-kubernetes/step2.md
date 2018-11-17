@@ -1,6 +1,6 @@
 
 ## 1. Get the application URL by running these commands:
-  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss,release=famous-warthog" -ojsonpath="{.items[0].metadata.name}")
+  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
   echo "Visit http://127.0.0.1:8080 to use your application"
   kubectl port-forward $POD_NAME 8080:80`{{execute}}
 
