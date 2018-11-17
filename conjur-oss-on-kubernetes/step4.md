@@ -75,6 +75,8 @@ rolebinding.rbac.authorization.k8s.io/read-quick-start-backend-credentials creat
 
 In the last step, we added the database credentials to our secret store - so to configure the Secretless Broker to be able to retrieve these credentials and proxy the connection to the actual PostgreSQL database, we have written a [secretless.yml](/demos/k8s-demo/etc/secretless.yml) file that defines a PostgreSQL listener on port 5432 that uses the Kubernetes Secrets Provider to retrieve the credential values that we stored when we ran the last script:
 
+To view the secretless.yml file: `cat ~/secretless-broker/demos/k8s-demo/etc/secretless.yml`{{execute}}
+
 ```yaml
 listeners:
   - name: pets-pg-listener
