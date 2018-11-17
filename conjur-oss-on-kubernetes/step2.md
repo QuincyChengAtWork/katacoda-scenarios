@@ -30,6 +30,6 @@ Detailed instructions here: https://www.conjur.org/get-started/install-conjur.ht
   
   `conjur authn whoami`{{execute}}
 
-## Installation Completed!
+## 5. Installation Completed!
 
 Congralutions!  Conjur has been successfully deployed to Kubernetes!
