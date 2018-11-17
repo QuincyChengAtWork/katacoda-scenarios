@@ -1,12 +1,12 @@
-### Steps for the admin-level user
+
 
 The following steps would be taken by an admin-level user, who has the ability to create and configure a database and to add secret values to a secret store.
 
 These steps make use of the **admin_config.sh** file, which stores the database connection info for the PostgreSQL backend.
 
-#### 1. Provision database
+### 1. Provision database
 
-+ Provision protected resources
+#### Provision protected resources
 
   **[Option 1] PostgreSQL inside k8s**
 
