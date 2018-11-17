@@ -10,7 +10,7 @@ mv linux-amd64/helm /usr/local/bin/`{{execute}}
 
 Once installed, initialise update the local cache to sync the latest available packages with the environment.
 
-`helm init`
+`helm init`{{execute}}
 
 Add CyberArk Helm repo
 
