@@ -10,7 +10,7 @@ mv linux-amd64/helm /usr/local/bin/`{{execute}}
 
 Download the Conjur images (it will take 1-2 minutes)
 
-`docker pull cyberark/conjur-oss
+`docker pull cyberark/conjur
 docker pull cyberark/conjur-cli:5`{{execute}}
 
 Once installed, initialise update the local cache to sync the latest available packages with the environment.
