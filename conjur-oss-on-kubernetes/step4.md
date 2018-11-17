@@ -14,7 +14,7 @@ These steps make use of the **admin_config.sh** file, which stores the database 
   `cd ~/secretless-broker/demos/k8s-demo/
   ./01_create_db.sh`{{execute}}
 
-    ```
+   
     >>--- Clean up quick-start-backend-ns namespace
     Error from server (NotFound): namespaces "quick-start-backend-ns" not found
     namespace/quick-start-backend-ns created
@@ -26,7 +26,7 @@ These steps make use of the **admin_config.sh** file, which stores the database 
     ...
     Ready!
     CREATE DATABASE
-    ```
+    
 
   **[Option 2] Remote PostgreSQL server**
 
