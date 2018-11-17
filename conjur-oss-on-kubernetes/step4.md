@@ -6,8 +6,6 @@ These steps make use of the **admin_config.sh** file, which stores the database 
 
 ### 1. Provision database
 
-#### Provision protected resources
-
   **[Option 1] PostgreSQL inside k8s**
 
   Run the following script to deploy a PostgreSQL instance  using a **StatefulSet** in the **quick-start-backend-ns** namespace:
