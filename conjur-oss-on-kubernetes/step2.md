@@ -1,13 +1,16 @@
 
 ## 1. Get the application URL by running these commands:
   `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
-  echo "Visit http://127.0.0.1:8080 to use your application"
   kubectl port-forward $POD_NAME 8080:80`{{execute}}
+
+Visit https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+
+ to use your Conjur on Kerbernetes
 
 ## 2. Configure Conjur
   To create an initial account as "quickstart" and login
   
-  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss,release=famous-warthog" -ojsonpath="{.items[0].metadata.name}")
+  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
   kubectl exec $POD_NAME conjurctl account create quickstart`{{execute}}
 
 Detailed instructions here: https://www.conjur.org/get-started/install-conjur.html#install-and-configure
