@@ -1,10 +1,11 @@
 {
-  "title": "Deploying Conjur on Kubernetes",
-  "description": "Learning how to deploy Conjur Open Source and secure apps on Kubernetes",
+  "title": "Deploying Conjur on Kubernetes using Helm",
+  "description": "Learning how to deploy Conjur Open Source using Helm, and secure apps on Kubernetes using Conjur",
   "details": {
     "steps": [
-      { "title": "Step 1 - Deploy Conjur on Kubernetes", "text": "step1.md" },
-      { "title": "Step 2 - Secure apps on Kubernetes", "text": "step2.md" }
+      { "title": "Step 1 - Install Conjur on Kubernetes using Helm", "text": "step1.md" },
+      { "title": "Step 2 - Configure Conjur on Kubernetes", "text": "step2.md" }
+      { "title": "Step 3 - Secure apps on Kubernetes", "text": "step3.md" }
     ],
     "intro": {
       "text": "intro.md",
