@@ -5,7 +5,7 @@
 Secrets are used to provide privileged access to protected resources.
 The Secretless Broker pushes the trust boundary of secrets away from application code into a privileged process that's designed with security best practices in mind. The Secretless Broker provides a local interface for application code to transparently consume protected resources.
 
-![Secretless Broker Architecture](https://github.com/cyberark/secretless-broker/blob/master/docs/img/secretless_architecture.svg)
+![Secretless Broker Architecture](https://raw.githubusercontent.com/cyberark/secretless-broker/master/docs/img/secretless_architecture.svg)
 
 ## Usage: Secretless Broker as Sidecar
 
