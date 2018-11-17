@@ -11,7 +11,8 @@ Visit https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.co
   To create an initial account as "quickstart" and login
   
   `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
-  kubectl exec $POD_NAME conjurctl account create quickstart`{{execute}}
+  kubectl exec $POD_NAME conjurctl account create quickstart
+  `{{execute}}
 
 Detailed instructions here: https://www.conjur.org/get-started/install-conjur.html#install-and-configure
 
