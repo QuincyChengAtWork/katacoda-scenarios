@@ -21,9 +21,13 @@ Detailed instructions here: https://www.conjur.org/get-started/install-conjur.ht
 ## 3. Connect to Conjur
   `docker run --rm -it --entrypoint bash cyberark/conjur-cli:5`{{execute}}
 
-## 4. Explore (optional)
-  `conjur init -u <ENDPOINT> -a quickstart`{{execute}}
+## 4. Verify the installation
+  `conjur init -u [[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com -a quickstart`{{execute}}
 
   `conjur authn login -u admin`{{execute}}
   
   `conjur authn whoami`{{execute}}
+
+## Installation Completed!
+
+Congralutions!  Conjur has been successfully deployed to Kubernetes!
