@@ -29,6 +29,9 @@ Detailed instructions here: https://www.conjur.org/get-started/install-conjur.ht
   `conjur authn login -u admin`{{execute}}
   
   `conjur authn whoami`{{execute}}
+  
+  To exit Conjur CLI client:
+  `exit`{{execute}}
 
 ## 5. Installation Completed!
 
