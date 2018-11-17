@@ -1,24 +1,34 @@
 
 
-## 1. Configure Env Variables for Conjur
-`export CONJUR_VERION=5`{{execute}}
+## 1. Install Helm & CyberArk charts
 
-`export PLATFORM=kubernetes`{{execute}}
+Helm is a single binary that manages deploying Charts to Kubernetes. A chart is a packaged unit of kubernetes software. It can be downloaded from https://github.com/kubernetes/helm/releases
 
-## 2. Configure Kubernetes Config
+`curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.3.0-linux-amd64.tar.gz
+tar -xvf helm-v2.3.0-linux-amd64.tar.gz
+mv linux-amd64/helm /usr/local/bin/`{{execute}}
 
-### Conjur Namespace
-`export CONJUR_NAMESPACE_NAME=CONJUR`{{execute}}
+Once installed, initialise update the local cache to sync the latest available packages with the environment.
 
-### The conjur-authenticator Cluster Role
+`helm init`
 
-Conjur's Kubernetes authenticator requires the following privileges:
+Add CyberArk Helm repo
 
-["get", "list"] on "pods" for confirming a pod's namespace membership
-["create", "get"] on "pods/exec" for injecting a certificate into a pod
-The deploy scripts include a manifest that defines the conjur-authenticator cluster role, which grants these privileges. Create the role now (note that your user will need to have the cluster-admin role to do so):
+`helm repo add cyberark https://cyberark.github.io/helm-charts
+helm repo update`{{execute}}
 
-`kubectl apply -f ./kubernetes/conjur-authenticator-role.yaml`{{execute}}
+## 2. View & Inspect CyberArk charts (optional)
 
+View all CyberArk charts
+`helm search -r 'cyberark/*'`{{execute}}
 
-## 2. Check Dependency
+Inspect and install a chart
+`helm inspect cyberark/conjur-oss`{{execute}}
+
+## 3. Install Conjur using Helm
+
+`helm install \
+  --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
+  cyberark/conjur-oss`{{execute}}
+  
+  
