@@ -70,9 +70,9 @@ Date: Thu, 23 Aug 2018 12:58:43 GMT
 .
 .
 ```
-To rotate the database password (note: you are acting as an admin user), run the following with your own value for `[new password value]`:
+To rotate the database password (note: you are acting as an admin user), run the following with a random value for `[new password value]`:
 
-`./rotate_password.sh [new password value]`{{execute}}
+`./rotate_password.sh $(dd if=/dev/urandom bs=1 count=32 2>/dev/null | base64 -w 0 | rev | cut -b 2- | rev)`{{execute}}
 
 ```
 ALTER ROLE
