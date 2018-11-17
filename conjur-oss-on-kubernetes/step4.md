@@ -12,10 +12,10 @@ These steps make use of the **admin_config.sh** file, which stores the database 
 
   Run the following script to deploy a PostgreSQL instance  using a **StatefulSet** in the **quick-start-backend-ns** namespace:
 
-  ```bash
+
   `cd ~/secretless-broker/demos/k8s-demo/
   ./01_create_db.sh`{{execute}}
-  ```
+
     ```
     >>--- Clean up quick-start-backend-ns namespace
     Error from server (NotFound): namespaces "quick-start-backend-ns" not found
@@ -52,10 +52,9 @@ In this step, we will:
 + Add the application's access credentials for the database to a secret store
 
 Run:
-```bash
 `cd ~/secretless-broker/demos/k8s-demo/
 ./02_configure_db.sh`{{execute}}
-```
+
 
 ```
 >>--- Set up database
