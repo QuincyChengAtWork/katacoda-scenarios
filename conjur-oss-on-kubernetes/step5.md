@@ -9,9 +9,9 @@ In the application manifest, we set the `DB_URL` environment variable to `localh
 #### 2. Deploy application
 
 To deploy the application with the Secretless Broker, run:
-```bash
-./03_deploy_app.sh
-```
+`cd ~/secretless-broker/demos/k8s-demo/
+./03_deploy_app.sh`{{execute}}
+
 ```
 >>--- Create and store Secretless configuration
 configmap/quick-start-application-secretless-config created
@@ -22,7 +22,3 @@ Waiting for quick-start-application to be ready
 ...
 Ready!
 ```
-
-### Try it out!
-
-That's it! You've configured your application to connect to PostgreSQL via the Secretless Broker, and we can try it out to validate that it's working as expected.
