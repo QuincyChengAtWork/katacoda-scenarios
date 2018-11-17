@@ -51,10 +51,8 @@ In this step, we will:
 + Configure the protected resources for usage by application (i.e. create DB user, add tables, etc.)
 + Add the application's access credentials for the database to a secret store
 
-Run:
 `cd ~/secretless-broker/demos/k8s-demo/
 ./02_configure_db.sh`{{execute}}
-
 
 ```
 >>--- Set up database
