@@ -1,16 +1,12 @@
 {
-  "title": "Deploying Conjur on Kubernetes using Helm + Secretless Broker Demo",
-  "description": "Learning how to deploy Conjur Open Source using Helm, and secure apps on Kubernetes using Secreless Broker",
+  "title": "Deploying Conjur on Kubernetes using Helm",
+  "description": "Learning how to deploy Conjur Open Source using Helm",
   "difficulty": "Intermediate",
-  "time": "15-25 minutes",
+  "time": "10-15 minutes",
   "details": {
     "steps": [
       { "title": "Step 1 - Install Conjur on Kubernetes using Helm", "text": "step1.md" },
       { "title": "Step 2 - Configure Conjur on Kubernetes", "text": "step2.md" },
-      { "title": "Step 3 - Introducing Secretless", "text": "step3.md" },
-      { "title": "Step 4 - Secretless Demo: Steps for the admin-level user", "text": "step4.md" },
-      { "title": "Step 5 - Secretless Demo: Steps for the non-privileged user (i.e. developer)", "text": "step5.md" },
-      { "title": "Step 6 - Secretless Demo: Try it out!", "text": "step6.md" }
     ],
     "intro": {
       "text": "intro.md",
