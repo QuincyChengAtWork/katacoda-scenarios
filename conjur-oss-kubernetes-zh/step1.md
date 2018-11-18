@@ -2,7 +2,7 @@
 
 ## 1. 安裝Helm和CyberArk Chart
 
-Helm是一個單獨的二進製文件，用於管理將圖表部署到Kubernetes。 Chart是kubernetes軟件的打包單元。 可以從https://github.com/kubernetes/helm/releases下載
+Helm是一個單獨的二進製文件，用於管理將圖表部署到Kubernetes。 Chart是kubernetes軟件的打包單元。 可以從https://github.com/kubernetes/helm/releases 下載
 
 `curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
 tar -xvf helm-v2.8.2-linux-amd64.tar.gz
