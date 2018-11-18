@@ -20,9 +20,11 @@ helm repo update`{{execute}}
 ## 2. 查看和檢查 CyberArk charts (optional)
 
 查看所有 CyberArk charts
+
 `helm search -r 'cyberark/*'`{{execute}}
 
 安裝 CyberArk chart
+
 `helm inspect cyberark/conjur-oss`{{execute}}
 
 ## 3. 使用Helm安裝Conjur
