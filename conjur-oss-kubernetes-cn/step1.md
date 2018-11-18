@@ -1,6 +1,6 @@
 ## 1. 安装Helm和Cyber​​Ark Chart
 
-Helm是一个单独的二进制文件，用于管理将图表部署到Kubernetes。 Chart是kubernetes软件的打包单元。可以从https://github.com/kubernetes/helm/releases下载
+Helm是一个单独的二进制文件，用于管理将图表部署到Kubernetes。 Chart是kubernetes软件的打包单元。可以从https://github.com/kubernetes/helm/releases 下载
 
 `curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
 tar -xvf helm-v2.8.2-linux-amd64.tar.gz
