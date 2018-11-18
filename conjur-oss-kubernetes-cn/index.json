@@ -1,0 +1,29 @@
+{
+ "title": "使用Helm在Kubernetes上部署Conjur (简体中文)",
+  "description": "学习如何使用Helm部署Conjur开源版本",
+  "difficulty": "中级", 
+  "time": "10-15 分钟",
+  "icon":"fa-kubernetes",
+  "details": {
+    "steps": [
+       { "title": "第1步 - 使用Helm在Kubernetes上安装Conjur", "text": "step1.md" },
+       { "title": "第2步 - 在Kubernetes上配置Conjur", "text": "step2.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "icon":"fa-kubernetes",
+    "uimessage1": "\u001b[32mPreparing your environment. It will take a few minutes.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
