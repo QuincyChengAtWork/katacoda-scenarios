@@ -1,8 +1,8 @@
 
 
-## 1. 安裝Helm和CyberArk charts
+## 1. 安裝Helm和CyberArk Chart
 
-Helm是一個單獨的二進製文件，用於管理將圖表部署到Kubernetes。 圖表是kubernetes軟件的打包單元。 它可以從https://github.com/kubernetes/helm/releases下載
+Helm是一個單獨的二進製文件，用於管理將圖表部署到Kubernetes。 Chart是kubernetes軟件的打包單元。 可以從https://github.com/kubernetes/helm/releases下載
 
 `curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
 tar -xvf helm-v2.8.2-linux-amd64.tar.gz
@@ -17,13 +17,13 @@ mv linux-amd64/helm /usr/local/bin/`{{execute}}
 `helm repo add cyberark https://cyberark.github.io/helm-charts
 helm repo update`{{execute}}
 
-## 2. 查看和檢查 CyberArk charts (optional)
+## 2. 查看和檢查 CyberArk Chart (optional)
 
-查看所有 CyberArk charts
+查看所有 CyberArk Chart
 
 `helm search -r 'cyberark/*'`{{execute}}
 
-安裝 CyberArk chart
+安裝 CyberArk Chart
 
 `helm inspect cyberark/conjur-oss`{{execute}}
 
