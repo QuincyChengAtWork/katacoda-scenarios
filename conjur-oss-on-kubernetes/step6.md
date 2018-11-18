@@ -6,6 +6,8 @@ That's it! You've configured your application to connect to PostgreSQL via the S
 `POST /pet` to add a pet - the request must include `name` in the JSON body
 
 `APPLICATION_URL=$(. ./admin_config.sh; echo ${APPLICATION_URL})
+APPLICATION_URL=[[HOST_SUBDOMAIN]]-30002-[[KATACODA_HOST]].environments.katacoda.com
+
 curl \
   -i \
   -d '{"name": "Mr. Snuggles"}' \
@@ -22,6 +24,7 @@ Date: Thu, 23 Aug 2018 12:57:45 GMT
 `GET /pets` to retrieve notes
 
 `APPLICATION_URL=$(. ./admin_config.sh; echo ${APPLICATION_URL})
+APPLICATION_URL=[[HOST_SUBDOMAIN]]-30002-[[KATACODA_HOST]].environments.katacoda.com
 curl -i ${APPLICATION_URL}/pets`{{execute}}
 
 ```
@@ -45,6 +48,7 @@ The rotator script:
 To see graceful rotation in action, poll the endpoint to retrieve the list of pets (`GET /pets`) in a separate terminal before rotating:
 
 `APPLICATION_URL=$(. ./admin_config.sh; echo ${APPLICATION_URL})
+APPLICATION_URL=[[HOST_SUBDOMAIN]]-30002-[[KATACODA_HOST]].environments.katacoda.com
 while true
 do
     echo "Retrieving pets"
