@@ -7,12 +7,12 @@ That's it! You've configured your application to connect to PostgreSQL via the S
 
 `APPLICATION_URL=$(. ./admin_config.sh; echo ${APPLICATION_URL})
 APPLICATION_URL=[[HOST_SUBDOMAIN]]-30002-[[KATACODA_HOST]].environments.katacoda.com
-
 curl \
   -i \
   -d '{"name": "Mr. Snuggles"}' \
   -H "Content-Type: application/json" \
-  ${APPLICATION_URL}/pet`{{execute}}
+  ${APPLICATION_URL}/pet
+  `{{execute}}
 
 ```bash
 HTTP/1.1 201 
