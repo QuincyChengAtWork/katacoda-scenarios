@@ -3,6 +3,7 @@
   "description": "學習如何使用Helm部署Conjur開源版本",
   "difficulty": "中級", 
   "time": "10-15 分鐘",
+  "icon":"fa-kubernetes",
   "details": {
     "steps": [
        { "title": "第1步 - 使用Helm在Kubernetes上安裝Conjur", "text": "step1.md" },
