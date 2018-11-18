@@ -37,4 +37,4 @@ Detailed instructions here: https://www.conjur.org/get-started/install-conjur.ht
 
 ## 5. Installation Completed!
 
-Congralutions!  Conjur has been successfully deployed to Kubernetes!
+Congratulations!  Conjur has been successfully deployed to Kubernetes!
