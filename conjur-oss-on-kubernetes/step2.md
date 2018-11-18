@@ -1,11 +1,11 @@
 
 ## 1. Get the application URL by running these commands:
   `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
-  kubectl port-forward $POD_NAME 8080:80 &
+  kubectl port-forward $POD_NAME 80:80 &
   echo ""
   `{{execute}}
 
-Visit https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+Visit https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
  to use your Conjur on Kerbernetes
 
@@ -25,7 +25,7 @@ Detailed instructions here: https://www.conjur.org/get-started/install-conjur.ht
   `docker run --rm -it --entrypoint bash cyberark/conjur-cli:5`{{execute}}
 
 ## 4. Verify the installation
-  `conjur init -u [[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com -a quickstart`{{execute}}
+  `conjur init -u [[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com -a quickstart`{{execute}}
 
   `conjur authn login -u admin`{{execute}}
   
