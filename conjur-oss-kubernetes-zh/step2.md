@@ -32,6 +32,7 @@
   `conjur authn whoami`{{execute}}
   
 退出Conjur CLI客戶端：
+
 `exit`{{execute}}
 
 ## 5. 安裝完成！
