@@ -1,5 +1,5 @@
 {
-  "title": "Deploying Conjur on Docker",
+  "title": "Deploying Conjur Open Source on Docker",
   "description": "Learning how to deploy Conjur Open Source on a Docker host ",
   "details": {
     "steps": [
