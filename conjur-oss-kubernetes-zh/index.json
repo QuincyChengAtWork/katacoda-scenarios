@@ -1,5 +1,5 @@
 {
- "title": "使用Helm在Kubernetes上部署Conjur (繁體中文)",
+ "title": "使用Helm在Kubernetes上部署Conjur開源版本 (繁體中文)",
   "description": "學習如何使用Helm部署Conjur開源版本",
   "difficulty": "中級", 
   "time": "10-15 分鐘",
