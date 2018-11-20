@@ -21,7 +21,8 @@ oc policy add-role-to-user edit "system:serviceaccount:${TILLER_NAMESPACE}:tille
 oc process -f https://github.com/openshift/origin/raw/master/examples/helm/tiller-template.yaml -p TILLER_NAMESPACE="${TILLER_NAMESPACE}" | oc create -f -
 oc rollout status deployment tiller`{{execute}}
 
-Let's verify the helm installation is okay.  Please wait for a while for server up & running if an error is shown
+Let's verify the helm installation is okay.  Please wait for a while for server up & running if an error is shown:
+
 `helm version`{{execute}}
 
 Add CyberArk Chart
@@ -38,17 +39,19 @@ Prepare the Conjur project
 oc new-project conjur
 oc project conjur
 oc policy add-role-to-user edit "system:serviceaccount:${TILLER_NAMESPACE}:tiller"
-oc adm policy add-scc-to-user anyuid -z conjur` {{execute}}
+oc adm policy add-scc-to-user anyuid -z conjur`{{execute}}
 
 Install Conjur
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
   cyberark/conjur-oss`{{execute}}
 
+Configure port forwarding
+`export POD_NAME=$(oc get pods -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
+oc port-forward $POD_NAME 8080:80 &`{{execute}}
+
 Create an Account for Conjur, please wait for a while to retry if an error is shown
-`  export POD_NAME=$(oc get pods -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
-  oc port-forward $POD_NAME 8080:80 &
-  oc exec $POD_NAME conjurctl account create quickstart`{{execute}}
+`oc exec $POD_NAME conjurctl account create quickstart`{{execute}}
   
 Finish!   
  
