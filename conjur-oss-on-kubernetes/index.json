@@ -1,5 +1,5 @@
 {
-  "title": "Deploying Conjur on Kubernetes using Helm",
+  "title": "Deploying Conjur Open Source on Kubernetes using Helm",
   "description": "Learning how to deploy Conjur Open Source using Helm",
   "difficulty": "Intermediate",
   "time": "10-15 minutes",
