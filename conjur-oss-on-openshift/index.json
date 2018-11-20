@@ -1,6 +1,6 @@
 {
     "icon": "fa-openshift",
-    "title": "Deploying Conjur on OpenShift",
+    "title": "Deploying Conjur Open Source on OpenShift",
     "description": "",
     "pathwayTitle": "OpenShift",
     "difficulty": "beginner",
