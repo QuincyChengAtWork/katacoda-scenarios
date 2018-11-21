@@ -31,4 +31,4 @@ Inspect and install a chart
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
   cyberark/conjur-oss`{{execute}}
   
-  
+Please wait for a while if an error is shown - Most likely the tiller is being started.  
