@@ -3,14 +3,14 @@
   "description": "Get started with a simple example ",
   "details": {
     "steps": [
-      { "title": "Step 1 - Deploy Secretless Broker simple example", "text": "step1.md" },
-      { "title": "Step 2 - PostgreSQL database", "text": "step2.md" },
-      { "title": "Step 3 - SSH", "text": "step3.md" },
-      { "title": "Step 4 - HTTP", "text": "step4.md" }
+      { "title": "Setup Secretless Broker simple example", "text": "setup.md" },
+      { "title": "PostgreSQL database", "text": "pg.md" },
+      { "title": "SSH", "text": "ssh.md" },
+      { "title": "HTTP", "text": "http.md" }
     ],
     "intro": {
       "text": "intro.md",
-      "credits": "https://www.conjur.org"
+      "credits": "https://secretless.io"
     },
     "finish": {
       "text": "finish.md"
