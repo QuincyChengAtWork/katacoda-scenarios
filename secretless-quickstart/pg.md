@@ -1,8 +1,8 @@
 
 Let's install PostgreSQL database client
 
-`apt=get -y update
-apt-get install postgresql-client -y`
+`apt-get -y update
+apt-get install postgresql-client -y`{{execute}}
 
 Direct access to the PostgreSQL database is available over port 5432. You can try querying some data, but you don't have the credentials required to connect (even if you know the username):
 
