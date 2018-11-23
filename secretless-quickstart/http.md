@@ -26,4 +26,3 @@ Server: nginx/1.14.0
 
 You are successfully authenticated.`
 
-You can type `exit`{{execute}} to quit back to the host
