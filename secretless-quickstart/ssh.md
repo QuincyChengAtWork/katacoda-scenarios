@@ -26,3 +26,4 @@ Check out https://secretless.io for more information.
 
 bdfe24ac8aaf:~$
 ```
+You can type `exit`{{execute}} to quit back to the host
