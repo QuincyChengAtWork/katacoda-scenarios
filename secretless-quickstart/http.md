@@ -1,6 +1,8 @@
 The service we're trying to connect to is listening on port 8080. If you try to access it, the service will inform you that you're unauthorized:
 
-`curl -i localhost:8080`{{execute}}`
+`curl -i localhost:8080` (if you try it out using your own environment)
+
+`curl -i [[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 `HTTP/1.1 401 Unauthorized
 Server: nginx/1.14.0
@@ -14,7 +16,9 @@ You are not authenticated.`
 
 Instead, you can make an authenticated HTTP request by proxying through the Secretless Broker on port 8081. The Secretless Broker will inject the proper credentials into the request without you needing to know what they are. Give it a try:
 
-`http_proxy=localhost:8081 curl -i localhost:8080`{{execute}}
+`http_proxy=localhost:8081 curl -i localhost:8080`
+
+`http_proxy=[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com curl -i [[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 `HTTP/1.1 200 OK
 Connection: keep-alive
