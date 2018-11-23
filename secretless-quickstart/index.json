@@ -1,10 +1,9 @@
 {
-  "title": "[work in progress] Secretless Broker Quick-Start",
+  "title": "Secretless Broker Quick-Start",
   "description": "Get started with a simple example ",
   "details": {
     "steps": [
       { "title": "Setup Secretless Broker simple example", "text": "setup.md" },
-      { "title": "PostgreSQL database", "text": "pg.md" },
       { "title": "SSH", "text": "ssh.md" },
       { "title": "HTTP", "text": "http.md" }
     ],
