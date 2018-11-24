@@ -5,7 +5,8 @@ apt-get -y update && \
 apt-get -y install dirmngr ansible ruby ruby-dev python-pip && \
 pip install --upgrade pip && \
 pip install docker && \
-docker pull cyberark/conjur-cli:5-6.1.0
+docker pull cyberark/conjur-cli:5-6.1.0 && \
+docker pull postgres:9.3
 ```{{execute}}
 
 ### Verify that ansible 2.5.x has been installed 
