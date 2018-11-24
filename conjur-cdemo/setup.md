@@ -1,7 +1,7 @@
 
 ### Install Ansible & other dependencies
 ```
-
+apt-get -y update
 apt-get -y install dirmngr ansible ruby ruby-dev
 gem install conjur-cli
 pip install docker
