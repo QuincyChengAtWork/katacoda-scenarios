@@ -12,7 +12,7 @@ pip install docker
 Run `ansible --version`{{execute}}
  
 ### Change directory to conjurDemo.
-`cd ~/cdemo/conjurDemo`{{execute}}
+`cd cdemo/conjurDemo`{{execute}}
 
 ### Update config files (optional)
 Edit inventory.yml to include any machines to be stood up as demo machines.
