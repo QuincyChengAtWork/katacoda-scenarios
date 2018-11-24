@@ -3,9 +3,10 @@
 ```
 apt-get -y update
 apt-get -y install dirmngr ansible ruby ruby-dev python-pip 
-gem install conjur-cli
 pip install --upgrade pip
 pip install docker
+docker pull cyberark/conjur-cli:5-6.1.0
+#gem install conjur-cli
 ```{{execute}}
 
 ### Verify that ansible 2.5.x has been installed 
