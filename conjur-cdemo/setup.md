@@ -1,7 +1,8 @@
 
 ### Install Ansible & other dependencies
 ```
-apt-get -y install dirmngr ansible ruby ruby-dev python-pip
+apt-get -y remove docker-ce runc
+apt-get -y install dirmngr ansible ruby ruby-dev python-pip containerd.io 
 gem install conjur-cli
 pip install docker
 
