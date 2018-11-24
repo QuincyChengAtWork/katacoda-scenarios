@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       { "title": "Setup", "text": "setup.md" },
-      { "title": "Playground", "text": "playground.md" }
+      { "title": "Playground", "text": "playground.md" } 
     ],
     "intro": {
       "text": "intro.md",
