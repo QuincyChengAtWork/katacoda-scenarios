@@ -13,7 +13,7 @@ Run `ansible --version`{{execute}}
 ### Pull the docker images (optional)
 
 ```
-docker pull cyberark/conjur
+docker pull cyberark/conjur && \
 docker pull cyberark/conjur-cli:5-6.1.0 && \
 docker pull postgres:9.3
 ```{{execute}}
