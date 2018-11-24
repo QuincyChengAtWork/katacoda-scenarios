@@ -1,6 +1,9 @@
 
 ### Install Ansible
-Run `installAnsible.sh`{{execute}}
+```
+cd cdemo
+./installAnsible.sh
+```{{execute}}
 
 ### Verify that ansible 2.5.x has been installed 
 Run `ansible --version`{{execute}}
