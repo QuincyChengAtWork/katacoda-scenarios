@@ -1,12 +1,11 @@
 
 ### Install Ansible & other dependencies
 ```
-apt-get update -y
-apt-get install ansible -y
+
+apt-get -y install dirmngr ansible ruby ruby-dev
+gem install conjur-cli
 pip install docker
 
-apt-get install ruby
-gem install conjur-cli
 ```
 
 ### Verify that ansible 2.5.x has been installed 
