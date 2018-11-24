@@ -1,9 +1,13 @@
 
-### Install Ansible
+### Install Ansible & other dependencies
 ```
-installAnsible.sh
+apt-get update -y
+apt-get install ansible -y
+pip install docker
+
+apt-get install ruby
+gem install conjur-cli
 ```
-It has been installed for you in this tutorial
 
 ### Verify that ansible 2.5.x has been installed 
 Run `ansible --version`{{execute}}
