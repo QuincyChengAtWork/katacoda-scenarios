@@ -15,9 +15,9 @@ Run `ansible --version`{{execute}}
 `cd cdemo/conjurDemo`{{execute}}
 
 ### Update config files (optional)
-Edit inventory.yml to include any machines to be stood up as demo machines.
-Edit site.yml to change which tools are installed. 
-Set each tool variable to 'YES' for it to be installed automatically. Set to 'NO' for it to be skipped.
+ - Edit inventory.yml to include any machines to be stood up as demo machines.
+ - Edit site.yml to change which tools are installed. 
+ - Set each tool variable to 'YES' for it to be installed automatically. Set to 'NO' for it to be skipped.
 
 ### Install demo
 Run `ansible-playbook -i inventory.yml site.yml`{{execute}} to install conjur and it's tools.
