@@ -4,7 +4,7 @@ echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' >> /etc/a
 
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
-apt-get install \
+apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
