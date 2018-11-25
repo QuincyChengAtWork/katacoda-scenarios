@@ -6,7 +6,7 @@ apt-get -y install dirmngr ansible ruby ruby-dev python-pip && \
 pip install --upgrade pip 
 ```{{execute}}
 
-### Verify that ansible 2.5.x has been installed 
+### Verify that ansible 2.5.x or above has been installed 
 Run `ansible --version`{{execute}}
 
 ### Pull the docker images (optional)
