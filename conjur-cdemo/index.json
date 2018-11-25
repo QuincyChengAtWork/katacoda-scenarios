@@ -16,7 +16,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mWelcome to Conjur CDemo\u001b[m\r\n"
   },
   "backend": {
