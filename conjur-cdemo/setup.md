@@ -20,7 +20,11 @@ Run `ansible --version`{{execute HOST1}}
 curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml 
 docker-compose pull 
 docker-compose run --no-deps --rm conjur data-key generate > data_key 
-export CONJUR_DATA_KEY="$(< data_key) 
+```{{execute HOST1}}
+
+### Configure Conjur OSS
+```
+export CONJUR_DATA_KEY="$(< data_key)"
 export CONJUR_ADMIN_API=secret 
 docker-compose up -d 
 docker-compose exec conjur conjurctl account create quick-start
