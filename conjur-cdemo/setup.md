@@ -18,8 +18,7 @@ docker pull postgres:9.3
 ```{{execute}}
 
 ### Create Playbook
-```
----
+<pre class="file" data-filename="katacoda.yml" data-target="replace">---
 - import_playbook: toolSetup.yml
   vars:
    weavescope_install: 'YES'
@@ -28,7 +27,21 @@ docker pull postgres:9.3
    ansible_install: 'YES'
    ansible_pas: 'NO'
    splunk_install: 'NO'
+</pre>
+
+
+### Install Conjur OSS
 ```
+curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml && \
+docker-compose pull && \
+docker-compose run --no-deps --rm conjur data-key generate > data_key && \
+export CONJUR_DATA_KEY="$(< data_key) && \
+export CONJUR_ADMIN_PASSWORD=secret && \
+docker-compose up -d && \
+docker-compose exec conjur conjurctl account create quick-start
+```{{execute}}
+
+The Admin password is <pre class="file" data-target="clipboard">secret</pre>
 
 
 ### Change directory to conjurDemo.
