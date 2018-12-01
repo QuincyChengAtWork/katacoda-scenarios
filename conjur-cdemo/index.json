@@ -19,7 +19,14 @@
     "uilayout": "terminal",
     "uimessage1": "\u001b[32mWelcome to....\u001b[m\r\n",
     "showdashboard": true,
-    "dashboards": [{"name": "Jekins", "port": 8080}, {"name": "gogs", "port": 8080}, {"name": "AWX", "port": 6060},{"name": "Weavescope", "port": 4040}, ]
+    "dashboards": [
+      {"name": "Conjur OSS ", "port": 81}, 
+      {"name": "Jekins", "port": 8080}, 
+      {"name": "gogs", "port": 10080}, 
+      {"name": "AWX", "port": 6060},
+      {"name": "Weavescope", "port": 4040}, 
+      {"name": "Splunk", "port": 8000}
+    ]
   },
   "backend": {
     "imageid": "docker"
