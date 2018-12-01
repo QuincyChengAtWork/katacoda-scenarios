@@ -3,22 +3,26 @@
 ```
 echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' >> /etc/apt/sources.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-apt-get -y update && \
+apt-get -y update 
 apt-get -y install ansible 
 ```{{execute HOST1}}
 
 ### Verify that ansible 2.5.x or above has been installed 
-Run `ansible --version`{{execute HOST1}}
+`ansible --version`{{execute HOST1}}
+
+### Get CDEMO 
+`git clone https://github.com/conjurdemos/cdemo.git`
 
 ### Install tools
-`ansible-playbook -i inventory.yml site.yml`{{execute}}
+```
+cd cdemo\conjurDemo
+ansible-playbook -i inventory.yml site.yml
+```{{execute}}
 
 
-### Install ansible conjur module
 
-`ansible-galaxy install cyberark.conjur-host-identity`{{execute HOST1}}
 
-### Install Conjur OSS
+### Install Conjur OSS 
 ```
 curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml 
 docker-compose pull 
