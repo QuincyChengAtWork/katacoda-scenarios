@@ -1,5 +1,5 @@
 {
-  "title": "work in progress",
+  "title": "Conjur CDEMO",
   "description": "testing",
   "details": {
     "steps": [
@@ -21,10 +21,10 @@
     "showdashboard": true,
     "dashboards": [
       {"name": "Conjur OSS ", "port": 81}, 
-      {"name": "Jekins", "port": 8080}, 
-      {"name": "gogs", "port": 10080}, 
-      {"name": "AWX", "port": 6060},
       {"name": "Weavescope", "port": 4040}, 
+      {"name": "Gogs", "port": 10080}, 
+      {"name": "Jekins", "port": 8080}, 
+      {"name": "AWX", "port": 6060},
       {"name": "Splunk", "port": 8000}
     ]
   },
