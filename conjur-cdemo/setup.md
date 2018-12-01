@@ -17,20 +17,9 @@ apt-get -y install ansible
 It will take a 10-15 minutes as the process involves downloading latest images
 ```
 cd cdemo\conjurDemo
-ansible-playbook -i inventory.yml site.yml
+ansible-playbook -i inventory.yml site.yml --extra-vars "conjur_OSS_url=https://[[HOST_SUBDOMAIN]]-81-[[KATACODA_HOST]].environments.katacoda.com/"
 ```{{execute}}
 
 
 
-
-### Install Conjur OSS 
-```
-curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml 
-docker-compose pull 
-docker-compose run --no-deps --rm conjur data-key generate > data_key 
-export CONJUR_DATA_KEY="$(< data_key)"
-export CONJUR_ADMIN_API=secret 
-docker-compose up -d 
-docker-compose exec conjur conjurctl account create quick-start
-```{{execute HOST1}}
 
