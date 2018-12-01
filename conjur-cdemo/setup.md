@@ -10,6 +10,10 @@ apt-get -y install ansible
 ### Verify that ansible 2.5.x or above has been installed 
 Run `ansible --version`{{execute HOST1}}
 
+### Install tools
+`ansible-playbook -i inventory.yml site.yml`{{execute}}
+
+
 ### Install ansible conjur module
 
 `ansible-galaxy install cyberark.conjur-host-identity`{{execute HOST1}}
