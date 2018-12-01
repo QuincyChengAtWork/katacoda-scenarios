@@ -14,6 +14,7 @@ apt-get -y install ansible
 `git clone https://github.com/conjurdemos/cdemo.git`
 
 ### Install tools
+It will take a 10-15 minutes as the process involves downloading latest images
 ```
 cd cdemo\conjurDemo
 ansible-playbook -i inventory.yml site.yml
