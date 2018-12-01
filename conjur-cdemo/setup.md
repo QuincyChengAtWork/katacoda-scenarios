@@ -16,7 +16,7 @@ apt-get -y install ansible
 ### Install tools
 It will take a 10-15 minutes as the process involves downloading latest images
 ```
-cd cdemo\conjurDemo
+cd cdemo/conjurDemo
 ansible-playbook -i inventory.yml site.yml --extra-vars "conjur_OSS_url=https://[[HOST_SUBDOMAIN]]-81-[[KATACODA_HOST]].environments.katacoda.com/ gogs_external_url=https://[[HOST_SUBDOMAIN]]-10080-[[KATACODA_HOST]].environments.katacoda.com/ jenkins_external_url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/    "
 ```{{execute}}
 
