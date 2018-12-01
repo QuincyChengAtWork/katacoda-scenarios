@@ -19,7 +19,7 @@
     "uilayout": "terminal",
     "uimessage1": "\u001b[32mWelcome to....\u001b[m\r\n",
     "showdashboard": true,
-    "dashboards": [{"name": "Display 80", "port": 80}, {"name": "Display 8080", "port": 8080}]
+    "dashboards": [{"name": "Jekins", "port": 8080}, {"name": "gogs", "port": 8080}, {"name": "AWX", "port": 6060},{"name": "Weavescope", "port": 4040}, ]
   },
   "backend": {
     "imageid": "docker"
