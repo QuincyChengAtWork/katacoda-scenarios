@@ -11,7 +11,7 @@ apt-get -y install ansible
 `ansible --version`{{execute HOST1}}
 
 ### Get CDEMO 
-`git clone https://github.com/conjurdemos/cdemo.git`
+`git clone https://github.com/conjurdemos/cdemo.git`{{execute}}
 
 ### Install tools
 It will take a 10-15 minutes as the process involves downloading latest images
