@@ -16,7 +16,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal",
+    "uilayout": "terminal",
     "uimessage1": "\u001b[32mWelcome to....\u001b[m\r\n"
   },
   "backend": {
