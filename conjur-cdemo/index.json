@@ -1,6 +1,6 @@
 {
-  "title": "Conjur CDEMO",
-  "description": "testing",
+  "title": "[wip] Conjur CDEMO",
+  "description": "A tour of Conjur",
   "details": {
     "steps": [
       { "title": "Setup", "text": "setup.md" },
