@@ -1,0 +1,48 @@
+{
+    "title": "Conjur Credentials Plugin for Jenkins",
+    "description": "Learn how to configure Jenkins to use Conjur Credential plugin to retrieve secrets",
+    "difficulty": "Intermediate",
+    "time": "15-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Setup Jenkins",
+                "text": "jenkins.md"
+            },
+            {
+                "title": "Setup Conjur",
+                "text": "conjur.md"
+            },
+            {
+                "title": "Configure Plugin",
+                "text": "config.md"
+            },
+            {
+                "title": "From Pipline Scripts",
+                "text": "script.md"
+            },
+            {
+                "title": "From Frestyle Projects",
+                "text": "project.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "courseBase.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Jenkins Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "jenkins",
+        "port": 8080
+    }
+}
