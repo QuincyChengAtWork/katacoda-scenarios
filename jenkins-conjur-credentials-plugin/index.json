@@ -39,7 +39,7 @@
             "host01": [
               {
                 "file": "Conjur.hpi",
-                "target": "~/"
+                "target": "/root/jenkins/plugins"
               }
             ]
           }
