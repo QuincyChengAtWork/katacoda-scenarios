@@ -1,6 +1,6 @@
 {
   "title": "[wip] Conjur CDEMO",
-  "description": "A tour of Conjur",
+  "description": "Work in progress - Requires more storage & computing resources",
   "details": {
     "steps": [
       { "title": "Setup", "text": "setup.md" },
