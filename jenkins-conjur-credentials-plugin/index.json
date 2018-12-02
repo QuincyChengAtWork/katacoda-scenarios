@@ -3,6 +3,7 @@
     "description": "Learn how to configure Jenkins to use Conjur Credential plugin to retrieve secrets",
     "difficulty": "Intermediate",
     "time": "15-20 minutes",
+    "icon":"fa-jenkins",
     "details": {
         "steps": [
             {
