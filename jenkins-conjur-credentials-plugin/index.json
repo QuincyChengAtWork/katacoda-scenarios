@@ -44,5 +44,14 @@
     "backend": {
         "imageid": "jenkins",
         "port": 8080
-    }
+    },
+      "assets": {
+        "host01": [
+          {
+            "file": "Conjur.hpi",
+            "target": "~/"
+          }
+        ]
+      }
+
 }
