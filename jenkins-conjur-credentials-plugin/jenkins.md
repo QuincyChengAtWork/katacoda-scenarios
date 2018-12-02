@@ -16,7 +16,7 @@ You can load the Jenkins' dashboard via the following URL https://[[HOST_SUBDOMA
 
 The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5aac067c7a07b9230`{{copy}}
 
-On your own system, the password can be found via docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+On your own system, the password can be found via `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
 
 It may take a couple of seconds for Jenkins to finish starting and be available. In the next steps, you'll use the dashboard to configure the plugins and start building Docker Images.
 
