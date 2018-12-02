@@ -39,12 +39,12 @@
     },
     "environment": {
       "showdashboard": true,
-      "dashboards": [{"name": "Conjur", "port": 80}, {"name": "Jenkins", "port": 8080}],
+      "dashboards": [{"name": "Conjur", "port": 8080}, {"name": "Jenkins", "port": 8181}],
         "uilayout": "terminal-iframe",
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
     },
     "backend": {
         "imageid": "jenkins",
-        "port": 8080
+        "port": 8181
     }
 }
