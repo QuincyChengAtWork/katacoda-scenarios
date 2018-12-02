@@ -35,14 +35,7 @@
         "finish": {
             "text": "finish.md"
         },
-         "assets": {
-            "host01": [
-              {
-                "file": "*",
-                "target": "/tmp"
-              }
-            ]
-          }
+       "assets": { "host01": [ {"file": "*", "target": "/root"} ] }
     },
     "environment": {
       "showdashboard": true,
