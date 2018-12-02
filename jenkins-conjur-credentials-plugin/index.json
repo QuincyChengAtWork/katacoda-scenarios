@@ -38,8 +38,8 @@
          "assets": {
             "host01": [
               {
-                "file": "Conjur.hpi",
-                "target": "/root/jenkins/plugins"
+                "file": "*",
+                "target": "/tmp"
               }
             ]
           }
