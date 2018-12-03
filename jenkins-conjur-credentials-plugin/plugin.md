@@ -5,6 +5,16 @@ The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5a
 
 On your own system, the password can be found via `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
 
+### Download & install the plugin
+```
+docker exec -it jenkins curl https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -o /tmp/conjur.hpi
+```{{execute}}
+
+```
+docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -restart
+```{{execute}}
+
+** Jenkins will be restarted, you may need to wait for 1-2 min and login to Jenkins dashboard again to proceed **
 
 ### Create Credential in Jenkins
 You can create the credential manually or by executing the following command 
