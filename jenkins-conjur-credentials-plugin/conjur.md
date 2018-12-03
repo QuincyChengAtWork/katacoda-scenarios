@@ -30,9 +30,23 @@ docker-compose up -d
 
 To create a default account (eg. quick-start):
 
-`docker-compose exec conjur conjurctl account create quick-start`{{execute}}
+`docker-compose exec conjur conjurctl account create quick-start > admin_key`{{execute}}
 
 > Prevent data loss:
 > The conjurctl account create command gives you the public key and admin API key for the account you created. Back them up in a safe location.
 
-** Please copy the API key for admin for logging in to the system ++
+### Update Admin API Key (optional)
+
+Let's set the admin API key for this tutorial for easy reference
+```
+export admin_api_key="$(cat admin_key | awk '/API key for admin/ {print $NF}’)”
+docker-compose client conjur init -u conjur -a quick-start
+docker-compose client conjur authn login -u admin -p $admin_api_key
+docker-compose client conjur user update_password -p 10mbdnr2ne26051zmpy0c2fe6xr7e66ds851f2kj276yynq15bwt8w
+```{{execute}}
+
+
+
+** Please backup & remove the API key for admin for logging in to the system ++
+
+
