@@ -11,7 +11,7 @@ docker-compose pull
 Generate your master data key and load it into the environment:
 
 ```
-docker-compose run --no-deps --rm conjur data-key generate > data_key`{{execute}}
+docker-compose run --no-deps --rm conjur data-key generate > data_key
 export CONJUR_DATA_KEY="$(< data_key)"
 ```{{execute}}
 
