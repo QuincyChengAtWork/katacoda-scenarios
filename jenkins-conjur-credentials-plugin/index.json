@@ -14,9 +14,14 @@
                 "title": "Setup Conjur",
                 "text": "conjur.md"
             },
+
+            {
+                "title": "Load Conjur Policies",
+                "text": "policy.md"
+            },
             {
                 "title": "Configure Plugin",
-                "text": "config.md"
+                "text": "plugin.md"
             },
             {
                 "title": "From Pipline Scripts",
