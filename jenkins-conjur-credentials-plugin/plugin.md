@@ -59,7 +59,9 @@ If the above command returns an error, it is likely that Jenkins is still being 
 
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/credentials/store/system/domain/_/credential/conjur-login/update
 
-And paste the API key from previous step to the Password field.   Click "Save" when finish
+You may need to login to the Jenkins dashboard again as the previous step involves restarting of Jenkins.
+The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5aac067c7a07b9230`{{copy}}
+
 
 ### Verify Global Configuration
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/configure
