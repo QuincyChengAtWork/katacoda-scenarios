@@ -1,3 +1,7 @@
+
+_If you'd like to deploy Conjur on your own environment or need more details, check out https://www.conjur.org/get-started/install-conjur.html or more tutorials at https://www.katacoda.com/quincycheng_
+
+
 ### Download & Pull
 In your terminal, download the Conjur quick-start configuration:
 
@@ -12,7 +16,6 @@ Generate your master data key and load it into the environment:
 
 ```
 docker-compose run --no-deps --rm conjur data-key generate > data_key
-export CONJUR_DATA_KEY="$(< data_key)"
 ```{{execute}}
 
 > Prevent data loss:
@@ -20,7 +23,10 @@ export CONJUR_DATA_KEY="$(< data_key)"
 
 ### To run the Conjur server, database and client:
 
-`docker-compose up -d`{{execute}}
+```
+export CONJUR_DATA_KEY="$(< data_key)"
+docker-compose up -d
+```{{execute}}
 
 To create a default account (eg. quick-start):
 
@@ -29,4 +35,4 @@ To create a default account (eg. quick-start):
 > Prevent data loss:
 > The conjurctl account create command gives you the public key and admin API key for the account you created. Back them up in a safe location.
 
-### Please copy the API key for admin for logging in to the system
+** Please copy the API key for admin for logging in to the system ++
