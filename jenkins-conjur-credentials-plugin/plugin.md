@@ -12,7 +12,7 @@ Download Conjur secrets plugin
 Update Credential plugin to v2.1.18 or above
 `docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin credentials -deploy`{{execute}}
 
-### Create Credential in Jenkins
+### Create Global Credential in Jenkins
 You can create the credential manually or by executing the following commands
 
 ```
@@ -38,7 +38,7 @@ cat >>/var/jenkins_home/org.conjur.jenkins.configuration.GlobalConjurConfigurati
 <?xml version='1.1' encoding='UTF-8'?>
 <org.conjur.jenkins.configuration.GlobalConjurConfiguration plugin="Conjur@0.2">
   <conjurConfiguration>
-    <applianceURL>https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/</applianceURL>
+    <applianceURL>https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/</applianceURL>
     <account>quick-start</account>
     <credentialID>conjur-login</credentialID>
     <certificateCredentialID></certificateCredentialID>
@@ -67,5 +67,3 @@ The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5a
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/configure
 
 You should be able to a section named "Conjur Appliance" with details configured.
-
-
