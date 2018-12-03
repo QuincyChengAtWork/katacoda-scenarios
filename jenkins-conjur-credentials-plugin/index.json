@@ -1,6 +1,6 @@
 {
-    "title": "[in progress] Conjur Credentials Plugin for Jenkins",
-    "description": "Learn how to configure Jenkins to use Conjur Credential plugin to retrieve secrets",
+    "title": "[in progress] Securing Jenkins using Conjur",
+    "description": "Learn how to configure Jenkins to use Conjur Credential plugin to retrieve secrets & secure the pipelines",
     "difficulty": "Intermediate",
     "time": "15-20 minutes",
     "icon":"fa-jenkins",
