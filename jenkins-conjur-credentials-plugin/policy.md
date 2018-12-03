@@ -6,10 +6,10 @@ _This section refers to *Enrolling an Application* at https://www.conjur.org/tut
 ### Login to Conjur
 ```
 conjur init -u conjur -a quick-start
-conjur authn login -u admin
+export admin_api_key="$(cat admin_key|awk '/API key for admin/ {print $NF}'|tr '  \n\r' ' '|awk '{$1=$1};1')"
+docker-compose exec client conjur init -u conjur -a quick-start
+docker-compose exec client conjur authn login -u admin -p $admin_api_key
 ```{{execute}}
-
-
 
 ### Create policy files
 ```
