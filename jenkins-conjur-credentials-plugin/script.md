@@ -2,7 +2,7 @@
 Conjur supports both Jenkins pipeline script & Freestyle project.  If you'd like to use Freestyle project, please skip this step and continue to the next step.
 
 ### Create a pipeline script
-You can create a pipeline script item at https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]]/job/Conjur%20Demo/newJob
+You can create a pipeline script item at https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/job/Conjur%20Demo/newJob
 
 Enter `Demo Script`{{copy}} as the item name
 Choose **Pipeline** & click **OK**
