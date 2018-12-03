@@ -70,9 +70,15 @@ Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.c
 ### Create a Conjur Secret in the folder
 
 ```
+docker exec -it jenkins bash
 echo '<org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl plugin="Conjur@0.2">
         <id>DB_PASSWORD</id>
         <description>Conjur Demo Folder Credentials</description>
         <variablePath>db/db_password</variablePath>
       </org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl>' | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ create-credentials-by-xml "folder::item::Conjur Demo" "(global)"
+exit
 ```{{execute}}
+
+### Verify Conjur Secret settings
+Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/job/Conjur%20Demo/credentials/store/folder/domain/_/credential/DB_PASSWORD/update
+
