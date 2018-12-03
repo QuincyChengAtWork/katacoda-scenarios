@@ -30,13 +30,13 @@ docker-compose up -d
 
 To create a default account (eg. quick-start):
 
-```
-docker-compose exec conjur conjurctl account create quick-start > admin_key
-cat admin_key
-```{{execute}}
+`docker-compose exec conjur conjurctl account create quick-start > admin_key`{{execute}}
+
+To view the account created, run:
+`cat admin_key`{{execute}}
 
 If there are errors returned, it is likely that the container is still spinning up.
-Please repeat the above command again.
+Please repeat this step by running docker-compose command to create the account again.
 
 > Prevent data loss:
 > The conjurctl account create command gives you the public key and admin API key for the account you created. Back them up in a safe location.
