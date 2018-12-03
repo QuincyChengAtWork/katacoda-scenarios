@@ -12,7 +12,7 @@ cat >> conjur_folder << _EOF_
     <org.conjur.jenkins.configuration.FolderConjurConfiguration plugin="Conjur@0.2">
       <inheritFromParent>false</inheritFromParent>
       <conjurConfiguration>
-        <applianceURL>[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com</applianceURL>
+        <applianceURL>https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com</applianceURL>
         <account>quick-start</account>
         <credentialID>conjur-login</credentialID>
         <certificateCredentialID></certificateCredentialID>
