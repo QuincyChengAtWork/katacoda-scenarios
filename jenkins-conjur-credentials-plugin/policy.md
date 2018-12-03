@@ -1,15 +1,16 @@
 _This section refers to *Enrolling an Application* at https://www.conjur.org/tutorials/policy/applications.html_
 
-### Login to Conjur Client
-`docker-compose exec client bash`{{execute}}
 
 ### Login to Conjur
 ```
-conjur init -u conjur -a quick-start
 export admin_api_key="$(cat admin_key|awk '/API key for admin/ {print $NF}'|tr '  \n\r' ' '|awk '{$1=$1};1')"
 docker-compose exec client conjur init -u conjur -a quick-start
 docker-compose exec client conjur authn login -u admin -p $admin_api_key
 ```{{execute}}
+
+
+### Login to Conjur Client
+`docker-compose exec client bash`{{execute}}
 
 ### Create policy files
 ```
