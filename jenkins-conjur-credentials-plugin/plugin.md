@@ -6,7 +6,7 @@ The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5a
 On your own system, the password can be found via `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
 
 
-### Create Credential
+### Create Credential in Jenkins
 You can create the credential manually or by executing the following command 
 
 ```
@@ -27,5 +27,6 @@ echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
 
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/credentials/store/system/domain/_/
 
+And paste the API key from previous step to the Password field.   Click "Save" when finish
 
 ### Global Config
