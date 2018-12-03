@@ -1,4 +1,4 @@
-_This section refers to *Enrolling an Application* at https://www.conjur.org/tutorials/policy/applications.html_
+_This section is based on **Enrolling an Application** tutorial at https://www.conjur.org/tutorials/policy/applications.html_
 
 
 ### Login to Conjur
