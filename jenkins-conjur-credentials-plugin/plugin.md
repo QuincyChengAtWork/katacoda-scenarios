@@ -6,17 +6,13 @@ The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5a
 On your own system, the password can be found via `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
 
 ### Download & install the plugin
-```
-docker exec -it jenkins curl https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -o /var/jenkins_home/plugins/conjur.hpi
+Download Conjur secrets plugin
+`docker exec -it jenkins curl https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -o /var/jenkins_home/plugins/conjur.hpi`{{execute}}
 
-docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin credentials -deploy
-```{{execute}}
+Update Credential plugin to v2.1.18 or above
+`docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin credentials -deploy`{{execute}}
 
-```
-docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -restart
-```{{execute}}
 
-** Jenkins will be restarted, you may need to wait for 1-2 min and login to Jenkins dashboard again to proceed **
 
 ### Create Credential in Jenkins
 You can create the credential manually or by executing the following commands
@@ -35,7 +31,6 @@ echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
  | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ \
    create-credentials-by-xml system::system::jenkins _
 exit
-exit
 ```{{execute}}
 
 ### Configure System Configuration in Jenkins
@@ -52,13 +47,17 @@ cat >>/var/jenkins_home/org.conjur.jenkins.configuration.GlobalConjurConfigurati
     <credentialID>conjur-login</credentialID>
     <certificateCredentialID></certificateCredentialID>
   </conjurConfiguration>
-  EOF
-
-
+EOF
 exit
 ```{{execute}}
 
 If the above command returns an error, it is likely that Jenkins is still being restarted.   Please wait for a while and try again
+
+
+### Enable Conjur secrets plugin
+`docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -restart`{{execute}}
+
+** Jenkins will be restarted, you may need to wait for 1-2 min and login to Jenkins dashboard again to proceed **
 
 ### Update API Key
 
