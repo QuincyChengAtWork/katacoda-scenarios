@@ -3,8 +3,7 @@ _If you'd like to deploy Conjur on your own environment or need more details, ch
 
 
 ### Download & Pull
-In your terminal, download the Conjur quick-start configuration:
-
+In your terminal, download the Conjur quick-start configuration.   It will take a few minutes to pull the images.
 ```
 curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml
 docker-compose pull
