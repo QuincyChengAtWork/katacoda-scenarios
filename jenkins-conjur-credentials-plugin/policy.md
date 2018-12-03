@@ -2,12 +2,15 @@ _This section refers to *Enrolling an Application* at https://www.conjur.org/tut
 
 
 ### Login to Conjur
+Initialize Conjur Client
+`docker-compose exec client conjur init -u conjur -a quick-start`{{execute}}
+
+Logon to Conjur
 ```
 export admin_api_key="$(cat admin_key|awk '/API key for admin/ {print $NF}'|tr '  \n\r' ' '|awk '{$1=$1};1')"
-docker-compose exec client conjur init -u conjur -a quick-start
 docker-compose exec client conjur authn login -u admin -p $admin_api_key
 ```{{execute}}
-
+It should display `Logged in` once you are successfully logged in
 
 ### Login to Conjur Client
 `docker-compose exec client bash`{{execute}}
@@ -65,3 +68,6 @@ password=$(openssl rand -hex 12)
 conjur variable values add db/password $password
 conjur variable value db/password
 ```{{execute}}
+
+### Logout Conjur Client
+`exit`{{execute}}
