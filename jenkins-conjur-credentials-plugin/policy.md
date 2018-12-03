@@ -56,7 +56,10 @@ exit
 docker-compose exec client conjur policy load --replace root /conjur.yml
 docker-compose exec client conjur policy load frontend /frontend.yml > frontend_api
 docker-compose exec client conjur policy load db db.yml
-cat fronend_api
+
+sed -i '1d' frontend_api
+export frontend_api_key=$(jq  -r '.created_roles."quick-start:host:frontend/frontend-01".api_key' frontend_api)
+cat frontend_api
 ```{{execute}}
 
 **Copy the api_key generated!**
