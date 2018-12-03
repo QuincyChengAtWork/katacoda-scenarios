@@ -65,7 +65,7 @@ exit
 ```{{execute}}
 
 ### Verify Folder settings
-Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com//job/Conjur%20Demo/configure
+Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/job/Conjur%20Demo/configure
 
 ![folder](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step5-1.png?raw=true)
 
