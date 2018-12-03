@@ -59,7 +59,7 @@ cat >> conjur_folder << _EOF_
   <icon class="com.cloudbees.hudson.plugins.folder.icons.StockFolderIcon"/>
 </com.cloudbees.hudson.plugins.folder.Folder>
 _EOF_
-cat conjur_folder | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ 
+cat conjur_folder | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ create-job "Conjur Demo"
 exit
 ```{{execute}}
 
