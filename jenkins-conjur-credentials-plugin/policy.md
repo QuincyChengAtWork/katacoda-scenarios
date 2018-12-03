@@ -12,11 +12,9 @@ docker-compose exec client conjur authn login -u admin -p $admin_api_key
 ```{{execute}}
 It should display `Logged in` once you are successfully logged in
 
-### Login to Conjur Client
-`docker-compose exec client bash`{{execute}}
-
 ### Create policy files
 ```
+docker-compose exec client bash
 cat >> conjur.yml << EOF
 - !policy
   id: db
@@ -49,15 +47,16 @@ cat >> frontend.yml << EOF
   role: !layer
   member: !host frontend-01
 EOF
-  
+exit
 ```{{execute}}
 
 ### Load policies to Conjur
 
 ```
-conjur policy load --replace root conjur.yml
-conjur policy load frontend frontend.yml
-conjur policy load db db.yml
+docker-compose exec client conjur policy load --replace root /conjur.yml
+docker-compose exec client conjur policy load frontend /frontend.yml > frontend_api
+docker-compose exec client conjur policy load db db.yml
+cat fronend_api
 ```{{execute}}
 
 **Copy the api_key generated!**
@@ -65,9 +64,6 @@ conjur policy load db db.yml
 ### Create secret for database
 ```
 password=$(openssl rand -hex 12)
-conjur variable values add db/password $password
-conjur variable value db/password
+docker-compose exec client conjur variable values add db/password $password
+docker-compose exec client conjur variable value db/password
 ```{{execute}}
-
-### Logout Conjur Client
-`exit`{{execute}}
