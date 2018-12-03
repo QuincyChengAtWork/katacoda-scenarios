@@ -3,7 +3,7 @@ You can load the Jenkins' dashboard via the following URL https://[[HOST_SUBDOMA
 
 The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5aac067c7a07b9230`{{copy}}
 
-On your own system, the password can be found via `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
+If you are using your own environment, the password can be found via `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
 
 ### Download & install the plugin
 Download Conjur secrets plugin
@@ -11,8 +11,6 @@ Download Conjur secrets plugin
 
 Update Credential plugin to v2.1.18 or above
 `docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin credentials -deploy`{{execute}}
-
-
 
 ### Create Credential in Jenkins
 You can create the credential manually or by executing the following commands
