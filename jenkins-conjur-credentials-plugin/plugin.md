@@ -69,6 +69,6 @@ The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5a
 ### Verify Global Configuration
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/configure
 
-You should be able to a section named "Conjur Appliance" with details configured.
+You should be able to a section named **Conjur Appliance** with details configured.
 
 ![global config](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step4-2.png?raw=true)
