@@ -10,6 +10,7 @@ On your own system, the password can be found via `docker exec -it jenkins cat /
 You can create the credential manually or by executing the following command 
 
 ```
+docker exec -it jenkins bash
 echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>                                      
 <scope>GLOBAL</scope>
   <id>conjur-login</id>
@@ -21,11 +22,12 @@ echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
 </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>'\
  | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ \
    create-credentials-by-xml system::system::jenkins _
-```{execute}
+exit
+```{{execute}}
 
 ### Update API Key
 
-Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/credentials/store/system/domain/_/
+Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/credentials/store/system/domain/_/credential/conjur-login/update
 
 And paste the API key from previous step to the Password field.   Click "Save" when finish
 
