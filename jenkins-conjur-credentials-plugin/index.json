@@ -20,8 +20,12 @@
                 "text": "policy.md"
             },
             {
-                "title": "Configure Plugin",
+                "title": "Configure Plugin settings",
                 "text": "plugin.md"
+            },
+            {
+                "title": "Configure Folder settings",
+                "text": "folder.md"
             },
             {
                 "title": "From Pipline Scripts",
