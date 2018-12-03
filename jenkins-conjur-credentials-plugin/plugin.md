@@ -71,4 +71,4 @@ Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.c
 
 You should be able to a section named "Conjur Appliance" with details configured.
 
-![credential](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step4-2.png?raw=true)
+![global config](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step4-2.png?raw=true)
