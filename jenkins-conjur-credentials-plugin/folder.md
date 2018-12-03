@@ -1,6 +1,7 @@
 You can override the global configuration by setting the Conjur Appliance information at Folder level, if the checkbox “Inherit from parent?” is checked, it means it will ignore the values set here, and go up the level navigating to the parent folder, or taking the global configuration if all folder up the hierarchy are inheriting from parent.
 
 
+### Create a folder
 ```
 docker exec -it jenkins bash
 cat >> conjur_folder << _EOF_
@@ -66,3 +67,12 @@ exit
 ### Verify Folder settings
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com//job/Conjur%20Demo/configure
 
+### Create a Conjur Secret in the folder
+
+```
+echo '<org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl plugin="Conjur@0.2">
+        <id>DB_PASSWORD</id>
+        <description>Conjur Demo Folder Credentials</description>
+        <variablePath>db/db_password</variablePath>
+      </org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl>' | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ create-credentials-by-xml "folder::item::Conjur Demo" "(global)"
+```{{execute}}
