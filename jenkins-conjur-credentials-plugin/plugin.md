@@ -19,7 +19,7 @@ docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar 
 ** Jenkins will be restarted, you may need to wait for 1-2 min and login to Jenkins dashboard again to proceed **
 
 ### Create Credential in Jenkins
-You can create the credential manually or by executing the following command 
+You can create the credential manually or by executing the following commands
 
 ```
 docker exec -it jenkins bash
@@ -34,6 +34,27 @@ echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
 </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>'\
  | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ \
    create-credentials-by-xml system::system::jenkins _
+exit
+exit
+```{{execute}}
+
+### Configure System Configuration in Jenkins
+You can configure Jenkins manually or by executing the following commands
+
+```
+docker exec -it jenkins bash
+cat >>/var/jenkins_home/org.conjur.jenkins.configuration.GlobalConjurConfiguration.xml<<EOF
+<?xml version='1.1' encoding='UTF-8'?>
+<org.conjur.jenkins.configuration.GlobalConjurConfiguration plugin="Conjur@0.2">
+  <conjurConfiguration>
+    <applianceURL>https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/</applianceURL>
+    <account>quick-start</account>
+    <credentialID>conjur-login</credentialID>
+    <certificateCredentialID></certificateCredentialID>
+  </conjurConfiguration>
+  EOF
+
+
 exit
 ```{{execute}}
 
