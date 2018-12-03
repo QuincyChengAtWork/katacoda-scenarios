@@ -10,7 +10,11 @@ docker run -d -u root --name jenkins \
 
 Download the plugin
 ```
-docker exec -it jenkins curl https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -o /var/jenkins_home/plugins/conjur.hpi
+docker exec -it jenkins curl https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -o /tmp/conjur.hpi
+```{{execute}}
+
+```
+docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -restart
 ```{{execute}}
 
 All plugins and configurations get persisted to the host (`ssh root@host01`) at _/root/jenkins2112. Port 8181 opens the web dashboard, 50000 is used to communicate with other Jenkins agents. Finally, the image has an alpine base to reduce the size footprint.
