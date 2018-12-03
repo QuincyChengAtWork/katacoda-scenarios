@@ -7,9 +7,12 @@ You can create a pipeline script item at https://2886795293-8181-ollie02.environ
 Enter `Demo Script`{{copy}} as the item name
 Choose *Pipeline* & click *OK*
 
+![new script](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step6-1.png?raw=true)
+
 Scroll down to *Pipeline*.   You may need to uncheck *Use Groovy Sandbox* to make the *Script* field appear
 
 Copy & Paste the pipeline script to *Script* field & click *Save*
+
 
 ```
 node {
@@ -24,12 +27,11 @@ node {
 }
 ```{{copy}}
 
+![new script](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step6-2.png?raw=true)
+
 ### Build it (optional)
 Click *Build Now* to build it
 
 You should find `Hello World ****` in the log
 
-### Verify the secret retrieval
-Let's verify the secret retrieval by reviewing the audit log
-
-`
+![build now](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step6-3.png?raw=true)
