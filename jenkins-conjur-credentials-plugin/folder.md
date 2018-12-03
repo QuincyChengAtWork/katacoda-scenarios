@@ -1,4 +1,4 @@
-You can override the global configuration by setting the Conjur Appliance information at Folder level, if the checkbox “Inherit from parent?” is checked, it means it will ignore the values set here, and go up the level navigating to the parent folder, or taking the global configuration if all folder up the hierarchy are inheriting from parent.
+You can override the global configuration by setting the Conjur Appliance information at Folder level, if the checkbox **Inherit from parent?** is checked, it means it will ignore the values set here, and go up the level navigating to the parent folder, or taking the global configuration if all folder up the hierarchy are inheriting from parent.
 
 
 ### Create a folder
@@ -67,6 +67,8 @@ exit
 ### Verify Folder settings
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com//job/Conjur%20Demo/configure
 
+![folder](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step5-1.png?raw=true)
+
 ### Create a Conjur Secret in the folder
 
 ```
@@ -82,3 +84,4 @@ exit
 ### Verify Conjur Secret settings
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/job/Conjur%20Demo/credentials/store/folder/domain/_/credential/DB_PASSWORD/update
 
+![folder secret](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step5-2.png?raw=true)
