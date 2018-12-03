@@ -7,7 +7,9 @@ On your own system, the password can be found via `docker exec -it jenkins cat /
 
 ### Download & install the plugin
 ```
-docker exec -it jenkins curl https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -o /tmp/conjur.hpi
+docker exec -it jenkins curl https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -o /var/jenkins_home/plugins/conjur.hpi
+
+docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin credentials -deploy
 ```{{execute}}
 
 ```
@@ -34,6 +36,8 @@ echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
    create-credentials-by-xml system::system::jenkins _
 exit
 ```{{execute}}
+
+If the above command returns an error, it is likely that Jenkins is still being restarted.   Please wait for a while and try again
 
 ### Update API Key
 
