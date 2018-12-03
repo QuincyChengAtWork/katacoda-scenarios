@@ -55,10 +55,15 @@ If the above command returns an error, it is likely that Jenkins is still being 
 
 ** Jenkins will be restarted, you may need to wait for 1-2 min and login to Jenkins dashboard again to proceed **
 
-### Update API Key
+### Verify Credential created
 
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/credentials/store/system/domain/_/credential/conjur-login/update
 
 And paste the API key from previous step to the Password field.   Click "Save" when finish
 
-### Global Config
+### Verify Global Configuration
+Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/configure
+
+You should be able to a section named "Conjur Appliance" with details configured.
+
+
