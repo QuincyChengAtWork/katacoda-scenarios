@@ -27,6 +27,21 @@ export CONJUR_DATA_KEY="$(< data_key)"
 docker-compose up -d
 ```{{execute}}
 
+To verify the containers are up & running, run 
+`docker ps`{{execute}}
+
+The result should be similar to the following:
+```
+CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS             PORTS                                              NAMES
+56100b59ce7b        conjurinc/cli5                 "sleep infinity"         8 minutes ago       Up 8 minutes                                                           tutorial_client_1
+149e88c645a1        cyberark/conjur                "conjurctl server"       8 minutes ago       Up 8 minutes        0.0.0.0:8080->80/tcp                               tutorial_conjur_1
+62529deb2e8f        postgres:9.3                   "docker-entrypoint.s…"   8 minutes ago       Up 8 minutes        5432/tcp                                           tutorial_database_1
+ab0ac454bfbe        jenkins/jenkins:2.112-alpine   "/sbin/tini -- /usr/…"   11 minutes ago      Up 11 minutes       0.0.0.0:50000->50000/tcp, 0.0.0.0:8181->8080/tcp   jenkins
+```
+
+
+
+
 To create a default account (eg. quick-start):
 
 `docker-compose exec conjur conjurctl account create quick-start > admin_key`{{execute}}
