@@ -2,21 +2,18 @@
 
 # Pull required container images from Docker Hub
 docker-compose pull
-docker pull svagi/openssl
 
 # Remove containers, certs and keys created in earlier tutorial runs (if any)
 rm -f tls/nginx.key tls/nginx.crt
 docker-compose down
 
 # Create a self-signed certificate and key for TLS
-docker run --rm -it \
-       -w /home -v $PWD/tls.conf:/home/tls.conf \
-       svagi/openssl req\
+openssl req\
        -x509 \
        -nodes \
        -days 365 \
        -newkey rsa:2048 \
-       -config /home/tls.conf \
+       -config tls/tls.conf \
        -extensions v3_ca \
        -keyout nginx.key \
        -out nginx.crt
