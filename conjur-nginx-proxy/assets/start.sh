@@ -3,8 +3,6 @@
 # Pull required container images from Docker Hub
 docker-compose pull
 
-mkdir tls
-
 # Remove containers, certs and keys created in earlier tutorial runs (if any)
 rm -f tls/nginx.key tls/nginx.crt
 docker-compose down
