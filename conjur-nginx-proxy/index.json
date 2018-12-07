@@ -39,12 +39,6 @@
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mWelcome to this Conjur tutorial\u001b[m\r\n"
   },
-   "files": [
-    "docker-compose.yml",
-    "default.conf",
-    "tls.conf",
-    "start.sh"
-  ],
   "backend": {
     "imageid": "docker"
   }
