@@ -3,7 +3,7 @@
   "description": "Learn how to set up Transport Layer Security so that requests made to the Conjur are encrypted in transit",
   "difficulty": "Beginner", 
   "time": "15-30 mins",
-  "icon":"fa-nginx",
+  "icon":"fa-docker",
   "details": {
     "steps": [
        { "title": "Using NGINX To Proxy Traffic With TLS To Conjur", "text": "setup.md" },
@@ -19,16 +19,10 @@
       "credits": "https://www.conjur.org"
    },
    "assets": {
-    "host01": [
-      {
-        "file": "*",
-        "target": "~/tutorial"
-      }
-    ],
     "client": [
       {
         "file": "*",
-        "target": "~/tutorialclient"
+        "target": "~/tutorial"
       }
     ]
    },
