@@ -23,7 +23,12 @@
       {
         "file": "*",
         "target": "~/tutorial"
-      }
+      },
+      {
+        "file": "start.sh",
+        "target": "~/tutorial",
+        "chmod","+x"
+      },
     ]
    },
     "finish": {
