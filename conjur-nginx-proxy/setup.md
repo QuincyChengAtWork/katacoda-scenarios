@@ -2,7 +2,7 @@
 
 ### Prerequisites
 
-*Please note that the steps and scripts below are optimized for this course.   For orignal procedure, please refer to [Tutorial - NGINX Proxy](https://www.conjur.org/tutorials/nginx.html) at [www.conjur.org](https://www.conjur.org)
+**Please note that the steps and scripts below are optimized for this course.   For orignal procedure, please refer to [Tutorial - NGINX Proxy](https://www.conjur.org/tutorials/nginx.html) at [www.conjur.org](https://www.conjur.org)**
 
 
 This tutorial requires Docker and a terminal application. Prepare by following the prerequisite instructions found on [Install Conjur](https://www.conjur.org/get-started/install-conjur.html#prerequisites).  
