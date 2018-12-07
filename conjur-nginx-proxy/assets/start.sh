@@ -26,7 +26,17 @@ export CONJUR_DATA_KEY="$(< data_key)"
 
 # Start services and wait a little while for them to become responsive
 docker-compose up -d
-sleep 6
+
+#Sleep for 9s
+sleep 9 &
+PID=$!
+i=1
+sp="/-\|"
+echo -n ' '
+while [ -d /proc/$PID ]
+do
+  printf "\b${sp:i++%${#sp}:1}"
+done
 
 # Create a new account in Conjur and fetch its API key
 # *** Protect your secrets: ***
