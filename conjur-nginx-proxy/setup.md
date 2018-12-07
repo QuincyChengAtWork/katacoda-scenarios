@@ -36,6 +36,7 @@ Run some commands in the Conjur client:
 docker-compose exec client bash
 conjur authn whoami
 conjur list
+exit
 ```{{execute}}
 
 ### What’s happening here?
