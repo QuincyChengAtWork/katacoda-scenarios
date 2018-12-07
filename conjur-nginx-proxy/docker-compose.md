@@ -1,6 +1,6 @@
 This file declares services to be used in the tutorial. Let’s break down each declaration:
 
-<pre class="file" data-filename="docker-compose.yml" data-target="replace">database:
+<pre class="file" data-filename="conjur-tutorials/ngnix/docker-compose.yml" data-target="replace">database:
   image: postgres:9.3
 </pre>
 
@@ -9,7 +9,7 @@ Conjur requires a Postgres database to store encrypted secrets and other data. T
 #### Production tip
 In production, you should also secure your Postgres database with TLS. If you’re using [Amazon RDS](https://aws.amazon.com/rds/), it already has TLS support built-in. If you’re hosting your own database, you’ll want to follow the [Postgres recommendations](https://www.postgresql.org/docs/9.6/static/ssl-tcp.html).
 
-<pre class="file" data-filename="docker-compose.yml">database:
+<pre class="file" data-filename="docker-compose.yml">
 conjur:
   image: cyberark/conjur
   command: server
