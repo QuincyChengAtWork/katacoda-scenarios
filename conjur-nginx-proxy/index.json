@@ -12,7 +12,7 @@
        { "title": "Review default.conf", "text": "default.md" },
        { "title": "Review tls/tls.conf", "text": "tls.md" },
        { "title": "Review start.sh", "text": "start.md" },
-       { "title": "Up and running", "text": "up.md" },
+       { "title": "Up and running", "text": "up.md" }
     ],
     "intro": {
       "text": "intro.md",
