@@ -1,1 +1,2 @@
-git clone https://github.com/cyberark/conjur-tutorials.git
+mkdir tls
+mv ./tls.conf ./tls/
