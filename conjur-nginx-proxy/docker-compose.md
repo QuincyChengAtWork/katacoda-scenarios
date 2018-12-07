@@ -33,9 +33,8 @@ Note also what’s **not** present in these first two service definitions: expos
     ports:
       - "8443:443"
     volumes:
-      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./tls/nginx.key:/etc/nginx/nginx.key:ro
-      - ./tls/nginx.crt:/etc/nginx/nginx.crt:ro
+      - ${PWD}:/etc/nginx/conf.d
+      - ${PWD}/tls/nginx.key:/etc/nginx
     depends_on: [ conjur ]
 </pre>
 
