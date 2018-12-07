@@ -22,7 +22,13 @@
    "assets": {
     "host01": [
       {
-        "file": "tls.conf",
+        "file": "*",
+        "target": "~/"
+      }
+    ],
+    "client": [
+      {
+        "file": "*",
         "target": "~/"
       }
     ]
