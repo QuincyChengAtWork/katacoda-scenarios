@@ -1,5 +1,5 @@
 {
-  "title": "Enabling TLS for Conjur using Nginx Proxy",
+  "title": "(in progress) Enabling TLS for Conjur using Nginx Proxy",
   "description": "Learn how to set up Transport Layer Security so that requests made to the Conjur are encrypted in transit",
   "difficulty": "Beginner", 
   "time": "15-30 mins",
