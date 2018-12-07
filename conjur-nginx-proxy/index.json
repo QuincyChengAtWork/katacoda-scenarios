@@ -19,6 +19,15 @@
       "credits": "https://www.conjur.org",
       "courseData": "courseBase.sh"
     },
+    
+   "assets": {
+    "host01": [
+      {
+        "file": "tls.conf",
+        "target": "~/"
+      }
+    ]
+   },
     "finish": {
       "text": "finish.md"
     }
