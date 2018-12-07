@@ -1,16 +1,17 @@
 [NGINX](https://www.nginx.com/) is a high performance free open source web server. This tutorial will show you how to use Docker to install Conjur and NGINX and configure them to use TLS.
 
 ### Prerequisites
+*Please note that these prerequisites have been completed for you in this course*
 
-This tutorial requires Docker and a terminal application. Prepare by following the prerequisite instructions found on Install Conjur.
+This tutorial requires Docker and a terminal application. Prepare by following the prerequisite instructions found on [Install Conjur](https://www.conjur.org/get-started/install-conjur.html#prerequisites).  
 
 Additionally, you will need the tutorial files from the Conjur source code repository. Here’s how you get them:
 
  - Install Git (it has been installed for you in this course)
  - Clone the Conjur repository
 
-In your terminal application, run:
-`git clone https://github.com/cyberark/conjur-tutorials.git`{{execute}}
+In your terminal application, run: `git clone https://github.com/cyberark/conjur-tutorials.git`
+
 This will create a folder called `conjur-tutorials` in your working directory.
 
 ### The Good Part
