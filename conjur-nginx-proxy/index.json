@@ -28,7 +28,7 @@
         "file": "start.sh",
         "target": "~/tutorial",
         "chmod":"+x"
-      },
+      }
     ]
    },
     "finish": {
