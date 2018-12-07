@@ -22,13 +22,13 @@
     "host01": [
       {
         "file": "*",
-        "target": "~/"
+        "target": "~/tutorial"
       }
     ],
     "client": [
       {
         "file": "*",
-        "target": "~/"
+        "target": "~/tutorialclient"
       }
     ]
    },
