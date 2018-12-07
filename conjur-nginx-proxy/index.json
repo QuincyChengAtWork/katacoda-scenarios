@@ -23,12 +23,6 @@
       "text": "finish.md"
     }
   },
-  "files": [
-      "~/tutorial/conjur-tutorials/ngnix/docker-compose.yml",
-      "~/tutorial/conjur-tutorials/ngnix/default.conf",
-      "~/tutorial/conjur-tutorials/ngnix/tls/tls.conf",
-      "~/tutorial/conjur-tutorials/ngnix/start.sh"
-  ],
   "environment": {
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mWelcome to this Conjur tutorial\u001b[m\r\n"
