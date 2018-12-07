@@ -3,6 +3,8 @@
 # Pull required container images from Docker Hub
 docker-compose pull
 
+mkdir tls
+
 # Remove containers, certs and keys created in earlier tutorial runs (if any)
 rm -f tls/nginx.key tls/nginx.crt
 docker-compose down
@@ -15,8 +17,8 @@ openssl req\
        -newkey rsa:2048 \
        -config tls/tls.conf \
        -extensions v3_ca \
-       -keyout nginx.key \
-       -out nginx.crt
+       -keyout tls/nginx.key \
+       -out tls/nginx.crt
 
 # Generate a data key for Conjur encryption of data at rest.
 # *** Prevent data loss: ***
