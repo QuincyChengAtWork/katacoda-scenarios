@@ -1,0 +1,32 @@
+{
+  "title": "Enabling TLS for Conjur using Nginx Proxy",
+  "description": "Learn how to set up Transport Layer Security so that requests made to the Conjur are encrypted in transit",
+  "difficulty": "Beginner", 
+  "time": "15-30 mins",
+  "icon":"fa-nginx",
+  "details": {
+    "steps": [
+       { "title": "Using NGINX To Proxy Traffic With TLS To Conjur", "text": "setup.md" },
+       { "title": "Breaking Down the Tutorial", "text": "breakdown.md" },
+       { "title": "Review docker-compose.yml", "text": "docker-compose.md" },
+       { "title": "Review default.conf", "text": "default.md" },
+       { "title": "Review tls/tls.conf", "text": "tls.md" },
+       { "title": "Review start.sh", "text": "start.md" },
+       { "title": "Up and running", "text": "up.md" },
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mWelcome to this Conjur tutorial\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
