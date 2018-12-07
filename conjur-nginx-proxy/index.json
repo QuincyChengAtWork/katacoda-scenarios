@@ -16,9 +16,8 @@
     ],
     "intro": {
       "text": "intro.md",
-      "credits": "https://www.conjur.org",
-      "courseData": "courseBase.sh"
-    },
+      "credits": "https://www.conjur.org"
+   },
    "assets": {
     "host01": [
       {
