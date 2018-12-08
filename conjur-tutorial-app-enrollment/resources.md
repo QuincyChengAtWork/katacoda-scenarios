@@ -18,11 +18,12 @@ Define a group which will be able to fetch the secrets
 "read" privilege allows the client to read metadata.
 "execute" privilege allows the client to read the secret data.
 These are normally granted together, but they are distinct just like read and execute bits on a filesystem.
-<pre class="file" data-filename="db.yml">
 
+<pre class="file" data-filename="db.yml">
   privileges: [ read, execute ]
   roles: !group secrets-users
 </pre>
+
 Now load it using the following command:
 
 `conjur policy load db db.yml`{{execute}}
