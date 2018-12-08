@@ -94,7 +94,7 @@ Now we can finish the tutorial by fetching the password while authenticated as t
 
 ```
 CONJUR_AUTHN_LOGIN=host/frontend/frontend-01 \
-  CONJUR_AUTHN_API_KEY=1wgv7h2pw1vta2a7dnzk370ger03nnakkq33sex2a1jmbbnz3h8cye9 \
+  CONJUR_AUTHN_API_KEY=$frontend_api \
   conjur variable value db/password
 ```{{execute}}
 `926c6e5622889763c9490ca3` <- Password printed here
