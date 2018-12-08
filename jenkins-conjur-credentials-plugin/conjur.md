@@ -44,7 +44,7 @@ ab0ac454bfbe        jenkins/jenkins:2.112-alpine   "/sbin/tini -- /usr/…"   11
 
 To create a default account (eg. quick-start):
 
-`docker-compose exec conjur conjurctl account create quick-start > admin_key`{{execute}}
+`docker-compose exec conjur conjurctl account create quick-start | tee admin_key`{{execute}}
 
 To view the account created, run:
 `cat admin_key`{{execute}}
