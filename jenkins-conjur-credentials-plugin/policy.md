@@ -56,13 +56,12 @@ Load root policy:
 `docker-compose exec client conjur policy load --replace root /conjur.yml`{{execute}}
 
 Load frontend policy, please note that a new host entity is created
-`docker-compose exec client conjur policy load frontend /frontend.yml > frontend_api`{{execute}}
+`docker-compose exec client conjur policy load frontend /frontend.yml | tee frontend.out`{{execute}}
 
 We will use the host entity later within this tutorial, so let's put it in memory
 ```
-sed -i '1d' frontend_api
-cat frontend_api
-export frontend_api_key=$(jq  -r '.created_roles."quick-start:host:frontend/frontend-01".api_key' frontend_api)
+export frontend_api_key=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
+echo $frontend_api_key
 ```{{execute}}
 
 Load database policy
