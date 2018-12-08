@@ -8,6 +8,7 @@ Here is a skeleton policy for this scenario, which simply defines two empty poli
 - !policy
   id: frontend
 </pre>
+
 Then load it using the following command:
 
 `docker-compose exec client -v .:. conjur policy load --replace root conjur.yml`{{execute}}
