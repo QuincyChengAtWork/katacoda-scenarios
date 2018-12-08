@@ -10,15 +10,16 @@ Declare the secrets which are used to access the database
 Define a group which will be able to fetch the secrets
 <pre class="file" data-filename="db.yml">
 - !group secrets-users
-
-- !permit
-  resource: *variables</pre>
+</pre>
 
 "read" privilege allows the client to read metadata.
 "execute" privilege allows the client to read the secret data.
 These are normally granted together, but they are distinct just like read and execute bits on a filesystem.
 
-<pre class="file" data-filename="db.yml">  privileges: [ read, execute ]
+<pre class="file" data-filename="db.yml">
+- !permit
+  resource: *variables
+  privileges: [ read, execute ]
   roles: !group secrets-users
 </pre>
 
