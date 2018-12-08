@@ -19,14 +19,14 @@ Define a group which will be able to fetch the secrets
 "execute" privilege allows the client to read the secret data.
 These are normally granted together, but they are distinct just like read and execute bits on a filesystem.
 
-<pre class="file" data-filename="db.yml">
-  privileges: [ read, execute ]
+<pre class="file" data-filename="db.yml">  privileges: [ read, execute ]
   roles: !group secrets-users
 </pre>
 
 Now load it using the following command:
 
 `conjur policy load db db.yml`{{execute}}
+
 ```
 Loaded policy 'db'
 {
@@ -35,16 +35,20 @@ Loaded policy 'db'
   "version": 1
 }
 ```
-The variable `db/password` has been created, but it doesn’t contain any data. So the next step is to load the password value:
 
+The variable `db/password` has been created, but it doesn’t contain any data. So the next step is to load the password value:
 
 ```
 password=$(openssl rand -hex 12)
 echo $password
 ```{{execute}}
-`ac8932bccf835a5a13586100`
-`conjur variable values add db/password $password`{{execute}}
-`Value added`
-`conjur variable value db/password`{{execute}}
+
 `ac8932bccf835a5a13586100`
 
+`conjur variable values add db/password $password`{{execute}}
+
+`Value added`
+
+`conjur variable value db/password`{{execute}}
+
+`ac8932bccf835a5a13586100`
