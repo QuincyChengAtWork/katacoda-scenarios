@@ -11,7 +11,7 @@ Here is a skeleton policy for this scenario, which simply defines two empty poli
 
 Then load it using the following command:
 
-`docker-compose exec client -v .:. conjur policy load --replace root conjur.yml`{{execute}}
+`conjur policy load --replace root conjur.yml`{{execute}}
 
 ```
 Loaded policy 'root'
