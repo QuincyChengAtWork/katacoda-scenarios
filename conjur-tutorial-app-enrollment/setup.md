@@ -25,7 +25,7 @@ Loaded policy 'root'
 
 Use the conjur list command to view all the objects in the system:
 
-`docker-compose exec client conjur list`{{execute}}
+`conjur list`{{execute}}
 ```
 [
   "myorg:policy:root",
