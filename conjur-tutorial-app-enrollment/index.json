@@ -6,7 +6,7 @@
   "icon":"fa-docker",
   "details": {
     "steps": [
-       { "title": "Install Conjur", "text": "setup.md" },
+       { "title": "Install Conjur", "text": "install.md" },
        { "title": "Setup", "text": "setup.md" },
        { "title": "Define Protected Resources", "text": "resources.md" },
        { "title": "Define an Application", "text": "application.md" },
