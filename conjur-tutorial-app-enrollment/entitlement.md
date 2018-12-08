@@ -51,8 +51,9 @@ Add the role grant by updating policy “db.yml” to the following:
 - !grant
   role: !group secrets-users
   member: !layer /frontend
-Then load it using the CLI:
 </pre>
+
+Then load it using the CLI:
 
 `conjur policy load db db.yml`{{execute}}
 ```
