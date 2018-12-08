@@ -6,5 +6,5 @@ if [ -z "$CONJUR_AUTHN_LOGIN" ]
 then
 docker-compose exec client bash -c "conjur $*"
 else
-docker exec -e CONJUR_AUTHN_LOGIN=$CONJUR_AUTHN_LOGIN -e CONJUR_AUTHN_API_KEY=$CONJUR_AUTHN_API_KEY client bash -c "conjur $*"
+docker exec -e CONJUR_AUTHN_LOGIN=$CONJUR_AUTHN_LOGIN -e CONJUR_AUTHN_API_KEY=$CONJUR_AUTHN_API_KEY tutorial_client_1 bash -c "conjur $*"
 fi
