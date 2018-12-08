@@ -23,6 +23,11 @@
         "file": "start.sh",
         "target": "~/tutorial",
         "chmod":"+x"
+      },
+      {
+        "file": "conjur",
+        "target": "~/.bin",
+        "chmod":"+x"
       }
     ]
    },
