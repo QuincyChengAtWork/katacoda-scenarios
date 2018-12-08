@@ -7,8 +7,9 @@ With the preceding steps completed, we now have the following objects and permis
 When a frontend application is deployed to host:frontend/frontend-01, it can authenticate with the api_key printed above and attempt to fetch the db password. You can simulate this using the following CLI command:
 
 ```
+export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
 CONJUR_AUTHN_LOGIN=host/frontend/frontend-01 \
-  CONJUR_AUTHN_API_KEY=1wgv7h2pw1vta2a7dnzk370ger03nnakkq33sex2a1jmbbnz3h8cye9 \
+  CONJUR_AUTHN_API_KEY=$frontend_api \
   conjur variable value db/password
 ```{{execute}}
 ```
