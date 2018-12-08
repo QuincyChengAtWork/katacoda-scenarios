@@ -12,8 +12,7 @@ Define a group which will be able to fetch the secrets
 - !group secrets-users
 
 - !permit
-  resource: *variables
-</pre>
+  resource: *variables</pre>
 
 "read" privilege allows the client to read metadata.
 "execute" privilege allows the client to read the secret data.
