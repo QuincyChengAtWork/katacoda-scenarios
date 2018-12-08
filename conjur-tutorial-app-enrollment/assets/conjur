@@ -1,2 +1,10 @@
-docker cp ~/tutorial/ tutorial_client_1:/app
+docker cp ~/tutorial/conjur.yml tutorial_client_1:/ > /dev/null 2>&1
+docker cp ~/tutorial/db.yml tutorial_client_1:/ > /dev/null 2>&1
+docker cp ~/tutorial/frontend.yml tutorial_client_1:/ > /dev/null 2>&1
+
+if [ -z "$CONJUR_AUTHN_LOGIN" ]
+then
 docker-compose exec client bash -c "conjur $*"
+else
+docker exec -e CONJUR_AUTHN_LOGIN=$CONJUR_AUTHN_LOGIN -e CONJUR_AUTHN_API_KEY=$CONJUR_AUTHN_API_KEY client bash -c "conjur $*"
+fi
