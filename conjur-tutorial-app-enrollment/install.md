@@ -3,6 +3,6 @@ If you would like to prepare your own docker environment, please refer to www.co
 Execute the following command to create a self-hosted Conjur:
 
 ```
-./start.sh https://[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com/
+./start.sh https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 ```{{execute}}
 
