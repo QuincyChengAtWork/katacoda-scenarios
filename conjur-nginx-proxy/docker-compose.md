@@ -39,7 +39,6 @@ Note also what’s **not** present in these first two service definitions: expos
 
 The proxy service uses the [official NGINX image](https://hub.docker.com/_/nginx/) from DockerHub. It depends on the Conjur service, connecting using the local private Docker network. Unlike the Conjur or database services, it exposes a port (443, the standard port for HTTPS connections) to the Internet. This will serve as the TLS gateway for Conjur.
 
-This service defines three volumes: the NGINX config file, a self-signed certificate, and a private key related to the certificate. Explanation of those files follows below. The files are made accessible from the local file system for read-only access by the container.
 
 #### Production tips
 For the convenience of a tutorial, we automatically generate a self-signed certificate and provide it to the proxy service. For reasons that are described in more detail [below](https://www.conjur.org/tutorials/nginx.html#tlstlsconf), this is unsuitable for production Conjur deployments.
