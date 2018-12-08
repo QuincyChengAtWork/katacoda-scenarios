@@ -47,7 +47,6 @@ Add the role grant by updating policy “db.yml” to the following:
   roles: !group secrets-users
 
 # Entitlements
-
 - !grant
   role: !group secrets-users
   member: !layer /frontend
