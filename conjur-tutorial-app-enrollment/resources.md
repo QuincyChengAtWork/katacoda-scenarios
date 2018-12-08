@@ -2,25 +2,28 @@ Having defined the policy framework, we can load the specific data for the datab
 
 Create the following file as “db.yml”:
 
-
-<pre class="file" data-filename="db.yml" data-target="replace"># Declare the secrets which are used to access the database
-- &variables
+Declare the secrets which are used to access the database
+<pre class="file" data-filename="db.yml" data-target="replace">- &variables
   - !variable password
+</pre>
 
-# Define a group which will be able to fetch the secrets
+Define a group which will be able to fetch the secrets
+<pre class="file" data-filename="db.yml">
 - !group secrets-users
 
 - !permit
   resource: *variables
-  # "read" privilege allows the client to read metadata.
-  # "execute" privilege allows the client to read the secret data.
-  # These are normally granted together, but they are distinct
-  #   just like read and execute bits on a filesystem.
+</pre>
+
+"read" privilege allows the client to read metadata.
+"execute" privilege allows the client to read the secret data.
+These are normally granted together, but they are distinct just like read and execute bits on a filesystem.
+<pre class="file" data-filename="db.yml">
+
   privileges: [ read, execute ]
   roles: !group secrets-users
 </pre>
 Now load it using the following command:
-
 
 `conjur policy load db db.yml`{{execute}}
 ```
