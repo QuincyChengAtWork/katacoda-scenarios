@@ -1,0 +1,46 @@
+{
+  "title": "(in progress)Enrolling an App to Conjur",
+  "description": "Learn how to enroll an application to Conjur",
+  "difficulty": "Beginner", 
+  "time": "15-30 mins",
+  "icon":"fa-docker",
+  "details": {
+    "steps": [
+       { "title": "Install Conjur", "text": "setup.md" },
+       { "title": "Setup", "text": "setup.md" },
+       { "title": "Define Protected Resources", "text": "resources.md" },
+       { "title": "Define an Application", "text": "application.md" },
+       { "title": "Entitlement", "text": "entitlement.md" },
+       { "title": "Next Steps", "text": "next.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "courseBase.sh",
+      "credits": "https://www.conjur.org"
+   },
+   "assets": {
+    "client": [
+      {
+        "file": "*",
+        "target": "~/tutorial"
+      },
+      {
+        "file": "start.sh",
+        "target": "~/tutorial",
+        "chmod":"+x"
+      }
+    ]
+   },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [ "conjur.yml", "db.yml", "frontend.yml"],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mWelcome to Conjur tutorial\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
