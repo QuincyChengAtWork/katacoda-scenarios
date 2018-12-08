@@ -1,0 +1,2 @@
+docker cp ~/tutorial/ tutorial_client_1:/app
+docker-compose exec client bash -c "conjur $*"
