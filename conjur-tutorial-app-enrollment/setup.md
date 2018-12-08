@@ -2,8 +2,7 @@ We will model a simple application in which a frontend service connects to a db 
 
 Here is a skeleton policy for this scenario, which simply defines two empty policies: db and frontend. Save this policy as “conjur.yml”:
 
-<pre class="file" data-filename="conjur.yml" data-target="replace">
-- !policy
+<pre class="file" data-filename="conjur.yml" data-target="replace">- !policy
   id: db
 
 - !policy
