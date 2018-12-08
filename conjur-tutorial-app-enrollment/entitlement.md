@@ -36,7 +36,7 @@ And by listing the role memberships of the host:
 ```
 Add the role grant by updating policy “db.yml” to the following:
 
-<pre class="file" data-filename="app.js" data-target="replace">- &variables
+<pre class="file" data-filename="db.yml" data-target="replace">- &variables
   - !variable password
 
 - !group secrets-users
