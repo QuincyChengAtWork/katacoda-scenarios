@@ -29,12 +29,11 @@ Note also what’s **not** present in these first two service definitions: expos
 
 <pre class="file" data-filename="docker-compose.yml" >
   proxy:
-    image: nginx:1.13.6-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8443:443"
-    volumes:
-      - ${PWD}:/etc/nginx/conf.d
-      - ${PWD}/tls/nginx.key:/etc/nginx
     depends_on: [ conjur ]
 </pre>
 
