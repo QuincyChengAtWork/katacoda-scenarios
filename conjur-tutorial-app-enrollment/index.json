@@ -17,6 +17,15 @@
       "text": "intro.md",
       "credits": "https://www.conjur.org"
    },
+   "assets": {
+    "client": [
+      {
+        "file": "start.sh",
+        "target": "~/tutorial",
+        "chmod":"+x"
+      }
+    ]
+   },
     "finish": {
       "text": "finish.md"
     }
