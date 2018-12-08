@@ -6,6 +6,7 @@ docker-compose pull
 # Remove containers, certs and keys created in earlier tutorial runs (if any)
 rm -f tls/nginx.key tls/nginx.crt
 docker-compose down
+docker rmi tutorial_proxy
 
 # Create a self-signed certificate and key for TLS
 openssl req\
