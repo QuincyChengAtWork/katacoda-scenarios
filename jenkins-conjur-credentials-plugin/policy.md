@@ -60,7 +60,7 @@ Load frontend policy, please note that a new host entity is created
 
 We will use the host entity later within this tutorial, so let's put it in memory
 ```
-export frontend_api_key=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
+export frontend_api_key=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:frontend/frontend-01".api_key')
 echo $frontend_api_key
 ```{{execute}}
 
