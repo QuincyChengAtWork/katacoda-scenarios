@@ -4,9 +4,9 @@ volumes:
 
 services:
    kdc:
-     build: 
+     build:
+       context: .
        dockerfile: Dockerfile
-       context: ./
      restart: always
      ports:
       - "88:88"
