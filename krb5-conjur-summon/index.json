@@ -1,6 +1,9 @@
 {
   "title": "(in process)Securing Kerberos Keytab using Conjur & Summon",
   "description": "Learn how to secure Keerberos Keytab files using Conjur & Summon",
+  "icon":"fa-krb5",
+  "difficulty": "Beginner",
+  "time": "10-20 minutes",
   "details": {
     "steps": [
       { "title": "Setup Conjur", "text": "conjur.md" },
@@ -15,7 +18,9 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+     "assets": { "host01": [ {"file": "*", "target": "/root"} ] }
+
   },
   "environment": {
     "uilayout": "terminal",
