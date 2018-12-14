@@ -1,0 +1,27 @@
+{
+  "title": "Secretless Broker Quick-Start",
+  "description": "Get started with a simple example ",
+  "details": {
+    "steps": [
+      { "title": "Setup Conjur", "text": "conjur.md" },
+      { "title": "Setup Kerberos Server", "text": "krb5.md" },
+      { "title": "Create User Principal & Keytab", "text": "keytab.md" },
+      { "title": "Summon Keytab", "text": "summon.md" }
+
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mWelcome!\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster"
+  }
+}
