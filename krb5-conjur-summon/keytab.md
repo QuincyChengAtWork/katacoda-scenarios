@@ -22,7 +22,7 @@ kadmin: `quit`{{execute}}
 
 ktutil: `addent -password -p quincy@CYBERARKDEMO.COM -k 1 -e aes256-cts-hmac-sha1-96`{{execute}}
 
-ktutil: `Password for quincy@CYBERARKDEMO.COM: ``d02742206e656fbaa1d33d11b104bb4f`{{execute}}
+ktutil: Password for quincy@CYBERARKDEMO.COM: `d02742206e656fbaa1d33d11b104bb4f`{{execute}}
 
 ktutil: `wkt user.keytab`{{execute}}
 
