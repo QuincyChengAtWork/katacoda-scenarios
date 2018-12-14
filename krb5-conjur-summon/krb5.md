@@ -14,5 +14,6 @@ cp -f krb5.conf /etc/
 
 ### Verify if setup works
 `kinit admin/admin@CYBERARKDEMO.COM`{{execute}}
-`password: ``5b1d328bc88b97356f406fab456b5a99`{{execute}}
+`Password for admin/admin@CYBERARKDEMO.COM:``5b1d328bc88b97356f406fab456b5a99`{{execute}}
 
+No errors should be shown
