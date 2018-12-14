@@ -1,6 +1,6 @@
 {
-  "title": "Secretless Broker Quick-Start",
-  "description": "Get started with a simple example ",
+  "title": "(in process)Securing Kerberos Keytab using Conjur & Summon",
+  "description": "Learn how to secure Keerberos Keytab files using Conjur & Summon",
   "details": {
     "steps": [
       { "title": "Setup Conjur", "text": "conjur.md" },
