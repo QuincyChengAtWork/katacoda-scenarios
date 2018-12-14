@@ -12,9 +12,24 @@ cp -f ./summon-conjur-linux-amd64/summon-conjur /usr/local/lib/summon
 ```{{execute}}
 
 ### Configure Summon
-
-
-
+Let's configure summon by using environmental variables.
+For more details, please refer to [Conjur provider for Summon](https://github.com/cyberark/summon-conjur)
+```
+export CONJUR_MAJOR_VERSION=5
+export CONJUR_APPLIANCE_URL=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+export CONJUR_AUTHN_LOGIN=host/frontend/frontend-01
+export CONJUR_AUTHN_API_KEY=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
+```
+We will make sure of `secrets.yml` file for injecting the keytab file
+To review it, run `cat secrets.yml`{{execute}}
+```
+KEYTAB: !file krb5/keytab
+```
 
 
 ### Summon Keytab
+To summon keytab, we can get the path to memeory-mapped keytab files using the environment variable `KEYTAB`, which defined in `secrets.yml`
+
+`summon kinit quincy@CYBERARKDEMO.COM -k -t $KEYTAB`{{execute}}
+
+`klist`{{execute}}
