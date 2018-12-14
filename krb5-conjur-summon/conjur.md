@@ -1,6 +1,6 @@
 ### Install Conjur
 Let's pull and setup a Conjur OSS
-`./start.sh`{{execute}}
+`./setupConjur.sh https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 ### Prepare Conjur Policy
 The sample policies have been prepared for you.
