@@ -20,7 +20,7 @@ Let's setup a Kerberos server on docker
 `docker-compose -f docker-compose-krb5.yml up -d `{{execute}}
 
 
-### Verify if setup works
+### Verify Setup
 
 Let's try to logon as `admin/admin@CYBERARKDEMO.COM`
 
