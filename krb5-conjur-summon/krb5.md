@@ -1,20 +1,27 @@
 We will make use of the host as the client and create a container as Kerberos KDC
 
+### Install Kerberos Client
+First, we install Kerberos client on the host
+
+```
+apt-get update
+apt-get install -y krb5-user
+```{{execute}}
+
+Default Kerberos version 5 realm: `CYBERARKDEMO.COM`{{execute}}
+
+Kerberos servers for your realm: `localhost`{{execute}}
+
+Administrative server for your Kerberos realm: `localhost`{{execute}} 
+
+ 
 ### Setup Kerberos Server
 Let's setup a Kerberos server on docker
 `docker-compose -f docker-compose-krb5.yml up -d `{{execute}}
 
 
-### Install Kerberos Client
-Now install Kerberos client on the host
-
-```
-apt-get update
-DEBIAN_FRONTEND=noninteractive apt-get install -y krb5-user
-cp -f krb5.conf /etc/
-```{{execute}}
-
 ### Verify if setup works
+
 Let's try to logon as `admin/admin@CYBERARKDEMO.COM`
 
 `kinit admin/admin@CYBERARKDEMO.COM`{{execute}}
