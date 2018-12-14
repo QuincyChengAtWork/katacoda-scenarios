@@ -33,6 +33,6 @@ KEYTAB: !var:file krb5/keytab
 ### Summon Keytab
 To summon keytab, we can get the path to memeory-mapped keytab files using the environment variable `KEYTAB`, which defined in `secrets.yml`
 
-`summon kinit quincy@CYBERARKDEMO.COM -k -t $KEYTAB`{{execute}}
+`summon bash -c 'kinit quincy@CYBERARKDEMO.COM -k -t $KEYTAB'`{{execute}}
 
 `klist`{{execute}}
