@@ -16,6 +16,7 @@ Run `cat conjur.yml`{{execute}} to review the root policy
   id: frontend
 ```
 **krb5 policy**
+
 Run `cat krb5.yml`{{execute}} to review the root policy
 
 ```
@@ -31,6 +32,7 @@ Run `cat krb5.yml`{{execute}} to review the root policy
 ```
 
 **frontend policy**
+
 Run `cat frontend.yml`{{execute}} to review the root policy
 
 ```
@@ -41,6 +43,7 @@ Run `cat frontend.yml`{{execute}} to review the root policy
   member: !host frontend-01
 ```
 ### Load Conjur Policies
+
 Now let's copy the policy files to Conjur CLI container and load them
 ```
 docker cp *.yml root_client_1:/tmp
