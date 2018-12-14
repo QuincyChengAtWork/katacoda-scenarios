@@ -8,7 +8,7 @@ Let's setup a Kerberos server on docker
 
 ```
 apt-get update
-apt-get install -y krb5-user
+DEBIAN_FRONTEND=noninteractive apt-get install -y krb5-user
 cp -f krb5.conf /etc/
 ```{{execute}}
 
