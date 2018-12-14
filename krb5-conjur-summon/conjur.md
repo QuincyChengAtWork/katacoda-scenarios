@@ -49,10 +49,19 @@ docker-compose exec client bash -c "conjur policy load /tmp/frontend.yml" | tee 
 docker-compose exec client bash -c "conjur policy load /tmp/krb5.yml"
 ```{{execute}}
 
-
-
 ### Add Keytab as variables
+Copy the `user.keytab` file to Conjur CLI container and add to Conjur as a variable
+
+```
+
+
+
+```{{execute}}
 
 ### Cleanup 
 
+```
+rm user.keytab
+docker-compose exec client bash -c "rm /tmp/user.keytab
+```{{execute}}
 
