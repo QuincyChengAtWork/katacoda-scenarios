@@ -29,10 +29,28 @@ To review it, run `cat secrets.yml`{{execute}}
 KEYTAB: !var:file krb5/keytab
 ```
 
-
 ### Summon Keytab
+First, we destroy the user’s active Kerberos authorization tickets.
+
+`/usr/bin/kdestory`{{execute}}
+
+And we can verify it by running:
+
+`klist`{{execute}}
+
 To summon keytab, we can get the path to memeory-mapped keytab files using the environment variable `KEYTAB`, which defined in `secrets.yml`
 
 `summon bash -c 'kinit quincy@CYBERARKDEMO.COM -k -t $KEYTAB'`{{execute}}
 
+We can now successfully logon, and this time `klist` works:
+
 `klist`{{execute}}
+
+```
+Ticket cache: FILE:/tmp/krb5cc_0
+Default principal: quincy@CYBERARKDEMO.COM
+
+Valid starting       Expires              Service principal
+2018-12-14 15:12:55  2018-12-15 03:12:55  krbtgt/CYBERARKDEMO.COM@CYBERARKDEMO.COM
+        renew until 2018-12-15 15:12:55
+```
