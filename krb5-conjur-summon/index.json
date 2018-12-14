@@ -1,7 +1,7 @@
 {
-  "title": "[in progress] Securing Kerberos Keytab using Conjur & Summon",
+  "title": "Securing Kerberos Keytab using Conjur & Summon",
   "description": "Learn how to secure Keerberos Keytab files using Conjur & Summon",
-  "icon":"fa-sitemap",
+  "icon":"fa-shield-alt",
   "difficulty": "Beginner",
   "time": "10-20 minutes",
   "details": {
