@@ -2,7 +2,7 @@ We will make use of the host as the client and create a container as Kerberos KD
 
 ### Setup Kerberos Server
 Let's setup a Kerberos server on docker
-`./setupKrb5.sh`{{execute}}
+`docker-compose -f docker-compose-krb5.yml up -d `{{execute}}
 
 
 ### Install Kerberos Client
