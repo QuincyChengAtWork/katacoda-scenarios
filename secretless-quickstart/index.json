@@ -1,6 +1,7 @@
 {
   "title": "Secretless Broker Quick-Start",
-  "description": "Get started with a simple example ",
+  "description": "Get started with a simple example",  
+  "icon":"fa-shield-alt",
   "details": {
     "steps": [
       { "title": "Setup Secretless Broker simple example", "text": "setup.md" },
