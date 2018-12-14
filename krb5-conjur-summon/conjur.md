@@ -47,12 +47,23 @@ Run `cat frontend.yml`{{execute}} to review the root policy
 ### Load Conjur Policies
 
 Now let's copy the policy files to Conjur CLI container and load them
+
+**Load Root Policy**
+
 ```
 docker cp conjur.yml root_client_1:/tmp/
-docker cp frontend.yml root_client_1:/tmp/
-docker cp krb5.yml root_client_1:/tmp/
 docker-compose exec client conjur policy load --replace root /tmp/conjur.yml
+```{{execute}}
+
+**Load Frontend Policy**
+```
+docker cp frontend.yml root_client_1:/tmp/
 docker-compose exec client conjur policy load frontend /tmp/frontend.yml | tee frontend.out
+```{{execute}}
+
+**Load Krb5 Policy**
+```
+docker cp krb5.yml root_client_1:/tmp/
 docker-compose exec client conjur policy load krb5 /tmp/krb5.yml
 ```{{execute}}
 
@@ -69,10 +80,10 @@ It's time to remove the keytab files
 
 ```
 rm user.keytab
-docker-compose exec client bash -c "rm /tmp/user.keytab
+docker-compose exec client bash -c "rm /tmp/user.keytab"
 ```{{execute}}
 
 To verify:
 `ls user.keytab`{{execute}}
 
-`docker-compose exec client bash -c "ls /tmp/*.keytab`{{execute}}
+`docker-compose exec client bash -c "ls /tmp/*.keytab"`{{execute}}
