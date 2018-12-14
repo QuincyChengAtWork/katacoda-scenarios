@@ -6,7 +6,7 @@
   "time": "10-20 minutes",
   "details": {
     "steps": [
-      { "title": "Setup Kerberos Server", "text": "krb5.md" },
+      { "title": "Setup Kerberos", "text": "krb5.md" },
       { "title": "Create User Principal & Keytab", "text": "keytab.md" },
       { "title": "Setup Conjur", "text": "conjur.md" },
       { "title": "Summon Keytab", "text": "summon.md" }
