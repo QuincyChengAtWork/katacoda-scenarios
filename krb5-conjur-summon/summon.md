@@ -32,7 +32,7 @@ KEYTAB: !var:file krb5/keytab
 ### Summon Keytab
 First, we destroy the user’s active Kerberos authorization tickets.
 
-`/usr/bin/kdestory`{{execute}}
+`kdestroy`{{execute}}
 
 And we can verify it by running:
 
