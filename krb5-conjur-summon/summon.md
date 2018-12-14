@@ -18,7 +18,7 @@ For more details, please refer to [Conjur provider for Summon](https://github.co
 ```
 export CONJUR_MAJOR_VERSION=5
 export CONJUR_ACCOUNT=demo
-export CONJUR_APPLIANCE_URL=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+export CONJUR_APPLIANCE_URL=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 export CONJUR_AUTHN_LOGIN=host/frontend/frontend-01
 export CONJUR_AUTHN_API_KEY=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
 ```{{execute}}
