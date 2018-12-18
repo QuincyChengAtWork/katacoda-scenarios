@@ -54,3 +54,9 @@ Valid starting       Expires              Service principal
 2018-12-14 15:12:55  2018-12-15 03:12:55  krbtgt/CYBERARKDEMO.COM@CYBERARKDEMO.COM
         renew until 2018-12-15 15:12:55
 ```
+
+This way the keytab is not stored in environment except Conjur.  To verify it, we can review the `KEYTAB` variable
+
+`echo $KEYTAB`{{execute}}
+
+It should be empty, that means it cannot be extracted from the environment and it is very secure.
