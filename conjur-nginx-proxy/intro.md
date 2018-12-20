@@ -26,3 +26,4 @@ Do not leave this to chance: even a small flaw can totally compromise your secre
 
 That doesn’t mean you should close the tab and walk away. It means you should get in touch with us and your own security team so we can ensure that you can deploy Conjur successfully.
 
+![ga](https://ga-beacon-226104.appspot.com/UA-131132287-1/conjur-nginx-proxy?pixel&useReferer)
