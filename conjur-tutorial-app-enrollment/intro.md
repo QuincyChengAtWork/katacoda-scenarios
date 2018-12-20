@@ -14,3 +14,4 @@ Organizing policy management into three categories - protected resources, applic
 
 - **Separation of duties** Management of protected resources is separated from management of client applications. Different teams can be responsible for each of these tasks. In addition, policy management can also be delegated to machine roles if desired.
 - **Least privilege** The client applications are granted exactly the privileges that they need to perform their work. And policy managers (whether humans or machines) have management privileges only on the objects that rightfully belong under their control.
+![ga](https://ga-beacon-226104.appspot.com/UA-131132287-1/conjur-tutorial-app-enrollment?pixel&useReferer)
