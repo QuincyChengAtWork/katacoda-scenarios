@@ -30,6 +30,7 @@ cat envoy.yaml
 ### Start Envoy
 ```
 docker run -d --name proxy1 -p 80:8080 -p 443:8443 -p 8001:8001 -v /root/:/etc/envoy/ envoyproxy/envoy
+docker network connect root_default proxy1
 ```{{execute}}
 
 ### Testing Configuration
