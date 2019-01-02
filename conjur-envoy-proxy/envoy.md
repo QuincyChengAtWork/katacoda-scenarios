@@ -20,8 +20,12 @@ To secure HTTP traffic the addition of a tls_context is required as a filter. Th
 
 With the TLS Context defined, the site will be able to serve traffic over HTTPS. If a user happens to land on the HTTP version of the site, we want them to redirect them to the HTTPS version to ensure they are secure.
 
-The configuration has been prepared for you.   To review it:
-`cat envoy.yaml`{{execute}}
+Let's prepare the configuration file:
+
+```
+sed "s/THECONJURIP/$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' root_conjur_1)/" envoy.yaml.template > envoy.yaml
+cat envoy.yaml
+```{{execute}}
 
 ### Start Envoy
 ```
