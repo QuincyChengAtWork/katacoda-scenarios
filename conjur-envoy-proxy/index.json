@@ -30,14 +30,12 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+   "assets": { "host01": [ {"file": "*", "target": "/root"}, {"file": "*.sh", "target": "/root", "chmod":"+x"} ] }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
-  "files": [
-        "envoy.yaml"
-  ],
   "backend": {
     "imageid": "envoy-docker"
   }
