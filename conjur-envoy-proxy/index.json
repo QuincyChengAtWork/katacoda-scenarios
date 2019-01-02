@@ -17,7 +17,7 @@
         "text": "conjur.md"
       },
       {
-        "title": "Step 4 - Securing Certs",
+        "title": "Securing Certs",
         "text": "cert.md"
       }
     ],
@@ -35,3 +35,4 @@
   "backend": {
     "imageid": "envoy-docker"
   }
+}
