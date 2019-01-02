@@ -8,16 +8,16 @@
         "title": "Setting up HTTP servers",
         "text": "http.md"
       },
-      {
-        "title": "Setting Up Envoy",
-        "text": "envoy.md"
-      },
        {
         "title": "Setting Up Conjur",
         "text": "conjur.md"
       },
       {
-        "title": "Securing Certs",
+        "title": "Setting Up Envoy",
+        "text": "envoy.md"
+      },
+      {
+        "title": "Securing Cert Chain & Private Key",
         "text": "cert.md"
       }
     ],
