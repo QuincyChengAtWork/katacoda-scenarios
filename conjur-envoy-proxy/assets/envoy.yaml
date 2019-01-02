@@ -13,7 +13,7 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-              - "example.com"
+              - "cyberarkdemo.com"
               routes:
               - match:
                   prefix: "/"
@@ -37,7 +37,7 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-              - "example.com"
+              - "cyberarkdemo.com"
               routes:
               - match:
                   prefix: "/service/1"
@@ -58,9 +58,9 @@ static_resources:
         common_tls_context:
           tls_certificates:
             - certificate_chain:
-                filename: "/etc/envoy/certs/example-com.crt"
+                filename: "/etc/envoy/certs/cybearkdemo-com.crt"
               private_key:
-                filename: "/etc/envoy/certs/example-com.key"
+                filename: "/etc/envoy/certs/cybearkdemo-com.key"
   clusters:
   - name: service1
     connect_timeout: 0.25s
