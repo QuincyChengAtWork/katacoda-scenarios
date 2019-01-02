@@ -58,7 +58,7 @@ curl -H "Host: example.com" https://localhost/service/2 -i
 Using OpenSSL CLI it's possible to view the certificate returned from a server. This will allow us to verify the correct certificate is being returned from Envoy.
 
 ```
-echo | openssl s_client -showcerts -servername example.com -connect localhost:443 2>/dev/null | openssl x509 -inform pem -noout -text
+echo | openssl s_client -showcerts -servername cyberarkdemo.com -connect localhost:443 2>/dev/null | openssl x509 -inform pem -noout -text
 ```{{execute}}
 
 ### Dashboard
