@@ -5,24 +5,20 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Setting Up Conjur",
-        "text": "conjur.md"
-      },
-      {
-        "title": "Step 2 - Setting up HTTP servers",
+        "title": "Setting up HTTP servers",
         "text": "http.md"
       },
       {
-        "title": "Step 3 - Setting Up Envoy",
+        "title": "Setting Up Envoy",
         "text": "envoy.md"
+      },
+       {
+        "title": "Setting Up Conjur",
+        "text": "conjur.md"
       },
       {
         "title": "Step 4 - Securing Certs",
-        "text": "certs.md"
-      },
-      {
-        "title": "Step 5 - Review & Verify",
-        "text": "review.md"
+        "text": "cert.md"
       }
     ],
     "intro": {
