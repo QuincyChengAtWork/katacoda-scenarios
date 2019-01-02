@@ -1,7 +1,9 @@
-version: '2'
+version: '3.5'
 services:
   database:
     image: postgres:9.3
+    networks:
+      - demo-network
 
   conjur:
     image: cyberark/conjur
@@ -10,6 +12,9 @@ services:
       DATABASE_URL: postgres://postgres@database/postgres
       CONJUR_DATA_KEY:
     depends_on: [ database ]
+    networks:
+      - demo-network
+
 
   client:
     image: conjurinc/cli5
@@ -21,3 +26,9 @@ services:
       CONJUR_ACCOUNT:
       CONJUR_AUTHN_API_KEY:
       CONJUR_AUTHN_LOGIN: admin
+    networks:
+      - demo-network
+
+networks:
+  demo-network:
+   name: demo-network
