@@ -1,0 +1,7 @@
+- !layer
+
+- !host envoy-01
+
+- !grant
+  role: !layer
+  member: !host envoy-01
