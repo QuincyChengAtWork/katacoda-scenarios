@@ -58,9 +58,9 @@ static_resources:
         common_tls_context:
           tls_certificates:
             - certificate_chain:
-                filename: "/etc/envoy/certs/cybearkdemo-com.crt"
+                filename: "/etc/envoy/certs/cyberarkdemo-com.crt"
               private_key:
-                filename: "/etc/envoy/certs/cybearkdemo-com.key"
+                filename: "/etc/envoy/certs/cyberarkdemo-com.key"
   clusters:
   - name: service1
     connect_timeout: 0.25s
