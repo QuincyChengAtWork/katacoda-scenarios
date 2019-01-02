@@ -1,0 +1,14 @@
+- &variables
+  - !variable private_key
+  - !variable cert_chain
+
+- !group secrets-users
+
+- !permit
+  resource: *variables
+  privileges: [ read, execute ]
+  roles: !group secrets-users
+
+- !grant
+  role: !group secrets-users
+  member: !layer /envoy
