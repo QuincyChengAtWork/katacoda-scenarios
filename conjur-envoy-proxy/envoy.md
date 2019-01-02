@@ -26,7 +26,7 @@ The configuration has been prepared for you.   To review it:
 ### Start Envoy
 ```
 docker run -d --name proxy1 -p 80:8080 -p 443:8443 -p 8001:8001 -v /root/:/etc/envoy/ envoyproxy/envoy
-```{{excute}}
+```{{execute}}
 
 ### Testing Configuration
 With the Proxy started, it's possible to test the configuration.
@@ -34,17 +34,17 @@ With the Proxy started, it's possible to test the configuration.
 First, if we issue a HTTP request the Proxy should return a redirect response to the HTTPS version due to our configuration flag.
 
 ```
-curl -H "Host: example.com" http://localhost -i
+curl -H "Host: cyberarkdemo.com" http://localhost -i
 ```{{execute}}
 
 HTTPS requests will be handled according to our configuration.
 
 ```
-curl -k -H "Host: example.com" https://localhost/service/1 -i
+curl -k -H "Host: cyberarkdemo.com" https://localhost/service/1 -i
 ```{{execute}}
 
 ```
-curl -k -H "Host: example.com" https://localhost/service/2 -i
+curl -k -H "Host: cyberarkdemo.com" https://localhost/service/2 -i
 ```{{execute}}
 
 
