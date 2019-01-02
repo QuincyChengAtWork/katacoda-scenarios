@@ -1,0 +1,43 @@
+{
+  "title": "(work in process) Enabling TLS for Conjur using Envoy Proxy",
+  "description": "Learn how to integrate Conjur with Envoy to enable SSL/TLS",
+  "icon": "fa-envoyproxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Setting Up Conjur",
+        "text": "conjur.md"
+      },
+      {
+        "title": "Step 2 - Setting up HTTP servers",
+        "text": "http.md"
+      },
+      {
+        "title": "Step 3 - Setting Up Envoy",
+        "text": "envoy.md"
+      },
+      {
+        "title": "Step 4 - Securing Certs",
+        "text": "certs.md"
+      },
+      {
+        "title": "Step 5 - Review & Verify",
+        "text": "review.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "files": [
+        "envoy.yaml"
+  ],
+  "backend": {
+    "imageid": "envoy-docker"
+  }
