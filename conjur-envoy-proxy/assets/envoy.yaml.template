@@ -14,7 +14,6 @@ static_resources:
             - name: backend
               domains:
               - "cyberarkdemo.com"              
-              - "conjurdemo.org"
               routes:
               - match:
                   prefix: "/"
