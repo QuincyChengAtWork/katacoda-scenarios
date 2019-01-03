@@ -52,6 +52,10 @@ curl -k -H "Host: cyberarkdemo.com" https://localhost/service/1 -i
 curl -k -H "Host: cyberarkdemo.com" https://localhost/service/2 -i
 ```{{execute}}
 
+```
+curl -k -H "Host: conjurdemo.org" https://localhost/ -i
+```{{execute}}
+
 
 Note, without -k argument, cURL will respond with an error due to the self-signed certificate.
 
