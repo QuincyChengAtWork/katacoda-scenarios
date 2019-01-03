@@ -53,15 +53,6 @@ static_resources:
                 route:
                   cluster: conjur
                   prefix_rewrite: "/"
-
-            - name: conjurbackend
-              domains:
-              - "conjurdemo.org"
-              routes:
-              - match:
-                  prefix: /
-                route:
-                  cluster: conjur
           http_filters:
           - name: envoy.router
             config: {}
