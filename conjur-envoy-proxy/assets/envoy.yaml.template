@@ -13,7 +13,8 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-              - "cyberarkdemo.com"
+              - "cyberarkdemo.com"              
+              - "conjurdemo.org"
               routes:
               - match:
                   prefix: "/"
@@ -47,8 +48,12 @@ static_resources:
                   prefix: "/service/2"
                 route:
                   cluster: service2
+            - name: conjurbackend
+              domains:
+              - "conjurdemo.org"
+              routes:
               - match:
-                  prefix: "/conjur"
+                  prefix: /
                 route:
                   cluster: conjur
           http_filters:
@@ -78,7 +83,6 @@ static_resources:
     - socket_address:
         address: 172.18.0.3
         port_value: 80
-        
   - name: conjur
     connect_timeout: 0.25s
     type: strict_dns
