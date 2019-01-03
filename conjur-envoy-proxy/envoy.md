@@ -48,19 +48,17 @@ HTTPS requests will be handled according to our configuration.
 curl -k -H "Host: cyberarkdemo.com" https://localhost/service/1 -i
 ```{{execute}}
 
-```
-curl -k -H "Host: cyberarkdemo.com" https://localhost/service/2 -i
-```{{execute}}
 
+To access the login page of Conjur OSS:
 ```
-curl -k -H "Host: conjurdemo.org" https://localhost/ -i
+curl -k -H "Host: cyberarkdemo.com" https://localhost/conjur -i
 ```{{execute}}
 
 
 Note, without -k argument, cURL will respond with an error due to the self-signed certificate.
 
 ```
-curl -H "Host: example.com" https://localhost/service/2 -i
+curl -H "Host: cyberarkdemo.com" https://localhost/service/2 -i
 ```{{execute}}
 
 ### Verify Certificate
