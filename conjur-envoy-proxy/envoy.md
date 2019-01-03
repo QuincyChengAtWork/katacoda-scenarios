@@ -44,12 +44,17 @@ curl -H "Host: cyberarkdemo.com" http://localhost -i
 
 HTTPS requests will be handled according to our configuration.
 
+**Service 1**
 ```
 curl -k -H "Host: cyberarkdemo.com" https://localhost/service/1 -i
 ```{{execute}}
 
+**Service 2**
+```
+curl -k -H "Host: cyberarkdemo.com" https://localhost/service/2 -i
+```{{execute}}
 
-To access the login page of Conjur OSS:
+**Conjur OSS**
 ```
 curl -k -H "Host: cyberarkdemo.com" https://localhost/conjur -i
 ```{{execute}}
