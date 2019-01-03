@@ -48,6 +48,12 @@ static_resources:
                   prefix: "/service/2"
                 route:
                   cluster: service2
+              - match:
+                  prefix: "/conjur"
+                route:
+                  cluster: conjur
+                  prefix_rewrite: "/"
+
             - name: conjurbackend
               domains:
               - "conjurdemo.org"
