@@ -15,10 +15,6 @@
       {
         "title": "Setting Up Envoy",
         "text": "envoy.md"
-      },
-      {
-        "title": "Securing Cert Chain & Private Key",
-        "text": "cert.md"
       }
     ],
     "intro": {
