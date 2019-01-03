@@ -1,5 +1,5 @@
 {
-  "title": "(work in process) Enabling TLS for Conjur using Envoy Proxy",
+  "title": "Enabling TLS for Conjur using Envoy Proxy",
   "description": "Learn how to integrate Conjur with Envoy to enable SSL/TLS",
   "icon": "fa-envoyproxy",
   "details": {
