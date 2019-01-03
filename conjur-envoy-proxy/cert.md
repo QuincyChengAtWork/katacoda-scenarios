@@ -59,31 +59,31 @@ docker-compose exec client conjur policy load envoy /tmp/envoy.yml | tee fronten
 **Load cert Policy**
 ```
 docker cp cert.yml root_client_1:/tmp/
-docker-compose exec client conjur policy load krb5 /tmp/cert.yml
+docker-compose exec client conjur policy load cert /tmp/cert.yml
 ```{{execute}}
 
 ### Add certificate chain & private key as variables
 Copy the `cyberarkdemo-com.crt` & `cyberarkdemo-com.key` files to Conjur CLI container and add to Conjur as a variable
 
 ```
-docker cp cyberarkdemo-com.crt root_client_1:/tmp/
-docker cp cyberarkdemo-com.key root_client_1:/tmp/
-docker-compose exec client bash -c "head -c1024 /tmp/cyberarkdemo-com.crt | conjur variable values add cert/cert_chain"
-docker-compose exec client bash -c "head -c1024 /tmp/cyberarkdemo-com.key | conjur variable values add cert/private_key"
+docker cp certs/cyberarkdemo-com.crt root_client_1:/tmp/
+docker cp certs/cyberarkdemo-com.key root_client_1:/tmp/
+docker-compose exec client bash -c "echo /tmp/cyberarkdemo-com.crt | conjur variable values add cert/cert_chain"
+docker-compose exec client bash -c "echo /tmp/cyberarkdemo-com.key | conjur variable values add cert/private_key"
 ```{{execute}}
 
 ### Cleanup 
 It's time to remove the keytab files
 
 ```
-rm cyberarkdemo-com.crt
-rm cyberarkdemo-com.key
+rm -f certs/cyberarkdemo-com.crt
+rm -f certs/cyberarkdemo-com.key
 docker-compose exec client bash -c "rm /tmp/cyberarkdemo-com.crt"
 docker-compose exec client bash -c "rm /tmp/cyberarkdemo-com.key"
 ```{{execute}}
 
 To verify:
-`ls cyberarkdemo-com.*`{{execute}}
+`ls certs/`{{execute}}
 
 `docker-compose exec client bash -c "ls /tmp/cyberarkdemo-com.*"`{{execute}}
 
@@ -107,26 +107,27 @@ For more details, please refer to [Conjur provider for Summon](https://github.co
 ```
 export CONJUR_MAJOR_VERSION=5
 export CONJUR_ACCOUNT=demo
-export CONJUR_APPLIANCE_URL=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+export CONJUR_APPLIANCE_URL=https://localhost/conjur
 export CONJUR_AUTHN_LOGIN=host/frontend/frontend-01
-export CONJUR_AUTHN_API_KEY=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
+export CONJUR_AUTHN_API_KEY=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:envoy/envoy-01".api_key')
 ```{{execute}}
 
-We will make sure of `secrets.yml` file for injecting the keytab file
+We will make sure of `secrets.yml` file for injecting the certificate chain & private key
 To review it, run `cat secrets.yml`{{execute}}
 ```
-KEYTAB: !var:file krb5/keytab
+CRT: !var:file cert/cert_chain
+KEY: !var:file cert/private_key
 ```
 
 ### Restart Envoy
 First, let's stop the running Envoy
 ```
-docker kill proxy1
-docker rm proxy 1
-```
+docker kill proxy1;
+docker rm proxy 1;
+```{{execute}}
 
 To summon certificate chain & private key, we can get the path to memeory-mapped cert files using the environment variable `CERT` & `KEY`, which defined in `secrets.yml`
+
 ```
 summon docker run --entrypoint "/usr/local/bin/envoy -c /etc/envoyproxy.yaml --config-yaml \"static_resources:listeners:\"" -d --name proxy1 -p 80:8080 -p 443:8443 -p 8001:8001 -v /root/:/etc/envoy/ envoyproxy/envoy
-
-
+```{{execute}}
