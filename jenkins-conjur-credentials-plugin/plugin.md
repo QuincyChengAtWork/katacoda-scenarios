@@ -50,11 +50,11 @@ In a browser, go to the Jenkins UI.
 
 3. On the form that appears, configure the login credentials. These are credentials for the Jenkins host to log into Conjur.
 
-- Scope: Select Global.
-- Username: Enter host/jenkins-frontend/<host-name> , where <host-name> is the network name for the Jenkins host that you declared in Conjur.
-- Password: Copy and paste the API key that was returned by Conjur when you loaded the policy declaring this host.
-- ID:  The Jenkins ID, natively provided by Jenkins.
-- Description:  Optional. Provide a description to identify this global credential entry.
+   - Scope: Select Global.
+   - Username: Enter host/jenkins-frontend/<host-name> , where <host-name> is the network name for the Jenkins host that you declared in Conjur.
+   - Password: Copy and paste the API key that was returned by Conjur when you loaded the policy declaring this host.
+   - ID:  The Jenkins ID, natively provided by Jenkins.
+   - Description:  Optional. Provide a description to identify this global credential entry.
 
 Access to the Jenkins host and to the credentials is protected by Conjur.
  	
@@ -64,11 +64,9 @@ When a host attempts to authenticate with Conjur, Conjur can detect if the reque
 
 ### Decide whether to set up global or folder-level access to Conjur, or a combination of both.
 
-- A global configuration allows any job to use the configuration (unless a folder-level configuration overrides the global configuration).
-
-- A folder-level configuration is specific to jobs in the folder. Folder-level configurations override the global configuration. In a hierarchy of folders, each folder may inherit configuration information from its parent. The top level in such a hierarchy is the global configuration.
-
-- You may set up a global configuration and override it with folder-level configurations.
+   - A global configuration allows any job to use the configuration (unless a folder-level configuration overrides the global configuration).
+   - A folder-level configuration is specific to jobs in the folder. Folder-level configurations override the global configuration. In a hierarchy of folders, each folder may inherit configuration information from its parent. The top level in such a hierarchy is the global configuration.
+   - You may set up a global configuration and override it with folder-level configurations.
 
 ** Using CLI **
 
@@ -97,11 +95,10 @@ If the above command returns an error, it is likely that Jenkins is still being 
 1. Navigate to either Jenkins > Manage Jenkins > Configure Jenkins   or Jenkins > Folder-name > Configuration.
 
 2. On the form that appears, under Conjur Appliance, configure the Conjur connection information.
-
-- Inherit from parent?: This checkbox appears only on the folder level configuration window. If checked, the values set here are ignored, and values in the parent folder apply. If all folders up the hierarchy are set to inherit from their parents, the global configuration is used.
-- Account:  The Conjur organizational account that was assigned when Conjur was originally configured. For example, my-org.
-- Appliance URL: The secure URL to Conjur.  For example: https://conjur-master.example.com
-- Conjur Auth Credentials: The host name and API key to authenticate to Conjur. Select credentials previously configured, or click Add to add new values.
+   - Inherit from parent?: This checkbox appears only on the folder level configuration window. If checked, the values set here are ignored, and values in the parent folder apply. If all folders up the hierarchy are set to inherit from their parents, the global configuration is used.  
+   - Account:  The Conjur organizational account that was assigned when Conjur was originally configured. For example, my-org.
+   - Appliance URL: The secure URL to Conjur.  For example: https://conjur-master.example.com
+   - Conjur Auth Credentials: The host name and API key to authenticate to Conjur. Select credentials previously configured, or click Add to add new values.
 - Conjur SSL Certificate: Select none. You already imported the SSL Certificate onto the Jenkins host in Certificate Preparation. This field allows you to reference a certificate stored as a credential in Jenkins. The stored value must be a .p12 file generated using the openssl command to convert the conjur.pem file. Because openssl requires the conjur.key file for the conversion, we recommend avoiding this method.
 
 3. Click Save.
@@ -120,8 +117,6 @@ You may need to login to the Jenkins dashboard again as the previous step involv
 The username is `admin`{{copy}} with the password the default `344827fbdbfb40d5aac067c7a07b9230`{{copy}}
 
 ![credential](https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/jenkins-conjur-credentials-plugin/sceencap/step4-1.png?raw=true)
-
-
 
 ### Verify Global Configuration
 Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/configure
