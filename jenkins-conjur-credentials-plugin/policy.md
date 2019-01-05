@@ -25,6 +25,7 @@ The following configurations are required on Conjur:
 The following steps create Conjur policy that defines the Jenkins host and adds that host to a layer.
 
 1. Declare a policy branch for Jenkins & save it as a .yml file
+
 ```
 docker-compose exec client bash
 cat >> conjur.yml << EOF
@@ -40,6 +41,7 @@ exit
 `docker-compose exec client conjur policy load --replace root /conjur.yml`{{execute}}
 
 4. Declare the layer and Jenkins host in another file. Copy the following policy as a template & save it.
+
 ```
 docker-compose exec client bash
 cat >> jenkins-frontend.yml << EOF
@@ -102,6 +104,7 @@ exit
 `docker-compose exec client conjur policy load root /conjur2.yml`{{execute}}
 
 4. Declare the variables, privileges, and entitlements. Copy the following policy as a template:
+
 ```
 docker-compose exec client bash
 cat >> jenkins-app.yml << EOF
@@ -150,6 +153,7 @@ The CLI command to set a value is:
 `conjur variable values add <policy-path-of-variable-name> <secret-value>`
 
 For example: 
+
 ```
 password=$(openssl rand -hex 12)
 docker-compose exec client conjur variable values add jenkins-app/db_password $password
