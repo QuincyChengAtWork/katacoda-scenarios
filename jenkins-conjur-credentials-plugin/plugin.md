@@ -105,7 +105,7 @@ If the above command returns an error, it is likely that Jenkins is still being 
 
 
 ### Enable Conjur secrets plugin
-`docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin https://github.com/QuincyChengAtWork/katacoda-scenarios/raw/master/jenkins-conjur-credentials-plugin/assets/Conjur.hpi -restart`{{execute}}
+`docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin https://github.com/cyberark/conjur-credentials-plugin/releases/download/v0.5/Conjur.hpi -restart`{{execute}}
 
 ** Jenkins will be restarted, you may need to wait for 1-2 min and login to Jenkins dashboard again to proceed **
 
