@@ -21,6 +21,10 @@
             {
                 "title": "Conjur Policies",
                 "text": "policy.md"
+            },            
+            {
+                "title": "Certificate Preparation",
+                "text": "certificate.md"
             },
             {
                 "title": "Configure Plugin",
