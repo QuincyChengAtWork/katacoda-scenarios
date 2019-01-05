@@ -33,7 +33,7 @@ cat >> conjur_folder << _EOF_
             <org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl plugin="Conjur@0.2">
               <id>DB_PASSWORD</id>
               <description>Conjur Demo Folder DB Password</description>
-              <variablePath>db/db_password</variablePath>
+              <variablePath>jenkins-app/db_password</variablePath>
             </org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl>
           </java.util.concurrent.CopyOnWriteArrayList>
         </entry>
@@ -76,7 +76,7 @@ docker exec -it jenkins bash
 echo '<org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl plugin="Conjur@0.2">
         <id>DB_PASSWORD</id>
         <description>Conjur Demo Folder Credentials</description>
-        <variablePath>db/db_password</variablePath>
+        <variablePath>jenkins-app/db_password</variablePath>
       </org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl>' | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ create-credentials-by-xml "folder::item::Conjur Demo" "(global)"
 exit
 ```{{execute}}
