@@ -28,7 +28,7 @@ The following steps create Conjur policy that defines the Jenkins host and adds 
 
 ```
 docker-compose exec client bash
-cat >> conjur.yml << EOF
+cat > conjur.yml << EOF
 - !policy
   id: jenkins-frontend
 EOF
@@ -44,15 +44,12 @@ exit
 
 ```
 docker-compose exec client bash
-cat >> jenkins-frontend.yml << EOF
- - !layer
-
-  - !host frontend-01
-
-  - !grant
-    role: !layer
-    member: !host frontend-01
-
+cat > jenkins-frontend.yml << EOF
+- !layer
+- !host frontend-01
+- !grant
+  role: !layer
+  member: !host frontend-01
 EOF
 exit
 ```{{execute}}
@@ -74,7 +71,7 @@ As it creates each new host, Conjur returns an API key.
 
 We will use the host entity later within this tutorial, so let's put it in memory
 ```
-export frontend_api_key=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:frontend/frontend-01".api_key')
+export frontend_api_key=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:jenkins-frontend/frontend-01".api_key')
 echo $frontend_api_key
 ```{{execute}}
 
@@ -90,7 +87,7 @@ If variables are already defined, you need only add the Jenkins layer to an exis
 
 ```
 docker-compose exec client bash
-cat >> conjur2.yml << EOF
+cat > conjur2.yml << EOF
 - !policy
   id: jenkins-app
 EOF
@@ -107,7 +104,7 @@ exit
 
 ```
 docker-compose exec client bash
-cat >> jenkins-app.yml << EOF
+cat > jenkins-app.yml << EOF
 #Declare the secrets required by the application
 
 - &variables
@@ -141,7 +138,7 @@ Change the variable names, the group name, and the layer name as appropriate.
 
 5. Load the policy into Conjur under the Jenkins policy branch you declared previously: 
 
-`docker-compose exec client conjur policy load jenkins-app /jenkins-app.yml | tee frontend.out`{{execute}}
+`docker-compose exec client conjur policy load jenkins-app /jenkins-app.yml`{{execute}}
 
 
 ### Set variable values in Conjur
