@@ -13,7 +13,7 @@ Scroll down to **Build Environment**
 Check **Use secret text(s) or files(s)**
 Click **Add** and choose **Conjur Secret Credentials**
 
-By default, the variable will be set to **CONJUR_SECRET** and the **ConjurSecret:db/db_password/*Conjur* (Conjur Demo Folder Credentials** for you.
+By default, the variable will be set to **CONJUR_SECRET** and the **ConjurSecret:jenkins-app/db_password/*Conjur* (Conjur Demo Folder Credentials** for you.
 
 The secrets will be injected as environment variables to the build steps of the project.
 
