@@ -3,13 +3,12 @@
   "description": "Learning how to deploy Conjur Open Source on a Docker host using one single command",
   "details": {
     "steps": [
-      { "title": "Step 1 - Install", "text": "install.md" },
+      { "title": "Step 1 - Install", "text": "install.md",       "courseData": "courseBase.sh" },
       { "title": "Step 2 - Verify", "text": "verify.md" }
     ],
     "intro": {
       "text": "intro.md",
-      "credits": "https://www.conjur.org",
-      "courseData": "courseBase.sh"
+      "credits": "https://www.conjur.org"
     },
     "finish": {
       "text": "finish.md"
