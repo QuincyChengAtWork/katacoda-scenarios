@@ -1,7 +1,7 @@
 
-The cli container is ready to use.   
+Conjur OSS is ready to use.   
 
-For example:
+Let's try:
 ```
-docker exec tutorial_cli_1 conjur authn whoami
+docker exec tutorial_client_1 conjur authn whoami
 ```{{execute}}
