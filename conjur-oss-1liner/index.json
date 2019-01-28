@@ -4,21 +4,19 @@
   "details": {
     "steps": [
       { "title": "Step 1 - Install", "text": "install.md" },
-      { "title": "Step 2 - Verify", "text": "verify.md" },
-      
+      { "title": "Step 2 - Verify", "text": "verify.md" }
     ],
     "intro": {
       "text": "intro.md",
       "credits": "https://www.conjur.org",
-      "courseData": "courseData.sh",
-
+      "courseData": "courseData.sh"
     },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "docker"
