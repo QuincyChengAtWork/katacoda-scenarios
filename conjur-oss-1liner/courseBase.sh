@@ -1,6 +1,6 @@
 #!/bin/bash
 export USER=tutorial
-CAT >> /usr/sbin/sudo << EOF
+cat >> /usr/sbin/sudo << EOF
 #!/bin/sh
 $*
 EOF
