@@ -9,7 +9,7 @@
     "intro": {
       "text": "intro.md",
       "credits": "https://www.conjur.org",
-      "courseData": "courseBase.sh" 
+      "code": "courseBase.sh" 
     },
     "finish": {
       "text": "finish.md"
