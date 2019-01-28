@@ -2,7 +2,7 @@ Conjur supports both Jenkins pipeline script & Freestyle project. If you'd like 
 
 
 ### Create a Freestyle project 
-You can create a Freestyle project item at https://2886795293-8181-ollie02.environments.katacoda.com/job/Conjur%20Demo/newJob
+You can create a Freestyle project item at https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.com/job/Conjur%20Demo/newJob
 
 Enter `Demo Freestyle`{{copy}} as the item name
 Choose **Freestyle Project** & click **OK**
