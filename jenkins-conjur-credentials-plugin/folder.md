@@ -73,11 +73,11 @@ Access https://[[HOST_SUBDOMAIN]]-8181-[[KATACODA_HOST]].environments.katacoda.c
 
 ```
 docker exec -it jenkins bash
-echo '<org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl plugin="Conjur@0.2">
+echo '<org.conjur.jenkins.conjursecrets.ConjurSecretCredentialsImpl plugin="Conjur@0.5">
         <id>DB_PASSWORD</id>
         <description>Conjur Demo Folder Credentials</description>
         <variablePath>jenkins-app/db_password</variablePath>
-      </org.conjur.jenkins.ConjurSecrets.ConjurSecretCredentialsImpl>' | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ create-credentials-by-xml "folder::item::Conjur Demo" "(global)"
+      </org.conjur.jenkins.conjursecrets.ConjurSecretCredentialsImpl>' | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ create-credentials-by-xml "folder::item::Conjur Demo" "(global)"
 exit
 ```{{execute}}
 
