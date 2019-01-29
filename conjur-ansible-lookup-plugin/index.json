@@ -1,7 +1,7 @@
 {
-  "title": "work in process - Conjur Ansible Lookup Plugin",
-  "description": "Learn how to retreive secrets from Conjur to Ansible",
-  "icon": "fa-ansible",
+  "title": "work in process - Ansible Conjur Role",
+  "description": "Learn how to retreive secrets from Conjur to Ansible using Ansible Conjur role",
+  "icon": "fa-redhat",
   "details": {
     "steps": [
       {
