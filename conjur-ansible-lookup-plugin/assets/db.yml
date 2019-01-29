@@ -1,10 +1,8 @@
 - &variables
   - !variable dbpass
-
 - !group secrets-users
   privileges: [ read, execute ]
   roles: !group secrets-users
-
 - !grant
   role: !group secrets-users
   member: !layer /ansible
