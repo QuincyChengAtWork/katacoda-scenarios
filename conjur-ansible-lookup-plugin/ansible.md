@@ -1,4 +1,4 @@
 
 To install Ansible:
 
-`apt install ansible`{{execute}}
+`apt install ansible -y`{{execute}}
