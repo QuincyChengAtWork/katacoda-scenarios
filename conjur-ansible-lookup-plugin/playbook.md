@@ -15,7 +15,7 @@ Using environment variables:
 
 ```
 export CONJUR_ACCOUNT="demo"
-export CONJUR_APPLIANCE_URL="https://conjur-appliance"
+export CONJUR_APPLIANCE_URL="https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/"
 export CONJUR_AUTHN_LOGIN="host/ansible-01"
 export CONJUR_AUTHN_API_KEY="$(tail -n +2 ansible.out | jq -r '.created_roles."quick-start:host:ansible/ansible-01".api_key')"
 ```{{execute}}
