@@ -65,5 +65,5 @@ Let's create a secret and add it to Conjur
 
 ```
 dbpass=$(openssl rand -hex 12)
-docker-compose exec client conjur variable values add db/dbpass $dbpass" 
+docker-compose exec client conjur variable values add db/dbpass "$dbpass" 
 ```{{execute}}
