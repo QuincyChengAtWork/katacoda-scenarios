@@ -16,7 +16,7 @@ Using environment variables:
 ```
 export CONJUR_ACCOUNT="demo"
 export CONJUR_APPLIANCE_URL="https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/"
-export CONJUR_AUTHN_LOGIN="host/ansible-01"
+export CONJUR_AUTHN_LOGIN="host/ansible/ansible-01"
 export CONJUR_AUTHN_API_KEY="$(tail -n +2 ansible.out | jq -r '.created_roles."quick-start:host:ansible/ansible-01".api_key')"
 ```{{execute}}
 
@@ -25,12 +25,10 @@ Let's create a sample playbook
 cat > playbook.yml << EOF
 - hosts: 127.0.0.1
   connection: local
-  vars:
-    super_secret_key: {{ lookup('retrieve_conjur_variable', 'path/to/secret') }}
   tasks:
     - name: Retrieve secret with master identity
       vars:
-        super_secret_key: {{ lookup('retrieve_conjur_variable', 'path/to/secret') }}
+        super_secret_key: "{{ lookup('retrieve_conjur_variable', 'db/dbpass') }}"
       shell: echo "Yay! {{super_secret_key}} was just retrieved with Conjur"
       register: foo
     - debug: msg="the echo was {{ foo.stdout }}"
