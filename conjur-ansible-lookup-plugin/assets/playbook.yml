@@ -1,0 +1,9 @@
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: Retrieve secret with master identity
+      vars:
+        super_secret_key: "{{ lookup('retrieve_conjur_variable', 'db/dbpass') }}"
+      shell: echo "Yay! {{super_secret_key}} was just retrieved with Conjur"
+      register: foo
+    - debug: msg="the echo was {{ foo.stdout }}"
