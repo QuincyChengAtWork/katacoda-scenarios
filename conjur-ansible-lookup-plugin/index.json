@@ -1,5 +1,5 @@
 {
-  "title": "work in process - Ansible Conjur Role",
+  "title": "Ansible Conjur Role",
   "description": "Learn how to retreive secrets from Conjur to Ansible using Ansible Conjur role",
   "icon": "fa-redhat",
   "details": {
@@ -9,7 +9,7 @@
         "text": "ansible.md"
       },
        {
-        "title": "Setting Up Ansible Lookup Plugin",
+        "title": "Setting Up Role & Lookup Plugin",
         "text": "galaxy.md"
       },
       {
