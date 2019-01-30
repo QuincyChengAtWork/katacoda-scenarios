@@ -43,7 +43,7 @@ Let's review the sample playbook
       shell: echo "Yay! {{super_secret_key}} was just retrieved with Conjur"
       register: foo
     - debug: msg="the echo was {{ foo.stdout }}"
-```{{execute}}
+```
 
 To execute the playbook:
 
