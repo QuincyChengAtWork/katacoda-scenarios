@@ -16,13 +16,24 @@ Using environment variables:
 ```
 export CONJUR_ACCOUNT="demo"
 export CONJUR_APPLIANCE_URL="https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/"
+export CONJUR_CERT_FILE="/root/conjur-demo.pem"
 export CONJUR_AUTHN_LOGIN="host/ansible/ansible-01"
-export CONJUR_AUTHN_API_KEY="$(tail -n +2 ansible.out | jq -r '.created_roles."quick-start:host:ansible/ansible-01".api_key')"
+export CONJUR_AUTHN_API_KEY="$(tail -n +2 ansible.out | jq -r '.created_roles."demo:host:ansible/ansible-01".api_key')"
 ```{{execute}}
 
-Let's create a sample playbook
+We can get the conjur client configuration from the client container:
+
 ```
-cat > playbook.yml << EOF
+docker cp root_client_1:/root/.conjurrc /root/
+docker cp root_client_1:/root/conjur-demo.pem /root/
+```{{execute}}
+
+
+Let's review the sample playbook
+
+`cat playbook.yml`{{execute}}
+
+```
 - hosts: 127.0.0.1
   connection: local
   tasks:
@@ -32,7 +43,6 @@ cat > playbook.yml << EOF
       shell: echo "Yay! {{super_secret_key}} was just retrieved with Conjur"
       register: foo
     - debug: msg="the echo was {{ foo.stdout }}"
-EOF
 ```{{execute}}
 
 To execute the playbook:
