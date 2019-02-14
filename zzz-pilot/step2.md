@@ -11,8 +11,7 @@ docker-compose exec conjur conjurctl account create quick-start | tee admin.out
 > Prevent data loss:
 > The conjurctl account create command gives you the public key and admin API key for the account you created. Back them up in a safe location.
 
-### Please copy the API key for admin for logging in to the system
-
+> Please copy the API key for admin for logging in to the system
 
 Initialize the Conjur client using the account name and admin API key you created:
 
