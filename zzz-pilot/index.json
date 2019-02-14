@@ -1,0 +1,28 @@
+{
+  "title": "Pilot Test",
+  "description": "Learning how to deploy Conjur OSS & enroll an application ",
+  "details": {
+    "steps": [
+      { "title": "Install Conjur", "text": "step1.md" },
+      { "title": "Start Conjur", "text": "step2.md" },
+      { "title": "Create and load your security policy", "text": "step3.md" },
+      { "title": "Create a secret and securely vault it in Conjur", "text": "step4.md" },
+      { "title": "Creating a non-human identity", "text": "step5.md" },
+      { "title": "Testing Authentication vs Authorization", "text": "step6.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mPreparing your environment.   It will take about 2 minutes.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
