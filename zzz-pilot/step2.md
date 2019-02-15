@@ -15,8 +15,6 @@ docker-compose exec conjur conjurctl account create quick-start | tee admin.out
 
 Initialize the Conjur client using the account name and admin API key you created:
 
-```
-docker-compose exec client bash -c "echo yes | conjur init -u https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ -a quick-start"
-api_key="$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"
-docker-compose exec client conjur authn login -u admin -p "$api_key"
-```{{execute}}
+`docker-compose exec client bash -c "echo yes | conjur init -u https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ -a quick-start"`{{execute}}
+
+`docker-compose exec client conjur authn login -u admin -p "$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"`{{execute}}
