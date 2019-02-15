@@ -14,7 +14,11 @@ For this example, the “frontend” policy will simply define a Layer and a Hos
 Now load the frontend policy using the following command:
 
 
-`conjur policy load frontend frontend.yml | tee frontend.out`{{execute}}
+```
+docker cp frontend.yml tutorial_client_1:frontend.yml
+docker-compose exec client conjur policy load frontend frontend.yml | tee frontend.out
+```{{execute}}
+
 ```
 Loaded policy 'frontend'
 {
