@@ -7,9 +7,11 @@ With the preceding steps completed, we now have the following objects and permis
 When a frontend application is deployed to host:frontend/frontend-01, it can authenticate with the api_key printed above and attempt to fetch the db password. You can simulate this using the following CLI command:
 
 ```
-export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
-CONJUR_AUTHN_LOGIN=host/frontend/frontend-01 \
-  CONJUR_AUTHN_API_KEY=$frontend_api \
+export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:frontend/frontend-01".api_key')
+docker exec \
+  -e CONJUR_AUTHN_LOGIN=host/frontend/frontend-01 \
+  -e CONJUR_AUTHN_API_KEY=$frontend_api \
+   tutorial_client_1 \
   conjur variable value db/password
 ```{{execute}}
 ```
@@ -20,19 +22,19 @@ Is the “error: 403 Forbidden” a mistake? No, it’s demonstrating that the h
 What’s needed is an entitlement to grant group:db/secrets-users to layer:frontend. You can verify that this role grant does not yet exist by listing the members of the role group:db/secrets-users:
 
 
-`conjur role members group:db/secrets-users`{{execute}}
+`docker-compose exec client conjur role members group:db/secrets-users`{{execute}}
 ```
 [
-  "myorg:policy:db"
+  "quick-start:policy:db"
 ]
 ```
 And by listing the role memberships of the host:
 
-`conjur role memberships host:frontend/frontend-01`{{execute}}
+`docker-compose exec client conjur role memberships host:frontend/frontend-01`{{execute}}
 ```
 [
-  "myorg:host:frontend/frontend-01",
-  "myorg:layer:frontend"
+  "quick-start:host:frontend/frontend-01",
+  "quick-start:layer:frontend"
 ]
 ```
 Add the role grant by updating policy “db.yml” to the following:
@@ -55,7 +57,11 @@ Add the role grant by updating policy “db.yml” to the following:
 
 Then load it using the CLI:
 
-`conjur policy load db db.yml`{{execute}}
+```
+docker cp db.yml tutorial_client_1:db.yml
+docker-compose exec client conjur policy load db db.yml
+```{{execute}}
+
 ```
 Loaded policy 'db'
 {
@@ -67,25 +73,25 @@ Loaded policy 'db'
 Now you can verify that the policy has taken effect. We will look at this in several different ways. First, verify that layer:frontend has been granted the role group:db/secrets-users:
 
 
-`conjur role members group:db/secrets-users`{{execute}}
+`docker-compose exec client conjur role members group:db/secrets-users`{{execute}}
 ```
 [
-  "myorg:policy:db",
-  "myorg:layer:frontend"
+  "quick-start:policy:db",
+  "quick-start:layer:frontend"
 ]
 ```
 And, you can see that the host:frontend/frontend-01 has execute privilege on variable:db/password:
 
 
-`conjur resource permitted_roles variable:db/password execute`{{execute}}
+`docker-compose exec client conjur resource permitted_roles variable:db/password execute`{{execute}}
 ```
 [
-  "myorg:host:frontend/frontend-01",
-  "myorg:group:db/secrets-users",
-  "myorg:policy:frontend",
-  "myorg:policy:db",
-  "myorg:layer:frontend",
-  "myorg:user:admin"
+  "quick-start:host:frontend/frontend-01",
+  "quick-start:group:db/secrets-users",
+  "quick-start:policy:frontend",
+  "quick-start:policy:db",
+  "quick-start:layer:frontend",
+  "quick-start:user:admin"
 ]
 ```
 The important line here is myorg:host:frontend/frontend-01.
@@ -93,10 +99,42 @@ The important line here is myorg:host:frontend/frontend-01.
 Now we can finish the tutorial by fetching the password while authenticated as the host:
 
 ```
-CONJUR_AUTHN_LOGIN=host/frontend/frontend-01 \
-  CONJUR_AUTHN_API_KEY=$frontend_api \
+docker exec \
+  -e CONJUR_AUTHN_LOGIN=host/frontend/frontend-01 \
+  -e CONJUR_AUTHN_API_KEY=$frontend_api \
+   tutorial_client_1 \
   conjur variable value db/password
 ```{{execute}}
 `926c6e5622889763c9490ca3` <- Password printed here
 Success! The host has the necessary (and minimal) set of privileges it needs to fetch the database password.
 
+### Modify the secret with non-human ID
+
+Now let's review the policy for modifying secret.
+
+`docker-compose exec client conjur resource permitted_roles variable:db/password update`{{execute}}
+
+```
+[
+  "quick-start:user:admin",
+  "quick-start:policy:db"
+]
+```
+
+As you may notice, secrets-users group is not included, so frontend-01 should not be able to modify the secrets.
+
+Let's verify it by adding a new vault using frontend-01
+
+```
+docker exec \
+  -e CONJUR_AUTHN_LOGIN=host/frontend/frontend-01 \
+  -e CONJUR_AUTHN_API_KEY=$frontend_api \
+   tutorial_client_1 \
+   conjur variable values add db/password $(openssl rand -hex 12)
+```{{execute}}
+
+```
+error: 403 Forbidden
+```
+
+403 error is shown, as expected.
