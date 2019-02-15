@@ -13,7 +13,8 @@ Then load it using the following commands:
 
 ```
 docker cp ./conjur.yml tutorial_client_1:conjur.yml
-docker-compose exec client conjur policy load --replace root conjur.yml`{{execute}}
+docker-compose exec client conjur policy load --replace root conjur.yml
+```{{execute}}
 
 ```
 Loaded policy 'root'
@@ -28,6 +29,7 @@ Loaded policy 'root'
 Use the conjur list command to view all the objects in the system:
 
 `docker-compose exec client conjur list`{{execute}}
+
 ```
 [
   "myorg:policy:root",
