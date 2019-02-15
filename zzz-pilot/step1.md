@@ -5,8 +5,8 @@ In your terminal, download the Conjur quick-start configuration:
 `curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml`{{execute}}
 
 # Pull Image
-Pull all the required Docker images from DockerHub
-docker-compose can do this for you automatically:
+Pull all the required Docker images from DockerHub.
+docker-compose can do this for you automatically.  It will take a few moments.
 
 `docker-compose pull`{{execute}}
 
