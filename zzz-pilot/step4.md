@@ -25,7 +25,10 @@ These are normally granted together, but they are distinct just like read and ex
 
 Now load it using the following command:
 
-`conjur policy load db db.yml`{{execute}}
+```
+docker cp ./conjur.yml tutorial_client_1:conjur.yml
+docker-compose exec client conjur policy load db db.yml
+```{{execute}}
 
 ```
 Loaded policy 'db'
@@ -45,10 +48,10 @@ echo $password
 
 `ac8932bccf835a5a13586100`
 
-`conjur variable values add db/password $password`{{execute}}
+`docker-compose exec conjur variable values add db/password $password`{{execute}}
 
 `Value added`
 
-`conjur variable value db/password`{{execute}}
+`docker-compose exec conjur variable value db/password`{{execute}}
 
 `ac8932bccf835a5a13586100`
