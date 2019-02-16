@@ -18,7 +18,7 @@
       "text": "finish.md"
     }
   },
-  "files": [ "conjur.yml", "db.yml", "frontend.yml"],
+  "files": [ "conjur.bak", "db1.bak", "db2.bak", "frontend.bak"],
   "environment": {
     "uilayout": "editor-terminal"
   },
