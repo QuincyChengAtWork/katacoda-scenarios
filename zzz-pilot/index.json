@@ -17,7 +17,14 @@
     "finish": {
       "text": "finish.md"
     },
-    "assets": { "host01": [ {"file": "conjur.bak", "target": "/home/scrapbook/tutorial/"} ] }
+    "assets": { 
+        "host01": [ 
+          {"file": "conjur.bak", "target": "~/"},
+          {"file": "db1.bak", "target": "~/"},
+          {"file": "db2.bak", "target": "~/"},
+          {"file": "frontend.bak", "target": "~/"}
+        ] 
+    }
   },
   "files": [ "conjur.yml", "db.yml", "frontend.yml"],
   "environment": {
