@@ -51,3 +51,5 @@ cat > frontend.bak << EOF
   role: !layer
   member: !host frontend-01
 EOF
+
+clear
