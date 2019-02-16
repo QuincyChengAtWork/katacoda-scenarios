@@ -96,7 +96,7 @@ And, you can see that the host:frontend/frontend-01 has execute privilege on var
   "quick-start:user:admin"
 ]
 ```
-The important line here is myorg:host:frontend/frontend-01.
+The important line here is `quick-start:host:frontend/frontend-01`
 
 Now we can finish the tutorial by fetching the password while authenticated as the host:
 
