@@ -13,18 +13,10 @@
     "intro": {
       "text": "intro.md",
       "credits": "https://www.conjur.org",
-      "code": "env-init.sh"
+      "courseData": "env-init.sh"
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": { 
-        "host01": [ 
-          {"file": "conjur.bak", "target": "~/"},
-          {"file": "db1.bak", "target": "~/"},
-          {"file": "db2.bak", "target": "~/"},
-          {"file": "frontend.bak", "target": "~/"}
-        ] 
     }
   },
   "files": [ "conjur.yml", "db.yml", "frontend.yml"],
