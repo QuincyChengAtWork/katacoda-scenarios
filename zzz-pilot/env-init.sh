@@ -24,7 +24,7 @@ cat > db1.bak << EOF
   roles: !group secrets-users
 EOF
 
-cat > db2.ank << EOF
+cat > db2.bak << EOF
 - &variables
   - !variable password
 
