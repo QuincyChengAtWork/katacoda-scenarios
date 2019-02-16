@@ -1,6 +1,6 @@
 {
   "title": "Conjur 101",
-  "description": "Learning how to deploy Conjur OSS & enroll an application",
+  "description": "Learn how to deploy Conjur OSS & enroll an application",
   "details": {
     "steps": [
       { "title": "Install Conjur", "text": "step1.md" },
