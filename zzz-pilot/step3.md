@@ -9,6 +9,8 @@ Here is a skeleton policy for this scenario, which simply defines two empty poli
   id: frontend
 </pre>
 
+Note: You can create this file, either by clicking above "Copy to Editor" or executing `cp conjur.bak conjur.yml`{{execute}}
+
 Then load it using the following commands:
 
 ```
