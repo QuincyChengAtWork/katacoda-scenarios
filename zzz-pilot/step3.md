@@ -34,9 +34,9 @@ Use the conjur list command to view all the objects in the system:
 
 ```
 [
-  "myorg:policy:root",
-  "myorg:policy:db",
-  "myorg:policy:frontend"
+  "quick-start:policy:root",
+  "quick-start:policy:db",
+  "quick-start:policy:frontend"
 ]
 ```
 
