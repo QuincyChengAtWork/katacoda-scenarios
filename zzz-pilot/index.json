@@ -12,7 +12,8 @@
     ],
     "intro": {
       "text": "intro.md",
-      "credits": "https://www.conjur.org"
+      "credits": "https://www.conjur.org",
+      "code": "env-init.sh"
     },
     "finish": {
       "text": "finish.md"
