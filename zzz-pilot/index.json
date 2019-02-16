@@ -16,9 +16,11 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": { "host01": [ {"file": "*", "target": "~/"} ] }
+
   },
-  "files": [ "conjur.bak", "db1.bak", "db2.bak", "frontend.bak"],
+  "files": [ "conjur.yml", "db.yml", "frontend.yml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
