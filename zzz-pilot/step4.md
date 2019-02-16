@@ -23,6 +23,9 @@ These are normally granted together, but they are distinct just like read and ex
   roles: !group secrets-users
 </pre>
 
+
+Note: You can create this file, either by clicking above "Copy to Editor" or executing `cp db1.bak db.yml`{{execute}}
+
 Now load it using the following command:
 
 ```
