@@ -25,8 +25,8 @@ docker-compose exec client conjur policy load frontend frontend.yml | tee fronte
 Loaded policy 'frontend'
 {
   "created_roles": {
-    "myorg:host:frontend/frontend-01": {
-      "id": "myorg:host:frontend/frontend-01",
+    "quick-start:host:frontend/frontend-01": {
+      "id": "quick-start:host:frontend/frontend-01",
       "api_key": "1wgv7h2pw1vta2a7dnzk370ger03nnakkq33sex2a1jmbbnz3h8cye9"
     }
   },
