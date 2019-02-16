@@ -13,7 +13,7 @@
     "intro": {
       "text": "intro.md",
       "credits": "https://www.conjur.org",
-      "courseData": "env-init.sh"
+      "code": "env-init.sh"
     },
     "finish": {
       "text": "finish.md"
