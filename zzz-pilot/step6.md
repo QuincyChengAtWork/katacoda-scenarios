@@ -55,6 +55,8 @@ Add the role grant by updating policy “db.yml” to the following:
   member: !layer /frontend
 </pre>
 
+Note: You can create this file, either by clicking above "Copy to Editor" or executing `cp db2.bak db.yml`{{execute}}
+
 Then load it using the CLI:
 
 ```
