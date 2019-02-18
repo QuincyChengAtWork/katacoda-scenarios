@@ -25,7 +25,6 @@ Run `cat krb5.yml`{{execute}} to review the root policy
 - &variables
   - !variable keytab
 - !group secrets-users
-- !group secrets-users
   privileges: [ read, execute ]
   roles: !group secrets-users
 - !grant
