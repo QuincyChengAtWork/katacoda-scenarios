@@ -1,10 +1,11 @@
 #!/bin/bash
 curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml
-docker-compose pull
+docker-compose pull database
+docker-compose pull conjur
 docker-compose run --no-deps --rm conjur data-key generate > data_key
 export CONJUR_DATA_KEY="$(< data_key)"
 
-docker-compose up -d 
+docker-compose up -d database conjur
 sleep 10
 docker-compose exec conjur conjurctl account create demo | tee admin.out
 api_key="$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"
