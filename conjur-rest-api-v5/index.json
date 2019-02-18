@@ -7,8 +7,8 @@
   "details": {
     "steps": [
        { "title": "Install Conjur", "text": "install.md" },
-       { "title": "Setup Conjur", "text": "setup.md" },
        { "title": "Authentication as human", "text": "authn_human.md" },
+       { "title": "Load Policies", "text": "policies.md" },
        { "title": "Authentication as machine", "text": "authn_machine.md" },
        { "title": "Secrets",  "text": "secrets.md"}
 
