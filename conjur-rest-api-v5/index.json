@@ -10,7 +10,7 @@
        { "title": "Setup Conjur", "text": "setup.md" },
        { "title": "Authentication as human", "text": "authn_human.md" },
        { "title": "Authentication as machine", "text": "authn_machine.md" },
-       { "title": "Secrets", "secrets.md"}
+       { "title": "Secrets",  "text": "secrets.md"}
 
     ],
     "intro": {
