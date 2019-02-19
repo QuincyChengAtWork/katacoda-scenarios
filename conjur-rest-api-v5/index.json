@@ -24,7 +24,7 @@
         "target": "~/tutorial"
       },
       {
-        "file": "*.sh",
+        "file": "startConjur.sh",
         "target": "~/tutorial",
         "chmod":"+x"
       }
