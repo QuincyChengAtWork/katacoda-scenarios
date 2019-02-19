@@ -33,7 +33,7 @@ source showSettings.sh && curl -s -H "Authorization: Token token=\"${access_toke
 ### Append policies 
 Adds data to the existing Conjur policy. Deletions are not allowed. Any policy objects that exist on the server but are omitted from the policy file will not be deleted and any explicit deletions in the policy file will result in an error.
 
-Note: entity IDs must be URL-encoded ¶
+Note: entity IDs must be URL-encoded 
 Any identifier included in the URL must be URL-encoded to be recognized by the Conjur API.
 
 Let's prepare the first part of `db` policy
