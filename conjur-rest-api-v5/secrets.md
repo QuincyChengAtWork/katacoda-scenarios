@@ -1,9 +1,6 @@
 
 ### Add a secret
 
-curl -H "$(conjur authn authenticate -H)" \
-     --data "c3c60d3f266074" \
-     https://eval.conjur.org/secrets/myorg/variable/prod/db/password
 If we wants to secure a database password using CyberArk, where the value is `c3c60d3f266074` in `db\password` variable, we can execute the following command:
 
 ```
@@ -12,7 +9,7 @@ source showSettings.sh && curl -s -H "Authorization: Token token=\"${access_toke
      https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/secrets/demo/variable/db%2Fpassword 
 ```{{execute}}
 
-And the value is secured by Conjur
+And the value is secured by Conjur.
 
 ### Retrieve a secret
 
