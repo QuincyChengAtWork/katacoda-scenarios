@@ -20,11 +20,12 @@
    "assets": {
     "client": [
       {
-        "file": "*",
-        "target": "~/tutorial"
+        "file": "showSettings.sh",
+        "target": "~/tutorial",
+        "chmod":"+x"
       },
       {
-        "file": "startConjur.sh",
+        "file": "setupConjur.sh",
         "target": "~/tutorial",
         "chmod":"+x"
       }
