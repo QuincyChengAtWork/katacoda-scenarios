@@ -12,7 +12,7 @@ echo -e "${c1}Conjur URL: ${c2}"$conjur_url
 echo -e "${c1}Conjur Org: ${c2}demo"
 echo -e "${c1}Conjur User Name: ${c2}admin"
 echo -e "${c1}Conjur Password: ${c2}"$conjur_admin
-echo -e "${c1}Conjur Refresh Token: ${c2}"$refresh_token
+echo -e "${c1}Conjur API Key: ${c2}"$refresh_token
 echo -e "${c1}Conjur Access Token: ${c2}"$access_token
 echo -e "${c0}"
 
