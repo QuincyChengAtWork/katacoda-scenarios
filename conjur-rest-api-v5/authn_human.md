@@ -20,7 +20,7 @@ Your HTTP/REST client probably provides HTTP basic authentication support. For e
 
 Note that machine roles (Hosts) do not have passwords and do not need to login.
 
-`export refresh_token = curl -s --user admin:$conjur_admin https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/authn/demo/login && echo $refresh_token`{{execute}}
+`export refresh_token=$(curl -s --user admin:$conjur_admin https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/authn/demo/login) && echo $refresh_token`{{execute}}
 
 
 ### Authenticate
