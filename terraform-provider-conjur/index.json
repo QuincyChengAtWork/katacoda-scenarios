@@ -1,6 +1,6 @@
 {
-  "title": "[work in progress]",
-  "description": "[work in progress]",
+  "title": "[work in progress] Terraform provider for Conjur",
+  "description": "Learn how to use Terraform provider for Conjur",
   "icon":"fa-terraform",
   "difficulty": "Beginner",
   "time": "10-20 minutes",
