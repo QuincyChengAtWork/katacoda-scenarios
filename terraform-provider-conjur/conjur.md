@@ -26,3 +26,11 @@ Run `cat conjur.yml`{{execute}} to review the root policy
 docker cp conjur.yml root_client_1:/tmp/
 docker-compose exec client conjur policy load --replace root /tmp/conjur.yml
 ```{{execute}}
+
+### Add variable
+Let's create a secret and add it to Conjur
+
+```
+dbpass=$(openssl rand -hex 12)
+docker-compose exec client conjur variable values add postgres/admin-password "$dbpass" 
+```{{execute}}
