@@ -1,0 +1,27 @@
+{
+  "title": "[work in progress]",
+  "description": "[work in progress]",
+  "icon":"fa-terraform",
+  "difficulty": "Beginner",
+  "time": "10-20 minutes",
+  "details": {
+    "steps": [
+      { "title": "Setup Terraform", "text": "terraform.md" },
+      { "title": "Setup Conjur", "text": "conjur.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+     "assets": { "host01": [ {"file": "*", "target": "/root"}, {"file": "*.sh", "target": "/root", "chmod":"+x"} ] }
+  },
+  "environment": {
+    "uilayout": "terminal",
+  },
+  "backend": {
+    "imageid": "conjur-docker"
+  }
+}
