@@ -1,5 +1,5 @@
 {
-  "title": "[work in progress] Terraform provider for Conjur",
+  "title": "Terraform provider for Conjur",
   "description": "Learn how to use Terraform provider for Conjur",
   "icon":"fa-terraform",
   "difficulty": "Beginner",
