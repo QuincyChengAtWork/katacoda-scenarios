@@ -7,7 +7,10 @@
   "details": {
     "steps": [
       { "title": "Setup Terraform", "text": "terraform.md" },
-      { "title": "Setup Conjur", "text": "conjur.md" }
+      { "title": "Setup Conjur", "text": "conjur.md" },
+      { "title": "Setup Provider", "text": "provider.md" },
+      { "title": "Apply!", "text": "apply.md" }
+
     ],
     "intro": {
       "text": "intro.md",
