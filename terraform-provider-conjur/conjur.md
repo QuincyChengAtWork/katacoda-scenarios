@@ -12,10 +12,9 @@ The sample policies have been prepared for you.
 Run `cat conjur.yml`{{execute}} to review the root policy
 ```
 - !policy
-  id: krb5
-
-- !policy
-  id: frontend
+  id: postgres
+  body:
+    - !variable admin-password
 ```
 
 
