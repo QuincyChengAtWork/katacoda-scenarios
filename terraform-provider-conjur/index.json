@@ -1,6 +1,6 @@
 {
   "title": "Terraform provider for Conjur",
-  "description": "Learn how to use Terraform provider for Conjur",
+  "description": "Learn how to use Terraform provider for Conjur & Secure client using Summmon",
   "icon":"fa-terraform",
   "difficulty": "Beginner",
   "time": "10-20 minutes",
@@ -9,7 +9,8 @@
       { "title": "Setup Terraform", "text": "terraform.md" },
       { "title": "Setup Conjur", "text": "conjur.md" },
       { "title": "Setup Provider", "text": "provider.md" },
-      { "title": "Apply!", "text": "apply.md" }
+      { "title": "Apply!", "text": "apply.md" },
+      { "title": "Secure client using Summon!", "text": "summon.md" }
 
     ],
     "intro": {
