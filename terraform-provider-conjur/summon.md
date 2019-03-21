@@ -30,5 +30,5 @@ To review, execute `cat secrets.yml`{{execute}}
 
 ```
 psql_ip="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgres )"
-psql -h $psql_ip -U postgres
+summon psql -h $psql_ip -U postgres
 ```{{execute}}
