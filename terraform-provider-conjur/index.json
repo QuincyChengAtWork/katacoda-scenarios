@@ -1,5 +1,5 @@
 {
-  "title": "Terraform provider for Conjur",
+  "title": "Terraform provider for Conjur & Summon",
   "description": "Learn how to use Terraform provider for Conjur & Secure client using Summmon",
   "icon":"fa-terraform",
   "difficulty": "Beginner",
