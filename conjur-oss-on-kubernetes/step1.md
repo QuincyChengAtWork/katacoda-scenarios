@@ -30,7 +30,7 @@ Inspect and install a chart
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
   --set account="quickstart" \
-  --set ssl.hostname="https://[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com/" \
+  --set ssl.hostname="[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com" \
   --set image.pullPolicy="IfNotPresent" \
   --set postgres.persistentVolume.create="false" \
   cyberark/conjur-oss`{{execute}}
