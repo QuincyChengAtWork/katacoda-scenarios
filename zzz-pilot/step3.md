@@ -14,7 +14,7 @@ Note: You can create this file, either by clicking above "Copy to Editor" or exe
 Then load it using the following commands:
 
 ```
-docker cp ./conjur.yml tutorial_client_1:conjur.yml
+docker cp ./conjur.yml root_client_1:conjur.yml
 docker-compose exec client conjur policy load --replace root conjur.yml
 ```{{execute}}
 
