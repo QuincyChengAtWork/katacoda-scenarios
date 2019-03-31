@@ -17,7 +17,7 @@ Now load the frontend policy using the following command:
 
 
 ```
-docker cp frontend.yml tutorial_client_1:frontend.yml
+docker cp frontend.yml root_client_1:frontend.yml
 docker-compose exec client conjur policy load frontend frontend.yml | tee frontend.out
 ```{{execute}}
 
