@@ -1,19 +1,8 @@
 
-## 1. Get the application URL by running these commands:
-  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
-  kubectl port-forward $POD_NAME 80:80 &
-  sleep 3s
-  echo "Press ENTER to continue..."
-  `{{execute}}
-
-Visit https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
-
- to use your Conjur on Kerbernetes
-
-## 2. Configure Conjur
+## 1. Configure Conjur
   To create an initial account as "quickstart" and login
   
-  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
+  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -o jsonpath="{.items[0].metadata.name}")
   kubectl exec $POD_NAME conjurctl account create quickstart
   `{{execute}}
 
@@ -22,10 +11,10 @@ Detailed instructions here: https://www.conjur.org/get-started/install-conjur.ht
 >  Note that the conjurctl account create command gives you the public key and admin API key for the account you created.
 >  Back them up in a safe location.
 
-## 3. Connect to Conjur
+## 2. Connect to Conjur
   `docker run --rm -it --entrypoint bash cyberark/conjur-cli:5`{{execute}}
 
-## 4. Verify the installation
+## 3. Verify the installation
   `conjur init -u [[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com -a quickstart`{{execute}}
 
   `conjur authn login -u admin`{{execute}}
@@ -35,6 +24,6 @@ Detailed instructions here: https://www.conjur.org/get-started/install-conjur.ht
   To exit Conjur CLI client:
   `exit`{{execute}}
 
-## 5. Installation Completed!
+## 4. Installation Completed!
 
 Congratulations!  Conjur has been successfully deployed to Kubernetes!
