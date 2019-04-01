@@ -1,5 +1,6 @@
 {
   "title": "Deploying Conjur Open Source on Docker",
+  "icon": "fa-docker",
   "description": "Learning how to deploy Conjur Open Source on a Docker host.",
   "details": {
     "steps": [
