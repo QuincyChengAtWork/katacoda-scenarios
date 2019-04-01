@@ -2,7 +2,7 @@
 Install the Conjur role using the following syntax:
 
 ```
-ansible-galaxy install cyberark.conjur
+ansible-galaxy install cyberark.conjur-lookup-plugin
 ```{{execute}}
 
 We will install the lookup plugin from the downloaded role
