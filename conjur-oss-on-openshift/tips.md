@@ -50,10 +50,10 @@ oc adm policy add-scc-to-user anyuid -z conjur`{{execute}}
 
 Create an Account for Conjur, please wait for a while to retry if an error is shown
 ```
-export POD_NAME=$(kubectl get pods --namespace conjur \
+export POD_NAME=$(oc get pods --namespace conjur \
     -l "app=conjur-oss" \
     -o jsonpath="{.items[0].metadata.name}")
-kubectl exec $POD_NAME --container=conjur-oss conjurctl account create "default"
+oc exec $POD_NAME --container=conjur-oss conjurctl account create "default"
 ```{{execute}}
   
 Finish!   
