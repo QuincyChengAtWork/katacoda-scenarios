@@ -5,7 +5,7 @@
 `oc adm policy add-cluster-role-to-user cluster-admin admin --as=system:admin
 oc adm policy add-cluster-role-to-user cluster-admin developer --as=system:admin
 oc adm policy add-scc-to-user anyuid -z default
-curl -ks https://storage.googleapis.com/kubernetes-helm/helm-v2.6.1-linux-amd64.tar.gz | tar xz
+curl -ks https://storage.googleapis.com/kubernetes-helm/helm-v2.13.1-linux-amd64.tar.gz | tar xz
 sudo mv linux-amd64/helm /usr/local/bin
 sudo chmod a+x /usr/local/bin/helm
 helm init --client-only`{{execute}}
