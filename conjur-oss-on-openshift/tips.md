@@ -18,6 +18,7 @@ With helm being the client only, Helm needs an agent named "tiller" on the kuber
 oc new-project tiller
 oc project tiller
 oc policy add-role-to-user edit "system:serviceaccount:${TILLER_NAMESPACE}:tiller"
+oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:tiller:tiller --as=system:admin
 oc process -f https://quincycheng.github.io/tiller-template.yaml -p TILLER_NAMESPACE="${TILLER_NAMESPACE}" | oc create -f -
 oc rollout status deployment tiller`{{execute}}
 
@@ -46,12 +47,14 @@ oc adm policy add-scc-to-user anyuid -z conjur`{{execute}}
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
   cyberark/conjur-oss`{{execute}}
 
-Configure port forwarding
-`export POD_NAME=$(oc get pods -l "app=conjur-oss" -ojsonpath="{.items[0].metadata.name}")
-oc port-forward $POD_NAME 8080:80 &`{{execute}}
 
 Create an Account for Conjur, please wait for a while to retry if an error is shown
-`oc exec $POD_NAME conjurctl account create quickstart`{{execute}}
+```
+export POD_NAME=$(kubectl get pods --namespace conjur \
+                                         -l "app=conjur-oss" \
+                                         -o jsonpath="{.items[0].metadata.name}")
+kubectl exec $POD_NAME --container=conjur-oss conjurctl account create "default"
+```{{execute}}
   
 Finish!   
  
