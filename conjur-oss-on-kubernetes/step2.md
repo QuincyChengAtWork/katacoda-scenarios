@@ -3,7 +3,7 @@
   To create an initial account as "quickstart" and login
   
   `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -o jsonpath="{.items[0].metadata.name}")
-  kubectl exec $POD_NAME conjurctl account create quickstart
+  kubectl exec $POD_NAME --container=conjur-oss conjurctl account create "quickstart"
   `{{execute}}
 
 Detailed instructions here: https://www.conjur.org/get-started/install-conjur.html#install-and-configure
