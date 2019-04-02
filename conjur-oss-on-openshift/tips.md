@@ -18,14 +18,14 @@ With helm being the client only, Helm needs an agent named "tiller" on the kuber
 oc new-project tiller
 oc project tiller
 oc policy add-role-to-user edit "system:serviceaccount:${TILLER_NAMESPACE}:tiller"
-oc process -f https://github.com/openshift/origin/raw/master/examples/helm/tiller-template.yaml -p TILLER_NAMESPACE="${TILLER_NAMESPACE}" | oc create -f -
+oc process -f https://quincycheng.github.io/tiller-template.yaml -p TILLER_NAMESPACE="${TILLER_NAMESPACE}" | oc create -f -
 oc rollout status deployment tiller`{{execute}}
 
 Let's verify the helm installation is okay.  Please wait for a while for server up & running if an error is shown:
 
 `helm version`{{execute}}
 
-Add CyberArk Chart
+### Add CyberArk Chart
 
 `helm repo add cyberark https://cyberark.github.io/helm-charts
 helm repo update`{{execute}}
@@ -41,7 +41,7 @@ oc project conjur
 oc policy add-role-to-user edit "system:serviceaccount:${TILLER_NAMESPACE}:tiller"
 oc adm policy add-scc-to-user anyuid -z conjur`{{execute}}
 
-Install Conjur
+## Install Conjur
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
   cyberark/conjur-oss`{{execute}}
