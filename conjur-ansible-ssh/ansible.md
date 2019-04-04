@@ -1,8 +1,9 @@
 
-To install Ansible:
+### To install Ansible:
 
 ```
 apt-get update
 apt-add-repository --yes --update ppa:ansible/ansible
-apt-get install ansible -y
+apt-get install ansible sshpass -y
 ```{{execute}}
+
