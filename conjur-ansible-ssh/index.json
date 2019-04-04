@@ -1,0 +1,46 @@
+{
+  "title": "wip - Ansible Conjur Lookup Plugin",
+  "description": "Learn how to retreive secrets from Conjur to Ansible for SSH connections",
+  "icon": "fa-redhat",
+  "details": {
+    "steps": [
+      {
+        "title": "Setup Accounts",
+        "text": "accounts.md"
+      },
+      {
+        "title": "Install Ansible",
+        "text": "ansible.md"
+      },
+       {
+        "title": "Setting Up Role & Lookup Plugin",
+        "text": "galaxy.md"
+      },
+      {
+        "title": "Install Conjur",
+        "text": "conjur.md"
+      },
+      {
+        "title": "Configure Conjur Policy & Secrets",
+        "text": "policy.md"
+      },
+      {
+        "title": "Ansible Playbook",
+        "text": "playbook.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+   "assets": { "host01": [ {"file": "*", "target": "/root"}, {"file": "*.sh", "target": "/root", "chmod":"+x"} ] }
+  },
+  "environment": {
+    "uilayout": "terminal-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster"
+  }
+}
