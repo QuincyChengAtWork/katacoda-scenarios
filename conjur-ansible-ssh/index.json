@@ -1,6 +1,6 @@
 {
   "title": "Using Conjur to secure SSH secrets for Ansible",
-  "description": "Learn how to retreive secrets from Conjur for Ansible to establish SSH connections",
+  "description": "Learn how to retreive SSH secrets from Conjur for Ansible connecting to multiple hosts",
   "icon": "fa-redhat",
   "details": {
     "steps": [
