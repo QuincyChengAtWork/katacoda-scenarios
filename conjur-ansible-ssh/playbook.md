@@ -66,9 +66,12 @@ Let's review the sample playbook, which connects to
 
 ```
 
+To disable host key checking:
+`export ANSIBLE_HOST_KEY_CHECKING=False`{{execute}}
+
 To execute the playbook:
 
-`ansible-playbook playbook.yml`{{execute}}
+`ansible-playbook -i inventory playbook.yml`{{execute}}
 
 Sample result:
 
