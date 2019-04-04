@@ -1,6 +1,8 @@
 - &variables
+  - !variable host1/host
   - !variable host1/user
   - !variable host1/pass
+  - !variable host2/host
   - !variable host2/user
   - !variable host2/pass
 
