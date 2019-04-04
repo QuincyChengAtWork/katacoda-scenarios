@@ -16,14 +16,25 @@ Run `cat db.yml`{{execute}} to review the root policy
 
 ```
 - &variables
-  - !variable dbpass
+  - !variable host1/host
+  - !variable host1/user
+  - !variable host1/pass
+  - !variable host2/host
+  - !variable host2/user
+  - !variable host2/pass
+
 - !group secrets-users
-- !group secrets-users
+
+- !permit
+  resource: *variables
   privileges: [ read, execute ]
   roles: !group secrets-users
+
+# Entitlements 
 - !grant
   role: !group secrets-users
   member: !layer /ansible
+
 ```
 
 **ansible policy**
@@ -61,20 +72,20 @@ docker-compose exec client conjur policy load db /tmp/db.yml
 ```{{execute}}
 
 ### Add variable
-Let's create a secret and add it to Conjur
+Let's create secrets and add them to Conjur
 
-
+Host 1 IP:
 `docker-compose exec client conjur variable values add db/host1/host "[[HOST1_IP]]"`{{execute}}
-
+Host 1 user name:
 `docker-compose exec client conjur variable values add db/host1/user "service01"`{{execute}}
-
+Host 1 password:
 `docker-compose exec client conjur variable values add db/host1/pass "W/4m=cS6QSZSc*nd"`{{execute}}
 
-
+Host 2 IP:
 `docker-compose exec client conjur variable values add db/host2/host "[[HOST2_IP]]"`{{execute}}
-
+Host 2 user name:
 `docker-compose exec client conjur variable values add db/host2/user "service02"`{{execute}}
-
+Host 2 password:
 `docker-compose exec client conjur variable values add db/host2/pass "yWTcAe=&r:cT!n79"`{{execute}}
 
 
