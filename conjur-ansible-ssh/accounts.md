@@ -16,7 +16,7 @@ useradd -m -d /tmp service02
 passwd service02
 ```{{execute HOST2}}
 
-`yWTcAe=&r:cT!n79`{{execute HOST2}}
-`yWTcAe=&r:cT!n79`{{execute HOST2}}
+`5;LF+J4Rfqds:DZ8`{{execute HOST2}}
+`5;LF+J4Rfqds:DZ8`{{execute HOST2}}
 
 
