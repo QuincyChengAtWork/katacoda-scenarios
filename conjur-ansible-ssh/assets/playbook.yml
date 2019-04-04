@@ -1,0 +1,15 @@
+- hosts: db_servers
+  vars:
+      ansible_connection: ssh      
+      ansible_host: "{{ lookup('retrieve_conjur_variable', 'db/' + inventory_hostname+ '/host') }}"
+      ansible_user: "{{ lookup('retrieve_conjur_variable', 'db/' + inventory_hostname+ '/user') }}"
+      ansible_ssh_pass: "{{ lookup('retrieve_conjur_variable', 'db/' + inventory_hostname+ '/pass') }}"
+
+  tasks:
+    - name: Get hostname
+      shell: echo $HOSTNAME
+      register: result
+      
+    - debug: msg=" inventory = {{ inventory_hostname }} "
+    
+    - debug: msg=" hostname = {{ result }} "
