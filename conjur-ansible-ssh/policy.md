@@ -86,7 +86,7 @@ Host 2 IP:
 Host 2 user name:
 `docker-compose exec client conjur variable values add db/host2/user "service02"`{{execute}}
 Host 2 password:
-`docker-compose exec client conjur variable values add db/host2/pass "yWTcAe=&r:cT!n79"`{{execute}}
+`docker-compose exec client conjur variable values add db/host2/pass "5;LF+J4Rfqds:DZ8"`{{execute}}
 
 
 
