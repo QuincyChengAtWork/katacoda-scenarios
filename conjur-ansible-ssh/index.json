@@ -1,5 +1,5 @@
 {
-  "title": "wip - Using Conjur to secure SSH secrets for Ansible",
+  "title": "Using Conjur to secure SSH secrets for Ansible",
   "description": "Learn how to retreive secrets from Conjur for Ansible to establish SSH connections",
   "icon": "fa-redhat",
   "details": {
