@@ -1,0 +1,17 @@
+- &variables
+  - !variable host1/user
+  - !variable host1/pass
+  - !variable host2/user
+  - !variable host2/pass
+
+- !group secrets-users
+
+- !permit
+  resource: *variables
+  privileges: [ read, execute ]
+  roles: !group secrets-users
+
+# Entitlements 
+- !grant
+  role: !group secrets-users
+  member: !layer /ansible
