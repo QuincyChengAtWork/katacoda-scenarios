@@ -28,24 +28,99 @@ docker cp root_client_1:/root/.conjurrc /root/
 docker cp root_client_1:/root/conjur-demo.pem /root/
 ```{{execute}}
 
+Let's review the sample inventory, which stores the 2 servers
 
-Let's review the sample playbook
+`cat inventory`{{execute}}
+
+```
+[db_servers]
+host1
+host2
+```
+
+
+Let's review the sample playbook, which connects to 
 
 `cat playbook.yml`{{execute}}
 
 ```
-- hosts: 127.0.0.1
-  connection: local
+- hosts: db_servers
+  roles:
+    - role: cyberark.conjur-lookup-plugin
+  vars:
+      ansible_connection: ssh      
+      ansible_host: "{{ lookup('retrieve_conjur_variable', 'db/' + inventory_hostname+ '/host') }}"
+      ansible_user: "{{ lookup('retrieve_conjur_variable', 'db/' + inventory_hostname+ '/user') }}"
+      ansible_ssh_pass: "{{ lookup('retrieve_conjur_variable', 'db/' + inventory_hostname+ '/pass') }}"
+
   tasks:
-    - name: Retrieve secret with master identity
-      vars:
-        super_secret_key: "{{ lookup('retrieve_conjur_variable', 'db/dbpass') }}"
-      shell: echo "Yay! {{super_secret_key}} was just retrieved with Conjur"
-      register: foo
-    - debug: msg="the echo was {{ foo.stdout }}"
+    - name: Get user name
+      shell: whoami
+      register: theuser
+
+    - name: Get host name
+      shell: hostname
+      register: thehost
+
+    - debug: msg="I am {{ theuser.stdout }} at {{ thehost.stdout }}"
+
 ```
 
 To execute the playbook:
 
 `ansible-playbook playbook.yml`{{execute}}
 
+Sample result:
+
+```
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+ok: [host2]
+ok: [host1]
+
+TASK [Get hostname] ************************************************************
+changed: [host1]
+changed: [host2]
+
+TASK [debug] *******************************************************************
+ok: [host1] => {
+    "msg": "service01 "
+}
+ok: [host2] => {
+    "msg": "service02 "
+}
+
+PLAY RECAP *********************************************************************
+host1                      : ok=3    changed=1    unreachable=0    failed=0
+host2                      : ok=3    changed=1    unreachable=0    failed=0
+
+master $ vi playbook.yml
+master $ ansible-playbook playbook.yml -i inventory
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+ok: [host2]
+ok: [host1]
+
+TASK [Get user name] ***********************************************************
+changed: [host1]
+changed: [host2]
+
+TASK [Get host name] ***********************************************************
+changed: [host2]
+changed: [host1]
+
+TASK [debug] *******************************************************************
+ok: [host1] => {
+    "msg": "I am  service01 at master"
+}
+ok: [host2] => {
+    "msg": "I am  service02 at node01"
+}
+
+PLAY RECAP *********************************************************************
+host1                      : ok=4    changed=2    unreachable=0    failed=0
+host2                      : ok=4    changed=2    unreachable=0    failed=0
+```
