@@ -63,7 +63,19 @@ docker-compose exec client conjur policy load db /tmp/db.yml
 ### Add variable
 Let's create a secret and add it to Conjur
 
-```
-dbpass=$(openssl rand -hex 12)
-docker-compose exec client conjur variable values add db/dbpass "$dbpass" 
-```{{execute}}
+
+`docker-compose exec client conjur variable values add db/host1/host "[[HOST1_IP]]"`{{execute}}
+
+`docker-compose exec client conjur variable values add db/host1/user "service01"`{{execute}}
+
+`docker-compose exec client conjur variable values add db/host1/pass "W/4m=cS6QSZSc*nd"`{{execute}}
+
+
+`docker-compose exec client conjur variable values add db/host2/host "[[HOST2_IP]]"`{{execute}}
+
+`docker-compose exec client conjur variable values add db/host2/user "service02"`{{execute}}
+
+`docker-compose exec client conjur variable values add db/host2/pass "yWTcAe=&r:cT!n79"`{{execute}}
+
+
+
