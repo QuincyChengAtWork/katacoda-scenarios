@@ -26,6 +26,7 @@ pushd test_app_summon
     docker rm --volumes $id
   fi
 
+  export namespace=$TEST_APP_NAMESPACE_NAME
 
   for app_type in "${APPS[@]}"; do
     # prep secrets.yml
