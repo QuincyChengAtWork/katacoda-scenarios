@@ -5,7 +5,8 @@
   "details": {
     "steps": [
       { "title": "Setup Minikube", "text": "minikube.md" },
-      { "title": "Setup Conjur", "text": "conjur.md" }
+      { "title": "Setup Conjur", "text": "conjur.md" },
+       { "title": "Setup Demo App", "text": "kubernetes-conjur-demo.md" }
     ],
     "intro": {
       "text": "intro.md",
