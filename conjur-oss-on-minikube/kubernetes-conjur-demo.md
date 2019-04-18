@@ -44,7 +44,6 @@ spec:
       labels:
         app: conjur-cli
     spec:
-      serviceAccountName: conjur-cluster
       containers:
       - name: conjur-cli
         image: cyberark/conjur-cli:5
@@ -57,7 +56,7 @@ EOF
 kubectl create -f conjur-cli.yml
 ```{{execute}}
 
-`export DEPLOY_MASTER_CLUSTER=true && .\2_load_conjur_policies.sh`{{execute}}
+`.\2_load_conjur_policies.sh`{{execute}}
 
 
 ```
