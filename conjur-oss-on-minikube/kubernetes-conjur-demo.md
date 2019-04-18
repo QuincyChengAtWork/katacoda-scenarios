@@ -58,8 +58,8 @@ kubectl create -f conjur-cli.yml
 
 `.\2_load_conjur_policies.sh`{{execute}}
 
-
 ```
-kubectl get pods --selector app=conjur-cli --no-headers | awk '{ print $1 }')
-echo $pod_list | awk '{print $1}'
+export cli_pod_name="$( kubectl get pods --selector app=conjur-cli --no-headers | awk '{ print $1 }' )"
+export conjur_service="$( kubectl get services | grep "conjur-oss" | awk '{ print $1 }' )"
+
 ```{{execute}}
