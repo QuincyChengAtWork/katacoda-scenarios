@@ -12,6 +12,8 @@ export conjur_service="$( kubectl get services | grep "conjur-oss" | grep -v "in
 export CONJUR_ADMIN_PASSWORD=$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')
 ```{{execute}}
 
+### Wait!
+It will take a moment for the container to spin up.   If you got any error after executing the following actions, please wait for a moment and try again.
 
 ### Login
 
@@ -26,4 +28,4 @@ Trust this certificate (yes/no): `yes`{{execute}}
 
 ### Copy Certificate for next step
 
-`kubectl cp $cli_pod_name:/root/conjur-quick-start.pem .`{{execute}}
+`kubectl cp $cli_pod_name:/root/conjur-quickstart.pem .`{{execute}}
