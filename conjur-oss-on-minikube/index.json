@@ -17,7 +17,8 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mPreparing your environment.   It will take about 2 minutes.\u001b[m\r\n"
+    "showdashboard": true,
+     "dashboards": [{"name": "Minikube Dashboard", "port": 30000}, {"name": "Display 8080", "port": 8080}]
   },
   "backend": {
     "imageid": "minikube"
