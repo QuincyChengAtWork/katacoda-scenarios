@@ -5,7 +5,8 @@
   "details": {
     "steps": [
       { "title": "Setup Minikube", "text": "minikube.md" },
-      { "title": "Setup Conjur", "text": "conjur.md" },
+      { "title": "Setup Conjur Server", "text": "conjur.md" },
+      { "title": "Setup Conjur Client", "text": "conjur-cli.md" },
        { "title": "Setup Demo App", "text": "kubernetes-conjur-demo.md" }
     ],
     "intro": {
@@ -14,12 +15,13 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+     "assets": { "host01": [ {"file": "*", "target": "/root"}, {"file": "*.sh", "target": "/root", "chmod":"+x"} ] }
   },
   "environment": {
     "uilayout": "terminal",
     "showdashboard": true,
-     "dashboards": [{"name": "Minikube Dashboard", "port": 30000}, {"name": "Display 8080", "port": 8080}]
+     "dashboards": [{"name": "Minikube Dashboard", "port": 30000}, {"name": "Display 443", "port": 443}]
   },
   "backend": {
     "imageid": "minikube"
