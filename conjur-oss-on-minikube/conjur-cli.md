@@ -24,3 +24,6 @@ Trust this certificate (yes/no): `yes`{{execute}}
 #### Conjur Login
 `kubectl exec -it $cli_pod_name -- conjur authn login -u admin -p $CONJUR_ADMIN_PASSWORD`{{execute}}
 
+### Copy Certificate for next step
+
+`kubectl cp $cli_pod_name:/root/conjur-quick-start.pem .`{{execute}}
