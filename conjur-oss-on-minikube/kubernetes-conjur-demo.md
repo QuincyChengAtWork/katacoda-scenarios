@@ -21,21 +21,32 @@ export CONJUR_ADMIN_PASSWORD=$(grep API ../admin.out | cut -d: -f2 | tr -d ' \r\
 export DEPLOY_MASTER_CLUSTER=true
 ```{{execute}}
 
+### Check Dependencies
+
 `./0_check_dependencies.sh`{{execute}}
+
+### Create Test App Namespace
 
 `./1_create_test_app_namespace.sh`{{execute}}
 
+### Load Policies
+
 `./2_load_conjur_policies.sh`{{execute}}
 
-
-4.  Store Conjur Cert
+### Store Conjur Cert
 ```
-$cli delete --ignore-not-found=true configmap $TEST_APP_NAMESPACE_NAME
-$cli create configmap $TEST_APP_NAMESPACE_NAME --from-file=../conjur-quickstart.pem
+kubectl delete --ignore-not-found=true configmap $TEST_APP_NAMESPACE_NAME
+kubectl create configmap $TEST_APP_NAMESPACE_NAME --from-file=../conjur-quickstart.pem
 ```{{execute}}
 
-'./5_build_and_push_containers.sh`{{execute}}
+### Build and Push containers
 
-'./6_deploy_test_app.sh`{{execute}}
+`./5_build_and_push_containers.sh`{{execute}}
 
-`7_verify_authentication.sh`{{execute}}
+### Deploy Test App
+
+`./6_deploy_test_app.sh`{{execute}}
+
+### Verify Authentication
+
+`./7_verify_authentication.sh`{{execute}}
