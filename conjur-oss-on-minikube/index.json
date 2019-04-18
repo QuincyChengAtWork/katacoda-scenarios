@@ -1,6 +1,6 @@
 {
   "title": "Work in progress Deploying Conjur Open Source on Minikube",
-  "icon": "fa-minikube",
+  "icon": "fa-kubernetes",
   "description": "Learning how to deploy Conjur Open Source on a Minikube",
   "details": {
     "steps": [
