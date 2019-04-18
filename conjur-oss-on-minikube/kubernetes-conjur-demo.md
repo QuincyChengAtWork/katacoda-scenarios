@@ -20,9 +20,9 @@ export CONJUR_MAJOR_VERSION=5
 export CONJUR_ADMIN_PASSWORD=$(grep API ../admin.out | cut -d: -f2 | tr -d ' \r\n')
 ```{{execute}}
 
-`.\0_check_dependencies.sh`{{execute}}
+`./0_check_dependencies.sh`{{execute}}
 
-`.\1_create_test_app_namespace.sh`{{execute}}
+`./1_create_test_app_namespace.sh`{{execute}}
 
 ```
 cat >conjur-cli.yml<<EOF
@@ -51,11 +51,13 @@ spec:
         imagePullPolicy: IfNotPresent
         command: ["sleep"]
         args: ["infinity"]
+      imagePullSecrets:
+        - name: dockerpullsecret
 EOF
 kubectl create -f conjur-cli.yml
 ```{{execute}}
 
-`.\2_load_conjur_policies.sh`{{execute}}
+`export DEPLOY_MASTER_CLUSTER=true && .\2_load_conjur_policies.sh`{{execute}}
 
 
 ```
