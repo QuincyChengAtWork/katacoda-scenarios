@@ -2,7 +2,7 @@
 
 ### Get the source code
 
-`git clone https://github.com/conjurdemos/kubernetes-conjur-demo.git`{{execute}}
+`git clone https://github.com/QuincyChengAtWork/kubernetes-conjur-demo.git`{{execute}}
 
 `cd kubernetes-conjur-demo`{{execute}}
 
@@ -34,11 +34,12 @@ export DEPLOY_MASTER_CLUSTER=true
 `./2_load_conjur_policies.sh`{{execute}}
 
 ### Store Conjur Cert
-```
-kubectl delete --ignore-not-found=true configmap $TEST_APP_NAMESPACE_NAME
-cp ../conjur-quickstart.pem ./ssl-certificate
-kubectl create configmap $TEST_APP_NAMESPACE_NAME --from-file=./ssl-certificate
-```{{execute}}
+For Enterprise version only.   
+We can skip this step for Conjur OSS.
+`./3_init_conjur_cert_authority.sh`{{execute}}
+
+### Store Conjur Cert
+`./4_store_conjur_cert.shh`{{execute}}
 
 ### Build and Push containers
 
