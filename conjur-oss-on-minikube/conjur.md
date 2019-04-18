@@ -43,7 +43,9 @@ Please wait for a while if an error is shown - Most likely the tiller is being s
 ### 4. Configure Conjur
   To create an initial account as "quickstart" and login
   
-  `export POD_NAME=$(kubectl get pods --namespace default -l "app=conjur-oss" -o jsonpath="{.items[0].metadata.name}")
+  `    export POD_NAME=$(kubectl get pods --namespace default \
+                                         -l "app=conjur-oss" \
+                                         -o jsonpath="{.items[0].metadata.name}")
   kubectl exec $POD_NAME --container=conjur-oss conjurctl account create "quickstart" | tee admin.out
   `{{execute}}
 
