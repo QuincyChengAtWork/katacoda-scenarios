@@ -18,17 +18,24 @@ export DOCKER_REGISTRY_PATH=$(minikube ip):5000
 export DOCKER_REGISTRY_URL=$(minikube ip):5000
 export CONJUR_MAJOR_VERSION=5
 export CONJUR_ADMIN_PASSWORD=$(grep API ../admin.out | cut -d: -f2 | tr -d ' \r\n')
+export DEPLOY_MASTER_CLUSTER=true
 ```{{execute}}
 
 `./0_check_dependencies.sh`{{execute}}
 
 `./1_create_test_app_namespace.sh`{{execute}}
 
-
 `./2_load_conjur_policies.sh`{{execute}}
 
-```
-export cli_pod_name="$( kubectl get pods --selector app=conjur-cli --no-headers | awk '{ print $1 }' )"
-export conjur_service="$( kubectl get services | grep "conjur-oss" | awk '{ print $1 }' )"
 
+4.  Store Conjur Cert
+```
+$cli delete --ignore-not-found=true configmap $TEST_APP_NAMESPACE_NAME
+$cli create configmap $TEST_APP_NAMESPACE_NAME --from-file=../conjur-quickstart.pem
 ```{{execute}}
+
+'./5_build_and_push_containers.sh`{{execute}}
+
+'./6_deploy_test_app.sh`{{execute}}
+
+`7_verify_authentication.sh`{{execute}}
