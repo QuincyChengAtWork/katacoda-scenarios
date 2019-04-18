@@ -1,0 +1,25 @@
+{
+  "title": "Work in progress Deploying Conjur Open Source on Minikube",
+  "icon": "fa-minikube",
+  "description": "Learning how to deploy Conjur Open Source on a Minikube",
+  "details": {
+    "steps": [
+      { "title": "Setup Minikube", "text": "minikube.md" },
+      { "title": "Setup Conjur", "text": "conjur.md" },
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mPreparing your environment.   It will take about 2 minutes.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
