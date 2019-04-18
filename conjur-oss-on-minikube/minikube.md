@@ -26,7 +26,9 @@ This command shows all nodes that can be used to host our applications. Now we h
 
 ### 3. Dashboard 
 
-Enable the dashboard using Minikube with the command minikube addons enable dashboard
+Enable the dashboard using Minikube with the command 
+
+`minikube addons enable dashboard`{{execute}}
 
 Make the Kubernetes Dashboard available by deploying the following YAML definition. This should only be used on Katacoda.
 
