@@ -3,6 +3,10 @@ set -euo pipefail
 
 . utils.sh
 
+if [[ "$PLATFORM" == "openshift" ]]; then
+    docker login -u _ -p $(oc whoami -t) $DOCKER_REGISTRY_PATH
+fi
+
 announce "Building and pushing test app images."
 
 readonly APPS=(
@@ -11,9 +15,22 @@ readonly APPS=(
 )
 
 pushd test_app_summon
+  if [[ "$PLATFORM" == "openshift" ]]; then
+    echo "Building Summon binaries to include in app image"
+    docker build -t test-app-builder -f Dockerfile.builder .
+
+    # retrieve the summon binaries
+    id=$(docker create test-app-builder)
+    docker cp $id:/usr/local/lib/summon/summon-conjur ./tmp.summon-conjur
+    docker cp $id:/usr/local/bin/summon ./tmp.summon
+    docker rm --volumes $id
+  fi
+
+
   for app_type in "${APPS[@]}"; do
     # prep secrets.yml
-    sed -e "s#{{ TEST_APP_NAME }}#test-summon-$app_type-app#g" ./secrets.template.yml > secrets.yml
+    # NOTE: generated files are prefixed with the test app namespace to allow for parallel CI
+    sed "s#{{ TEST_APP_NAME }}#test-summon-$app_type-app#g" ./secrets.template.yml > "tmp.$TEST_APP_NAMESPACE_NAME.secrets.yml"
 
     dockerfile="Dockerfile"
     if [[ "$PLATFORM" == "openshift" ]]; then
@@ -22,11 +39,16 @@ pushd test_app_summon
 
     echo "Building test app image"
     docker build \
-      -t test-app:$CONJUR_NAMESPACE_NAME \
-      -f $dockerfile .
+      --build-arg namespace=$TEST_APP_NAMESPACE_NAME \
+      --tag test-app:$CONJUR_NAMESPACE_NAME \
+      --file $dockerfile .
 
     test_app_image=$(platform_image "test-$app_type-app")
     docker tag test-app:$CONJUR_NAMESPACE_NAME $test_app_image
+
+#    if [[ is_minienv != true ]]; then
+#      docker push $test_app_image
+#    fi
   done
 popd
 
@@ -37,6 +59,9 @@ if [[ "$PLATFORM" != "openshift" ]]; then
     test_app_pg_image=$(platform_image test-app-pg)
     docker tag test-app-pg:$CONJUR_NAMESPACE_NAME $test_app_pg_image
 
+#    if [[ is_minienv != true ]]; then
+#      docker push $test_app_pg_image
+#    fi
   popd
 fi
 
@@ -48,4 +73,9 @@ if [[ "$LOCAL_AUTHENTICATOR" == "true" ]]; then
   # Re-tag the locally-built secretless-broker:latest image
   secretless_image=$(platform_image secretless-broker)
   docker tag secretless-broker:latest $secretless_image
+
+#  if [[ is_minienv != true ]]; then
+#    docker push $authn_image
+#    docker push $secretless_image
+#  fi
 fi
