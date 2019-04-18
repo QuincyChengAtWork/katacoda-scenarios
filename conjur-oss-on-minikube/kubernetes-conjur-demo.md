@@ -36,7 +36,8 @@ export DEPLOY_MASTER_CLUSTER=true
 ### Store Conjur Cert
 ```
 kubectl delete --ignore-not-found=true configmap $TEST_APP_NAMESPACE_NAME
-kubectl create configmap $TEST_APP_NAMESPACE_NAME --from-file=../conjur-quickstart.pem
+cp ../conjur-quickstart.pem ./ssl_certificate
+kubectl create configmap $TEST_APP_NAMESPACE_NAME --from-file=./ssl_certificate
 ```{{execute}}
 
 ### Build and Push containers
