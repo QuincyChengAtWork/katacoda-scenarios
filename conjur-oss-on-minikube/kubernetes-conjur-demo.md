@@ -39,7 +39,7 @@ We can skip this step for Conjur OSS.
 `./3_init_conjur_cert_authority.sh`{{execute}}
 
 ### Store Conjur Cert
-`./4_store_conjur_cert.shh`{{execute}}
+`./4_store_conjur_cert.sh`{{execute}}
 
 ### Build and Push containers
 
