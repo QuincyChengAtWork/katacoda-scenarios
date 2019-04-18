@@ -24,39 +24,8 @@ export CONJUR_ADMIN_PASSWORD=$(grep API ../admin.out | cut -d: -f2 | tr -d ' \r\
 
 `./1_create_test_app_namespace.sh`{{execute}}
 
-```
-cat >conjur-cli.yml<<EOF
----
-apiVersion: apps/v1beta1
-kind: Deployment
-metadata:
-  name: conjur-cli
-  labels:
-    app: conjur-cli
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: conjur-cli
-  template:
-    metadata:
-      name: conjur-cli
-      labels:
-        app: conjur-cli
-    spec:
-      containers:
-      - name: conjur-cli
-        image: cyberark/conjur-cli:5
-        imagePullPolicy: IfNotPresent
-        command: ["sleep"]
-        args: ["infinity"]
-      imagePullSecrets:
-        - name: dockerpullsecret
-EOF
-kubectl create -f conjur-cli.yml
-```{{execute}}
 
-`.\2_load_conjur_policies.sh`{{execute}}
+`./2_load_conjur_policies.sh`{{execute}}
 
 ```
 export cli_pod_name="$( kubectl get pods --selector app=conjur-cli --no-headers | awk '{ print $1 }' )"
