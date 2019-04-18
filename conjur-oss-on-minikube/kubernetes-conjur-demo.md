@@ -20,8 +20,14 @@ export CONJUR_MAJOR_VERSION=5
 export CONJUR_ADMIN_PASSWORD=$(grep API ../admin.out | cut -d: -f2 | tr -d ' \r\n')
 ```{{execute}}
 
-`0_check_dependencies.sh`{{execute}}
+`.\0_check_dependencies.sh`{{execute}}
 
-`1_create_test_app_namespace.sh`{{execute}}
+`.\1_create_test_app_namespace.sh`{{execute}}
 
-`2_load_conjur_policies.sh`{{execute}}
+`.\2_load_conjur_policies.sh`{{execute}}
+
+
+```
+kubectl get pods --selector app=conjur-cli --no-headers | awk '{ print $1 }')
+echo $pod_list | awk '{print $1}'
+```{{execute}}
