@@ -19,7 +19,7 @@ It will take a moment for the container to spin up.   If you got any error after
 
 #### Conjur init
 
-`kubectl exec -it $cli_pod_name -- conjur init -a quickstart -u https://$conjur_service`{{execute}}
+`kubectl exec -it $cli_pod_name -- conjur init -a default -u https://$conjur_service`{{execute}}
 
 Trust this certificate (yes/no): `yes`{{execute}}
 
@@ -28,4 +28,4 @@ Trust this certificate (yes/no): `yes`{{execute}}
 
 ### Copy Certificate for next step
 
-`kubectl cp $cli_pod_name:/root/conjur-quickstart.pem .`{{execute}}
+`kubectl cp $cli_pod_name:/root/conjur-default.pem .`{{execute}}
