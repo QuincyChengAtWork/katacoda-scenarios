@@ -12,7 +12,7 @@
 export TEST_APP_NAMESPACE_NAME=test-app
 export TEST_APP_DATABASE=postgres
 export CONJUR_NAMESPACE_NAME=default
-export CONJUR_ACCOUNT=quickstart
+export CONJUR_ACCOUNT=default
 export AUTHENTICATOR_ID=authn
 export DOCKER_REGISTRY_PATH=$(minikube ip):5000
 export DOCKER_REGISTRY_URL=$(minikube ip):5000
@@ -33,7 +33,7 @@ export DEPLOY_MASTER_CLUSTER=true
 
 `./2_load_conjur_policies.sh`{{execute}}
 
-### Store Conjur Cert
+### Init Certificate Authority
 For Enterprise version only.   
 We can skip this step for Conjur OSS.
 `./3_init_conjur_cert_authority.sh`{{execute}}
