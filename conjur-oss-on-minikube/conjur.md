@@ -30,7 +30,7 @@ Inspect and install a chart
 
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
-  --set account=quickstart \
+  --set account=default \
   --set ssl.hostname="[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com" \
   --set image.pullPolicy=IfNotPresent \
   --set postgres.persistentVolume.create=false \
@@ -42,13 +42,13 @@ Please wait for a while if an error is shown - Most likely the tiller is being s
 
 ### 4. Configure Conjur
 
-To create an initial account as "quickstart" and login
+To create an initial account as "default" and login
 
 ```
 export POD_NAME=$(kubectl get pods --namespace default \
       -l "app=conjur-oss" \
      -o jsonpath="{.items[0].metadata.name}")
-kubectl exec $POD_NAME --container=conjur-oss conjurctl account create "quickstart" | tee admin.out
+kubectl exec $POD_NAME --container=conjur-oss conjurctl account create default | tee admin.out
 ```{{execute}}
 
 Detailed instructions here: https://www.conjur.org/get-started/install-conjur.html#install-and-configure
