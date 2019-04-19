@@ -30,12 +30,12 @@ Inspect and install a chart
 
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
-  --authenticators="authn-k8s/dev\,authn" \
+  --set authenticators="authn-k8s/dev\,authn" \
   --set account=quincy \
   --set ssl.hostname="[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com" \
   --set image.pullPolicy=IfNotPresent \
   --set postgres.persistentVolume.create=false \
-  --set service.external.enabled=true \
+  --set service.external.enabled=false \
   cyberark/conjur-oss`{{execute}}
   
 Please wait for a while if an error is shown - Most likely the tiller is being started.  
