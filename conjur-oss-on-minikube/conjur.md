@@ -31,7 +31,7 @@ Inspect and install a chart
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
   --set account=default \
-  --set ssl.hostname="[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com" \
+  --set ssl.hostname="[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com" \
   --set image.pullPolicy=IfNotPresent \
   --set postgres.persistentVolume.create=false \
   --set service.external.enabled=false \
