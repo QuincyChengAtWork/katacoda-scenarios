@@ -30,11 +30,12 @@ Inspect and install a chart
 
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
-  --set account=default \
+  --authenticators="authn-k8s/dev\,authn" \
+  --set account=quincy \
   --set ssl.hostname="[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com" \
   --set image.pullPolicy=IfNotPresent \
   --set postgres.persistentVolume.create=false \
-  --set service.external.enabled=false \
+  --set service.external.enabled=true \
   cyberark/conjur-oss`{{execute}}
   
 Please wait for a while if an error is shown - Most likely the tiller is being started.  
@@ -48,7 +49,7 @@ To create an initial account as "default" and login
 export POD_NAME=$(kubectl get pods --namespace default \
       -l "app=conjur-oss" \
      -o jsonpath="{.items[0].metadata.name}")
-kubectl exec $POD_NAME --container=conjur-oss conjurctl account create default | tee admin.out
+kubectl exec $POD_NAME --container=conjur-oss conjurctl account create quincy | tee admin.out
 ```{{execute}}
 
 Detailed instructions here: https://www.conjur.org/get-started/install-conjur.html#install-and-configure
