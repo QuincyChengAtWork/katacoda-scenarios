@@ -2,13 +2,13 @@
 
 ### Load Deployment
 
-`kubectl create -f conjur-cli.yml`{{execute}}
+`kubectl create -f conjur-cli.yml --namespace $CONJUR_NAMESPACE`{{execute}}
 
 ### Get Details
 
 ```
-export cli_pod_name="$( kubectl get pods --selector app=conjur-cli --no-headers | awk '{ print $1 }' )"
-export conjur_service="$( kubectl get services | grep "conjur-oss" | grep -v "ingress" | awk '{ print $1 }' )"
+export cli_pod_name="$( kubectl get pods --selector app=conjur-cli --no-headers --namespace $CONJUR_NAMESPACE | awk '{ print $1 }' )"
+export conjur_service="$( kubectl get services --namespace $CONJUR_NAMESPACE | grep "conjur-oss" | grep -v "ingress" | awk '{ print $1 }' )"
 export CONJUR_ADMIN_PASSWORD=$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')
 ```{{execute}}
 
