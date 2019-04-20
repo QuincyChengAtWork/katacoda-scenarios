@@ -31,7 +31,7 @@ Inspect and install a chart
 export CONJUR_NAMESPACE=conjur
 export CONJUR_APP_NAME=conjur-oss
 export CONJUR_ALT_HOSTNAME_SSL=conjur-oss.conjur.svc.cluster.local
-
+kubectl create namespace "$CONJUR_NAMESPACE"
 ```{{execute}}
 
 ### 3. Install Conjur using Helm
@@ -53,10 +53,10 @@ Please wait for a while if an error is shown - Most likely the tiller is being s
 
 ### 4. Configure Conjur
 
-To create an initial account as "default" and login
+To create an initial account as "quincy" and login
 
 ```
-export POD_NAME=$(kubectl get pods --namespace default \
+export POD_NAME=$(kubectl get pods --namespace $CONJUR_NAMESPACE \
       -l "app=conjur-oss" \
      -o jsonpath="{.items[0].metadata.name}")
 kubectl exec $POD_NAME --container=conjur-oss conjurctl account create quincy | tee admin.out
