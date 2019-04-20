@@ -26,16 +26,26 @@ View all CyberArk charts
 Inspect and install a chart
 `helm inspect cyberark/conjur-oss`{{execute}}
 
+### 3. Create a namespace for Conjur OSS
+```
+export CONJUR_NAMESPACE=conjur
+export CONJUR_APP_NAME=conjur-oss
+export CONJUR_ALT_HOSTNAME_SSL=conjur-oss.conjur.svc.cluster.local
+
+```{{execute}}
+
 ### 3. Install Conjur using Helm
 
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
   --set authenticators="authn-k8s/dev\,authn" \
   --set account=quincy \
-  --set ssl.hostname="[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com" \
+  --set ssl.hostname="$CONJUR_ALT_HOSTNAME_SSL" \
   --set image.pullPolicy=IfNotPresent \
   --set postgres.persistentVolume.create=false \
   --set service.external.enabled=false \
+  --namespace "$CONJUR_NAMESPACE" \
+  --name "$CONJUR_APP_NAME"
   cyberark/conjur-oss`{{execute}}
   
 Please wait for a while if an error is shown - Most likely the tiller is being started.  
