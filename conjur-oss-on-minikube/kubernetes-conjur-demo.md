@@ -11,7 +11,7 @@
 ```
 export TEST_APP_NAMESPACE_NAME=test-app
 export TEST_APP_DATABASE=postgres
-export CONJUR_NAMESPACE_NAME=conjur-oss
+export CONJUR_NAMESPACE_NAME=conjur
 export CONJUR_ACCOUNT=quincy
 export AUTHENTICATOR_ID=dev
 export DOCKER_REGISTRY_PATH=$(minikube ip):5000
@@ -19,6 +19,7 @@ export DOCKER_REGISTRY_URL=$(minikube ip):5000
 export CONJUR_MAJOR_VERSION=5
 export CONJUR_ADMIN_PASSWORD=$(grep API ../admin.out | cut -d: -f2 | tr -d ' \r\n')
 export DEPLOY_MASTER_CLUSTER=true
+export conjur_service=conjur-oss
 ```{{execute}}
 
 ### Check Dependencies
