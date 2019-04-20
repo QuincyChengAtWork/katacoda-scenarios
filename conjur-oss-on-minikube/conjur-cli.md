@@ -9,6 +9,9 @@
 ```
 export cli_pod_name="$( kubectl get pods --selector app=conjur-cli --no-headers --namespace $CONJUR_NAMESPACE | awk '{ print $1 }' )"
 export conjur_service="$( kubectl get services --namespace $CONJUR_NAMESPACE | grep "conjur-oss" | grep -v "ingress" | awk '{ print $1 }' )"
+
+export conjur_service=$CONJUR_ALT_HOSTNAME_SSL
+
 export CONJUR_ADMIN_PASSWORD=$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')
 ```{{execute}}
 
@@ -19,13 +22,13 @@ It will take a moment for the container to spin up.   If you got any error after
 
 #### Conjur init
 
-`kubectl exec -it $cli_pod_name -- conjur init -a quincy -u https://$conjur_service`{{execute}}
+`kubectl exec --namespace $CONJUR_NAMESPACE -it $cli_pod_name -- conjur init -a quincy -u https://$conjur_service`{{execute}}
 
 Trust this certificate (yes/no): `yes`{{execute}}
 
 #### Conjur Login
-`kubectl exec -it $cli_pod_name -- conjur authn login -u admin -p $CONJUR_ADMIN_PASSWORD`{{execute}}
+`kubectl exec --namespace $CONJUR_NAMESPACE -it $cli_pod_name -- conjur authn login -u admin -p $CONJUR_ADMIN_PASSWORD`{{execute}}
 
 ### Copy Certificate for next step
 
-`kubectl cp $cli_pod_name:/root/conjur-quincy.pem .`{{execute}}
+`kubectl cp --namespace $CONJUR_NAMESPACE $cli_pod_name:/root/conjur-quincy.pem .`{{execute}}
