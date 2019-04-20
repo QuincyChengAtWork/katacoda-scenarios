@@ -45,7 +45,7 @@ kubectl create namespace "$CONJUR_NAMESPACE"
   --set postgres.persistentVolume.create=false \
   --set service.external.enabled=false \
   --namespace "$CONJUR_NAMESPACE" \
-  --name "$CONJUR_APP_NAME"
+  --name "$CONJUR_APP_NAME" \
   cyberark/conjur-oss`{{execute}}
   
 Please wait for a while if an error is shown - Most likely the tiller is being started.  
@@ -59,7 +59,7 @@ To create an initial account as "quincy" and login
 export POD_NAME=$(kubectl get pods --namespace $CONJUR_NAMESPACE \
       -l "app=conjur-oss" \
      -o jsonpath="{.items[0].metadata.name}")
-kubectl exec $POD_NAME --container=conjur-oss conjurctl account create quincy | tee admin.out
+kubectl exec --namespace $CONJUR_NAMESPACE $POD_NAME --container=conjur-oss conjurctl account create quincy | tee admin.out
 ```{{execute}}
 
 Detailed instructions here: https://www.conjur.org/get-started/install-conjur.html#install-and-configure
