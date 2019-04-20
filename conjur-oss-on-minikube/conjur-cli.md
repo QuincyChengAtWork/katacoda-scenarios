@@ -19,7 +19,7 @@ It will take a moment for the container to spin up.   If you got any error after
 
 #### Conjur init
 
-`kubectl exec --namespace $CONJUR_NAMESPACE -it $cli_pod_name -- conjur init -a quincy -u https://$conjur_service`{{execute}}
+`kubectl exec --namespace $CONJUR_NAMESPACE -it $cli_pod_name -- conjur init -a quincy -u https://$CONJUR_ALT_HOSTNAME_SSL`{{execute}}
 
 Trust this certificate (yes/no): `yes`{{execute}}
 
