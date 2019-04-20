@@ -39,3 +39,9 @@ The Kubernetes dashboard allows you to view your applications in a UI. In this d
 The URL to the dashboard is https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
 
 It will take a moment to start the dashboard.   Let's move on the load the dashboard later.
+
+### 4. Tunnel
+
+In some cases, we will need minikube to enable tunnel for routing network traffic.   
+
+`minikube tunnel > tunnel.log &`{{execute}}
