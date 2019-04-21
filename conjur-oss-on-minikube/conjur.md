@@ -38,7 +38,7 @@ kubectl create namespace "$CONJUR_NAMESPACE"
 
 `helm install \
   --set dataKey="$(docker run --rm cyberark/conjur data-key generate)" \
-  --set authenticators="authn-k8s/dev\,authn" \
+  --set authenticators="authn-k8s/dev" \
   --set account=quincy \
   --set ssl.hostname="$CONJUR_ALT_HOSTNAME_SSL" \
   --set image.pullPolicy=IfNotPresent \
