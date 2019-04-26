@@ -4,10 +4,27 @@
   "description": "...under construction",
   "details": {
     "steps": [
-      { "title": "Setup Minikube", "text": "minikube.md" },
-      { "title": "Setup Conjur Server", "text": "conjur.md" },
-      { "title": "Setup Conjur Client", "text": "conjur-cli.md" },
-       { "title": "Setup Demo App", "text": "kubernetes-conjur-demo.md" }
+      { "title": "Overview", "text": "overview.md" },
+      { "title": "Setup Minikube", "text": "minikube-1.md" },
+      { "title": "Review Cluster Info", "text": "minikube-2.md" },
+      { "title": "Enabling Dashboard", "text": "minikube-3.md" },
+      { "title": "Enabling Tunnel", "text": "minikube-4.md" },
+
+      { "title": "Build Insecure App", "text": "insecure-1.md" },
+      { "title": "Deploy Insecure App", "text": "insecure-2.md" },
+      { "title": "Using Insecure App", "text": "insecure-3.md" },
+      { "title": "Risk of embedded secrets", "text": "insecure-4.md" },
+      
+      { "title": "Depoy Conjur", "text": "conjur-1.md" },
+      { "title": "Initalize Conjur", "text": "conjur-2.md" },
+      { "title": "Change Admin Password", "text": "conjur-3.md" },
+      { "title": "Load Policies", "text": "conjur-4.md" },
+      { "title": "Initalize CA", "text": "conjur-5.md" },
+      
+      { "title": "Build Insecure App", "text": "insecure-1.md" },
+      { "title": "Deploy Insecure App", "text": "insecure-2.md" },
+      { "title": "Using Insecure App", "text": "insecure-3.md" },
+      { "title": "No more embedded secrets", "text": "insecure-4.md" },
     ],
     "intro": {
       "text": "intro.md",
@@ -16,12 +33,11 @@
     "finish": {
       "text": "finish.md"
     },
-     "assets": { "host01": [ {"file": "*", "target": "/root"}, {"file": "*.sh", "target": "/root", "chmod":"+x"} ] }
   },
   "environment": {
     "uilayout": "terminal",
     "showdashboard": true,
-     "dashboards": [{"name": "Minikube Dashboard", "port": 30000}, {"name": "Display 443", "port": 443}]
+     "dashboards": [{"name": "Minikube Dashboard", "port": 30000}]
   },
   "backend": {
     "imageid": "minikube"
