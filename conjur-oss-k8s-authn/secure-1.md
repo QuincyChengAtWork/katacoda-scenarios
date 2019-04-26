@@ -1,5 +1,6 @@
 
 
-### Build & Deploy Insecure App
-
-`./7_deploy_testapp_with_conjur.sh`{{execute}}
+```
+source bootstrap.env
+./7_deploy_testapp_with_conjur.sh
+```{{execute}}
