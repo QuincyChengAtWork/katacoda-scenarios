@@ -1,7 +1,5 @@
 
 
-### Risk - Embedded Secret
-
 When we deploy the application, the database secret is embedded in the configuration
 
 `cat ./test-app/test-app.yml`{{execute}}
@@ -18,3 +16,7 @@ Can you find it?  It's at the end of the configuration.
 Who has reviewed it?  
 When did it happen?   
 Can you track it?  
+
+Yup, that's the risk we're talking about.
+
+Let's fix it!
