@@ -7,7 +7,7 @@ First, we'll need the application URL
 
 ```
 export secure_app_url=$(kubectl describe service test-app | grep 'LoadBalancer Ingress' | awk '{ print $3 }'):8080
-```{{exeucte}}
+```{{execute}}
 
 To list all pet messages:
 
