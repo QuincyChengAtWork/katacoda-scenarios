@@ -10,10 +10,9 @@
       { "title": "Enabling Dashboard", "text": "minikube-3.md" },
       { "title": "Enabling Tunnel", "text": "minikube-4.md" },
 
-      { "title": "Build Insecure App", "text": "insecure-1.md" },
-      { "title": "Deploy Insecure App", "text": "insecure-2.md" },
-      { "title": "Using Insecure App", "text": "insecure-3.md" },
-      { "title": "Risk of embedded secrets", "text": "insecure-4.md" },
+      { "title": "Build & Deploy Insecure App", "text": "insecure-1.md" },
+      { "title": "Using Insecure App", "text": "insecure-2.md" },
+      { "title": "Risk of embedded secrets", "text": "insecure-3.md" },
       
       { "title": "Depoy Conjur", "text": "conjur-1.md" },
       { "title": "Initalize Conjur", "text": "conjur-2.md" },
@@ -21,10 +20,9 @@
       { "title": "Load Policies", "text": "conjur-4.md" },
       { "title": "Initalize CA", "text": "conjur-5.md" },
       
-      { "title": "Build Insecure App", "text": "insecure-1.md" },
-      { "title": "Deploy Insecure App", "text": "insecure-2.md" },
-      { "title": "Using Insecure App", "text": "insecure-3.md" },
-      { "title": "No more embedded secrets", "text": "insecure-4.md" },
+      { "title": "Build & Deploy Insecure App", "text": "secure-1.md" },
+      { "title": "Using Insecure App", "text": "secure-2.md" },
+      { "title": "No more embedded secrets", "text": "secure-3.md" },
     ],
     "intro": {
       "text": "intro.md",
