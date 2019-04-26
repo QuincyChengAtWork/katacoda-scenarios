@@ -1,6 +1,5 @@
 
 
-### Start Minikube
 Minikube has been installed and configured in the environment. Check that it is properly installed, by running the minikube version command:
 
 `minikube version`{{execute}}
