@@ -22,7 +22,7 @@
       
       { "title": "Build & Deploy secure App", "text": "secure-1.md" },
       { "title": "Using secure App", "text": "secure-2.md" },
-      { "title": "No more embedded secrets", "text": "secure-3.md" },
+      { "title": "No more embedded secrets", "text": "secure-3.md" }
     ],
     "intro": {
       "text": "intro.md",
