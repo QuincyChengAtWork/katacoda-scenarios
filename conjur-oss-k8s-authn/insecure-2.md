@@ -1,7 +1,5 @@
 
 
-### Usage of Insecure App
-
 Let's test the app!
 
 First, we'll need the application URL and setup a random message generator
@@ -18,4 +16,3 @@ To list all pet messages:
 To add a new message:
 
 `curl  -d '{"name": "$(fortune)"}' -H "Content-Type: application/json" $app_url/pet`{{execute}}
-
