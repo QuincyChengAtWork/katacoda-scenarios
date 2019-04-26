@@ -1,5 +1,7 @@
 
-Let's deploy a typical web application as an example
+Let's deploy a typical web application.
+
+We will make use of the pet store demo app from CyberArk (https://github.com/conjurdemos/pet-store-demo)
 
 To build & deploy it:
 ```
