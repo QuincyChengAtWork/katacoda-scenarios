@@ -11,5 +11,4 @@ To review the access token and display the current system time:
 ```
 kubectl exec $(kubectl get pods |  grep "test-app" |  awk '{ print $1 }') cat /run/conjur/access-token
 date
-echo "\n\n"
 ```{{execute}}
