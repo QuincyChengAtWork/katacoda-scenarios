@@ -9,22 +9,22 @@ Last but not least, we will remove the embedded secrets and secret it using Conj
   - Review Cluster Info
   - Enabling Dashboard
   - Enabling Tunnel  
-
-- Setup Conjur
-  - Deploy 
-  - Initalize Conjur
-  - Change Admini Password
-  - Load Policies
-  - Initalize CA
   
 - Insecure App
   - Build 
   - Deploy
   - Usage
-  - Risk
-  
+  - Risk of embedded secrets
+
+- Setup Conjur
+  - Deploy Conjur
+  - Initalize Conjur
+  - Change Admin Password
+  - Load Policies
+  - Initalize CA
+
 - Secure App
   - Build
   - Deploy
   - Usage
-  - No more Risk
+  - No more embedded secrets
