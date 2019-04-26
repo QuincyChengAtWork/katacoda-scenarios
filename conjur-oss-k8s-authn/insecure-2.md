@@ -13,6 +13,6 @@ To list all pet messages:
 
 `curl $insecure_app_url/pets`{{execute}}
 
-To add a new message:
+To add a new message with a random name
 
 `curl  -d "{\"name\": \"$(shuf -n 1 /usr/share/dict/american-english)\"}" -H "Content-Type: application/json" $insecure_app_url/pet`{{execute}}
