@@ -1,7 +1,5 @@
 
 
-### No more embedded secrets
-
 The application doesn't have any embedded secrets.
 
 Check it out: `cat ./test-app/test-app-conjur.yml`{{execute}}
