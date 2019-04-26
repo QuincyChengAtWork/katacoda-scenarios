@@ -7,7 +7,7 @@ First, we'll need the application URL and setup a random message generator
 ```
 export insecure_app_url=$(kubectl describe service test-app | grep 'LoadBalancer Ingress' | awk '{ print $3 }'):8080
 apt install -y wamerican
-```{{exeucte}}
+```{{execute}}
 
 To list all pet messages:
 
