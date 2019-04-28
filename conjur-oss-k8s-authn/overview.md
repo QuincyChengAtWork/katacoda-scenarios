@@ -4,26 +4,26 @@ An simple REST API application will be deployed, and we will review its risk of 
 Last but not least, we will remove the embedded secrets and secret it using Conjur OSS.
 
 ### Agenda:
-- Setup Minikube
+- **Setup Minikube**
   - Start Minikube
   - Review Cluster Info
   - Enabling Dashboard
   - Enabling Tunnel  
   
-- Insecure App
+- **Insecure App**
   - Build 
   - Deploy
   - Usage
   - Risk of embedded secrets
 
-- Setup Conjur
+- **Setup Conjur**
   - Deploy Conjur
   - Initalize Conjur
   - Change Admin Password
   - Load Policies
   - Initalize CA
 
-- Secure App
+- **Secure App**
   - Build
   - Deploy
   - Usage
