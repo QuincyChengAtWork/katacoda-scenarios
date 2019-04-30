@@ -5,8 +5,9 @@
     "difficulty": "beginner",
     "time": "60 minutes",
     "backend": {
-        "trainingid": "openshift-3-10", 
-        "imageid": "openshift-3-10",
+#        "trainingid": "openshift-3-10", 
+#        "imageid": "openshift-3-10",
+        "imageid": "openshift-3-11-cluster",
         "port": 8443
     },
     "environment": {
