@@ -26,6 +26,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "conjur-docker"
+    "imageid": "docker"
   }
 }
