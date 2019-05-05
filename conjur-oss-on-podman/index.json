@@ -1,6 +1,6 @@
 {
   "title": "Deploy Conjur Open Source on podman (without docker)",
-  "icon": "fa-container-storage",
+  "icon": "fa-box-open",
   "description": "Learning how to deploy Conjur Open Source on podman, without using Docker",
   "details": {
     "steps": [
