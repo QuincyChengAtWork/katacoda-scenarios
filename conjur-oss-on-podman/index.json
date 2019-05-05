@@ -1,0 +1,24 @@
+{
+  "title": "work in progress",
+  "icon": "fa-runc",
+  "description": "Learning how to deploy Conjur Open Source on podman.",
+  "details": {
+    "steps": [
+      { "title": "Step 1 - Install Podman", "text": "podman.md" },
+      { "title": "Step 2 - Install Conjur OSS", "text": "conjur.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
