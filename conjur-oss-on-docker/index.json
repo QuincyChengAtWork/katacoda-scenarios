@@ -23,6 +23,6 @@
     "uimessage1": "\u001b[32mPreparing your environment.   It will take about 2 minutes.\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "conjur-docker"
+    "imageid": "docker"
   }
 }
