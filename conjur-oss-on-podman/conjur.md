@@ -1,5 +1,5 @@
 
-**Server**
+**Setup Server**
 
 First, we'll create a pod for Conjur OSS
 
@@ -17,14 +17,14 @@ Finally, the container for Conjur OSS will be created.
 
 `podman run --name conjur -d --pod=conjur-oss -e CONJUR_DATA_KEY="$CONJUR_DATA_KEY" -e DATABASE_URL=postgres://postgres@database/postgres --add-host database:127.0.0.1  docker.io/cyberark/conjur server `{{execute}}
 
-**Initialize Conjur***
+**Initialize Conjur**
 
 Let's create an account
 
 `podman exec conjur conjurctl account create quick-start | tee admin.out `{{execute}}
 
 
-**Client**
+**Setup Client**
 
 To prepare the necessary information, including admin API Key, Conjur IP address & folder storage:
 
