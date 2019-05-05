@@ -16,7 +16,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu"
