@@ -1,5 +1,5 @@
 {
-  "title": "Deploy Conjur OSS on podman (without docker)",
+  "title": "Deploy Conjur Open Source on podman (without docker)",
   "icon": "fa-podman",
   "description": "Learning how to deploy Conjur Open Source on podman, without using Docker",
   "details": {
