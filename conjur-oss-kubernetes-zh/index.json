@@ -1,6 +1,6 @@
 {
-  "title": "Deploying Conjur Open Source on Kubernetes using Helm (Traditional Chinese)",
-  "description": "Learning how to deploy Conjur Open Source using Helm in Traditional Chinese",
+  "title": "(Traditional Chinese) 使用Helm在Kubernetes上安裝Conjur",
+  "description": "學習如何使用Helm在Kubernetes上安裝Conjur",
   "difficulty": "初級", 
   "time": "10-15 分鐘",
   "icon":"fa-kubernetes",
