@@ -11,7 +11,7 @@ Then, the database container will be spinned up
 
 Next, we will generate a data key for Conjur OSS
 
-`podman run --rm conjur data-key generate > data_key &&  export CONJUR_DATA_KEY="$(< data_key)”`{{execute}}
+`podman run --rm docker.io/cyberark/conjur data-key generate > data_key &&  export CONJUR_DATA_KEY="$(< data_key)"`{{execute}}
 
 Finally, the container for Conjur OSS will be created. 
 
@@ -23,12 +23,26 @@ Let's create an account
 
 `podman exec conjur conjurctl account create quick-start | tee admin.out `{{execute}}
 
-And save the admin key for client connectivity
-
-`export api_key="$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"`{{execute}}
 
 **Client**
 
-`podman run --rm -it -v $(pwd)/mydata/:/root --entrypoint bash docker.io/cyberark/conjur-cli:5 -c "echo yes | conjur init -a quick-start -u https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/"`{{execute}}
+To prepare the necessary information, including admin API Key, Conjur IP address & folder storage:
+
+```
+export api_key="$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"
+export SERVICE_IP=$(ifconfig ens3| grep "inet addr" | cut -d ':' -f 2 | cut -d ' ' -f 1)
+mkdir mydata
+```{{execute}}
+
+Let's initialize Conjur CLI
+
+`podman run --rm -it -v $(pwd)/mydata/:/root --entrypoint bash docker.io/cyberark/conjur-cli:5 -c "echo yes | conjur init -a quick-start -u http://$SERVICE_IP:8080"`{{execute}}
+
+To Login:
 
 `podman run --rm -it -v $(pwd)/mydata/:/root docker.io/cyberark/conjur-cli:5 authn login -u admin -p $api_key`{{execute}}
+
+And verify the logon user:
+
+`podman run --rm -it -v $(pwd)/mydata/:/root docker.io/cyberark/conjur-cli:5 authn whoami`{{execute}}
+
