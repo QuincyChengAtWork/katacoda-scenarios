@@ -1,6 +1,6 @@
 {
   "title": "work in progress",
-  "icon": "fa-runc",
+  "icon": "fa-podman",
   "description": "Learning how to deploy Conjur Open Source on podman.",
   "details": {
     "steps": [
