@@ -1,11 +1,10 @@
 
+# Setup OpenShift
+
+The OpenShift environment is prepared for you.
+Once the prompt is shown, you can verify it by executing:
 
 `oc version`{{execute}}
-
-`oc info`{{execute}}
-
-
-
 
 
 # Logging in to the Cluster
@@ -15,18 +14,17 @@ Before creating any applications, it is recommended you login as a distinct user
 
 To login to the OpenShift cluster from the Terminal run:
 
-`oc login -u developer -p developer  [[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/
-
-`{{execute}}
+`oc login -u developer -p developer [[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 This will log you in using the credentials:
 
 Username: `developer`
+
 Password: `developer`
+
 Use the same credentials to log into the web console.
 
 In order that you can still run commands from the command line as a cluster admin, the sudoer role has been enabled for the developer account. To execute a command as a cluster admin use the --as system:admin option to the command. For example:
-
 
 
 # Running Images as a Defined User
@@ -37,4 +35,3 @@ If you attempt to run an arbitrary image from an external image registry such a 
 In order to run such an image, you will need to grant additional privileges to the project you create to allow it to run an application image as any user ID. This can be done by running the command:
 
 `oc adm policy add-scc-to-user anyuid -z default -n myproject --as system:admin`{{execute}}
-
