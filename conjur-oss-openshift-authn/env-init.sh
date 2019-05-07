@@ -6,3 +6,5 @@ ssh root@host01 "oc create -f volumes.json"
 
 git clone https://github.com/QuincyChengAtWork/conjur-oss-openshift-authn-katacoda.git
 cd conjur-oss-openshift-authn-katacoda
+clear
+launch.sh
