@@ -37,6 +37,6 @@
      "dashboards": [{"name": "Dashboard", "port": 8443}]
   },
   "backend": {
-    "imageid": "openshift"
+     "imageid": "openshift-3-11"
   }
 }
