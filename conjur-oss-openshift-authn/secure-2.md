@@ -15,6 +15,6 @@ To list all pet messages:
 
 To add a new message:
 
-`curl  -d "{\"name\": \"$(shuf -n 1 /usr/share/dict/american-english)\"}" -H "Content-Type: application/json" $secure_app_url/pet`{{execute}}
+`curl  -d "{\"name\": \"$(shuf -n 1 /usr/share/dict/words)\"}" -H "Content-Type: application/json" $secure_app_url/pet`{{execute}}
 
 You can repeat the above actions to create & review multiple entries.
