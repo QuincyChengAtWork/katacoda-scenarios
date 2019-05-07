@@ -1,3 +1,3 @@
-git clone https://github.com/QuincyChengAtWork/conjur-oss-k8s-authn-katacoda.git
-cd conjur-oss-k8s-authn-katacoda
+git clone https://github.com/QuincyChengAtWork/conjur-oss-openshift-authn-katacoda.git
+cd conjur-oss-openshift-authn-katacoda
 clear
