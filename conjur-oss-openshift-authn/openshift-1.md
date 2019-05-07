@@ -16,6 +16,8 @@ To login to the OpenShift cluster from the Terminal run:
 
 `oc login -u developer -p developer [[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
+Use insecure connections? (y/n): `y`{{execute}}
+
 This will log you in using the credentials:
 
 Username: `developer`
