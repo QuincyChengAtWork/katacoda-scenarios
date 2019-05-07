@@ -4,5 +4,5 @@ Conjur is an open source security service that integrates with popular tools to 
 
 Reference: https://docs.conjur.org/Latest/en/Content/Integrations/kubernetes.htm
 
-![architecture](https://docs.conjur.org/Latest/en/Content/Images/Integrations/openshift-oss-integration-arch.jpg)
+![architecture](https://docs.conjur.org/Latest/en/Content/Images/Integrations/k8s-oss-integration-arch.jpg)
 ![ga](https://ga-beacon-226104.appspot.com/UA-131132287-1/conjur-oss-8s-openshift?pixel&useReferer)
