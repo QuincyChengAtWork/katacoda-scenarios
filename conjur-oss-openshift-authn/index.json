@@ -1,0 +1,42 @@
+{
+  "title": "Work in Progress - Conjur Openshift Authentication",
+  "icon": "fa-openshift",
+  "description": "Learn how to securely pass secrets stored in Conjur to OpenShift applications",
+  "details": {
+    "steps": [
+      { "title": "Overview", "text": "overview.md" },
+      
+      { "title": "Setup Openshift", "text": "openshift-1.md" },
+
+      { "title": "Build & Deploy Insecure App", "text": "insecure-1.md" },
+      { "title": "Using Insecure App", "text": "insecure-2.md" },
+      { "title": "Risk of Embedded Secrets", "text": "insecure-3.md" },
+      
+      { "title": "Depoy Conjur", "text": "conjur-1.md" },
+      { "title": "Initalize Conjur", "text": "conjur-2.md" },
+      { "title": "Change Admin Password", "text": "conjur-3.md" },
+      { "title": "Load Policies", "text": "conjur-4.md" },
+      { "title": "Initalize CA", "text": "conjur-5.md" },
+      
+      { "title": "Build & Deploy Secure App", "text": "secure-1.md" },
+      { "title": "Using Secure App", "text": "secure-2.md" },
+      { "title": "No More Embedded Secrets", "text": "secure-3.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+     "dashboards": [{"name": "Dashboard", "port": 8443}]
+  },
+  "backend": {
+    "imageid": "openshift"
+  }
+}
