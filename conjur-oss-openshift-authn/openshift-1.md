@@ -28,6 +28,8 @@ Use the same credentials to log into the web console.
 
 In order that you can still run commands from the command line as a cluster admin, the sudoer role has been enabled for the developer account. To execute a command as a cluster admin use the --as system:admin option to the command. For example:
 
+`oc adm policy add-cluster-role-to-user cluster-admin developer --as=system:admin`{{execute}}
+
 
 # Running Images as a Defined User
 By default OpenShift prohibits images from running as the root user or as a specified user. Instead, each project is assigned its own unique range of user IDs that application images have to run as.
