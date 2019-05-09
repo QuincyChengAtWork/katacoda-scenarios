@@ -24,14 +24,20 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "env-init.sh",
+            "courseData": "env-init.sh",
+            "code": "set-env.sh",
+
       "credits": "https://www.conjur.org"
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
-       "host01": [{"file": "volumes.json", "target": "~/"}]
+          "host01": [
+              {"file": "volumes.json", "target": "~/"},
+              {"file": ".setup-volumes", "target": "~/", "chmod": "+x"},
+              {"file": ".setup-templates", "target": "~/", "chmod": "+x"}
+          ]
     }
   },
   "environment": {
@@ -40,6 +46,7 @@
      "dashboards": [{"name": "Dashboard", "port": 8443}]
   },
   "backend": {
-     "imageid": "openshift-3-11"
+        "imageid": "openshift-3-11-cluster",
+        "port": 8443
   }
 }
