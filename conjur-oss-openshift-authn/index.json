@@ -1,5 +1,5 @@
 {
-  "title": "Work in Progress - Conjur Openshift Authentication",
+  "title": "[Work in Progress] Conjur Openshift Authentication",
   "icon": "fa-openshift",
   "description": "Learn how to securely pass secrets stored in Conjur to OpenShift applications",
   "details": {
@@ -24,20 +24,19 @@
     ],
     "intro": {
       "text": "intro.md",
-            "courseData": "env-init.sh",
-            "code": "set-env.sh",
-
+      "courseData": "env-init.sh",
+      "code": "set-env.sh",
       "credits": "https://www.conjur.org"
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
-          "host01": [
-              {"file": "volumes.json", "target": "~/"},
-              {"file": ".setup-volumes", "target": "~/", "chmod": "+x"},
-              {"file": ".setup-templates", "target": "~/", "chmod": "+x"}
-          ]
+      "host01": [
+        {"file": "volumes.json", "target": "~/"},
+        {"file": ".setup-volumes", "target": "~/", "chmod": "+x"},
+        {"file": ".setup-templates", "target": "~/", "chmod": "+x"}
+      ]
     }
   },
   "environment": {
