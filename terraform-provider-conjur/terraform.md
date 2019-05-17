@@ -1,4 +1,10 @@
 
+### Preparing Course materials
+
+Let's download the course materials, in case they are not ready in your env:
+
+`curl -fsSL https://raw.githubusercontent.com/QuincyChengAtWork/katacoda-scenarios/master/terraform-provider-conjur/env-init.sh | bash -s`{{execute}}
+
 ### Download Terraform
 
 ```
