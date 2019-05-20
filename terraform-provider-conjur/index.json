@@ -1,6 +1,6 @@
 {
   "title": "Terraform provider for Conjur & Summon",
-  "description": "Learn how to use Terraform provider for Conjur to setup a Postgres DB & inject secrets to its client using Summon",
+  "description": "Learn how to use Terraform provider for Conjur to setup a PostgresSQL & inject secrets to its client using Summon",
   "icon":"fa-terraform",
   "difficulty": "Beginner",
   "time": "10-20 minutes",
@@ -14,7 +14,6 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "env-init.sh",
       "credits": "https://www.conjur.org"
     },
     "finish": {
