@@ -12,7 +12,7 @@ curl -sO https://raw.githubusercontent.com/QuincyChengAtWork/katacoda-scenarios/
 chmod +x setupConjur.sh
 
 apt-get update
-apt-get install unzip
+apt-get install -y unzip wget 
 
 
 clear && echo "The environment is now ready!"
