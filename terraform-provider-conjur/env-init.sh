@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd /root
 curl -sO https://raw.githubusercontent.com/QuincyChengAtWork/katacoda-scenarios/master/terraform-provider-conjur/assets/conjur.tf
 curl -sO https://raw.githubusercontent.com/QuincyChengAtWork/katacoda-scenarios/master/terraform-provider-conjur/assets/conjur.yml
 curl -sO https://raw.githubusercontent.com/QuincyChengAtWork/katacoda-scenarios/master/terraform-provider-conjur/assets/docker.tf
