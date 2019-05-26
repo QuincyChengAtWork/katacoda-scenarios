@@ -26,6 +26,8 @@ To inject the password to Postgres client using Summon, `secrets.yml` file is ne
 
 To review, execute `cat secrets.yml`{{execute}}
 
+`PGPASSWORD: !var postgres/admin-password`
+
 ### Connect to Postgres DB using Summon
 
 As we have exposed TCP port 5432 from postgres database, we can connect to it to by:
@@ -33,3 +35,5 @@ As we have exposed TCP port 5432 from postgres database, we can connect to it to
 ```
 summon psql -h docker -U postgres
 ```{{execute}}
+
+You should have logged in using the postgres database client without knowing the password! Cool!
