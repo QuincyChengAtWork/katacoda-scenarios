@@ -44,3 +44,7 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 
 An additional container is now up & running.
 To verify, execute `docker ps`{{execute}}
+
+To review the postgres database log, we can execute;
+
+`docker logs postgres`{{execute}}
