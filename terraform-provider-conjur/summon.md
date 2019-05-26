@@ -28,7 +28,8 @@ To review, execute `cat secrets.yml`{{execute}}
 
 ### Connect to Postgres DB using Summon
 
+As we have exposed TCP port 5432 from postgres database, we can connect to it to by:
+
 ```
-psql_ip="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgres )"
-summon psql -h $psql_ip -U postgres
+summon psql -h docker -U postgres
 ```{{execute}}
