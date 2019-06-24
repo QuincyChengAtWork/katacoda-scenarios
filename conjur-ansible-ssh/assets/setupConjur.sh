@@ -12,3 +12,4 @@ docker-compose exec client bash -c "echo yes | conjur init -u $1 -a demo"
 sleep 10
 api_key="$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"
 docker-compose exec client conjur authn login -u admin -p "$api_key"
+cd ..
