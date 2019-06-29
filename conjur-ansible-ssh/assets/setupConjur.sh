@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml
+curl -o docker-compose.yml https://quincycheng.github.io/docker-compose.quickstart.yml
 git clone https://github.com/cyberark/conjur-quickstart.git
 cd conjur-quickstart
 docker-compose pull
