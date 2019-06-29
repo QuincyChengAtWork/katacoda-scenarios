@@ -33,7 +33,7 @@ To review, execute `cat secrets.yml`{{execute}}
 As we have exposed TCP port 5432 from postgres database, we can connect to it to by:
 
 ```
-summon psql -h docker -U postgres
+summon psql -h host01 -U postgres
 ```{{execute}}
 
 You should have logged in using the postgres database client without knowing the password! Cool!
