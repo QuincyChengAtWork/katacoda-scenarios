@@ -1,5 +1,5 @@
 {
-  "title": "Secretless on Kubernetes",
+  "title": "[work in progress] Using Secretless on Kubernetes",
   "icon": "fa-kubernetes",
   "description": "Learn how to use Secretless in Kubernetes",
   "details": {
@@ -33,16 +33,3 @@
       "code": "env-init.sh",
       "credits": "https://www.conjur.org"
     },
-    "finish": {
-      "text": "finish.md"
-    }
-  },
-  "environment": {
-    "uilayout": "terminal",
-    "showdashboard": true,
-     "dashboards": [{"name": "Minikube Dashboard", "port": 30000}]
-  },
-  "backend": {
-    "imageid": "minikube"
-  }
-}
