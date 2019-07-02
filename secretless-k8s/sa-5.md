@@ -25,7 +25,7 @@ services:
         from: kubernetes
         get: quick-start-backend-credentials#password
 EOF
-```
+```{{execute}}
 
 Here’s what this does:
 
