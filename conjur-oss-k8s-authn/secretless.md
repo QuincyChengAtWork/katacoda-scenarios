@@ -19,11 +19,11 @@ policy load root /root/policy/host-entitlement.yml
 
 
 ```
-kubectl create configmap secretless-config --from-file=secretless.yml
+kubectl create configmap secretless-config --from-file=test-app/secretless.yml
 ```{{execute}}
 
 ```
-kubectl apply -f manifest-secretless.yml
+kubectl apply -f test-app/manifest-secretless.yml
 ```{{execute}}
 
 ```
