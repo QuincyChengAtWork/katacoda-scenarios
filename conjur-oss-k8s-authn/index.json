@@ -1,5 +1,5 @@
 {
-  "title": "Conjur Kubernetes Authentication",
+  "title": "work in progress - Conjur Kubernetes Authentication",
   "icon": "fa-kubernetes",
   "description": "Learn how to securely pass secrets stored in Conjur to Kubernetes applications",
   "details": {
