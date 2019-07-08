@@ -16,8 +16,11 @@ kubectl create secret generic \
 ```{{execute}}
 
 ```
-kubectl --namespace quick-start-backend-ns apply -f secretless-pg.yml
+sed -e "s#{{ TEST_APP_PG_DOCKER_IMAGE }}#$test_app_pg_image#g" ./test-app/pg/secretless-pg.yml |
+  sed -e "s#{{ TEST_APP_NAMESPACE_NAME }}#$TEST_APP_NAMESPACE_NAME#g" |
+  kubectl create -f -
 ```{{execute}}
+
 
 
 
