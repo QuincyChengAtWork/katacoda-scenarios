@@ -195,5 +195,10 @@ export secretless_app_url=$(kubectl describe service test-app-secretless | grep 
 ```{{execute}}
 
 ```
-curl $secretless_app_url/pet
+curl $secretless_app_url/pets
+```{{execute}}
+
+
+```
+curl  -d "{\"name\": \"$(shuf -n 1 /usr/share/dict/american-english)\"}" -H "Content-Type: application/json" $secretless_app_url/pet
 ```{{execute}}
