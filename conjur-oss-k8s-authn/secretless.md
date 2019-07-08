@@ -1,5 +1,5 @@
 
-#Service IP
+# Service IP
 
 ```
 export SERVICE_IP=$(kubectl get svc --namespace conjur \
@@ -135,7 +135,8 @@ docker run --rm -it -e PGPASSWORD=${SECURITY_ADMIN_PASSWORD} postgres:9.6 \
 
   GRANT SELECT, INSERT ON public.pets TO ${APPLICATION_DB_USER};
   GRANT USAGE, SELECT ON SEQUENCE public.pets_id_seq TO ${APPLICATION_DB_USER};
-  EOSQL
+
+EOSQL
 ```{{execute}}
 
 
@@ -148,9 +149,13 @@ docker run --rm -it --add-host conjur.demo.com:$SERVICE_IP -v $(pwd)/mydata/:/ro
 
 ```
 docker run --rm -it --add-host conjur.demo.com:$SERVICE_IP -v $(pwd)/mydata/:/root cyberark/conjur-cli:5 variable values add orquestador-ajustadores-app/secretless-url "secretless-backend.orquestador.svc.cluster.local:5432"
+```{{execute}}
 
+```
   docker run --rm -it --add-host conjur.demo.com:$SERVICE_IP -v $(pwd)/mydata/:/root cyberark/conjur-cli:5 variable values add orquestador-ajustadores-app/secretless-username "app_user"
+```{{execute}}
 
+```
 docker run --rm -it --add-host conjur.demo.com:$SERVICE_IP -v $(pwd)/mydata/:/root cyberark/conjur-cli:5 variable values add orquestador-ajustadores-app/secretless-password "app_user_password"
 ```{{execute}}
 
