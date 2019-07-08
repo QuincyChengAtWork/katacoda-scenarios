@@ -1,4 +1,28 @@
 
+
+# Deploy PostgresSQL 
+
+```
+openssl req -new -x509 -days 365 -nodes -text -out server.crt \
+  -keyout server.key -subj "/CN=pg"
+chmod og-rwx server.key
+```{{execute}}
+
+```
+kubectl create secret generic \
+  secretless-backend-certs \
+  --from-file=server.crt \
+  --from-file=server.key
+```{{execute}}
+
+```
+kubectl --namespace quick-start-backend-ns apply -f secretless-pg.yml
+```{{execute}}
+
+
+
+# Deploy Secretless App
+
 ```
 export SERVICE_IP=$(kubectl get svc --namespace conjur \
       conjur-oss-ingress \
@@ -33,7 +57,7 @@ kubectl create configmap secretless-config --from-file=test-app/secretless.yml
 ```{{execute}}
 
 
-TEST:
+## Test the app
 
 ```
 export secretless_app_url=$(kubectl describe service test-app-secretless | grep 'LoadBalancer Ingress' | awk '{ print $3 }'):8080
