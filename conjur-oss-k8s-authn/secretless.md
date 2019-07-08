@@ -22,13 +22,9 @@ policy load root /root/policy/host-entitlement.yml
 kubectl create configmap secretless-config --from-file=test-app/secretless.yml
 ```{{execute}}
 
-```
-kubectl apply -f test-app/manifest-secretless.yml
-```
 
 ```
-sed -e "s#{{ TEST_APP_DOCKER_IMAGE }}#$test_app_image#g" ./test-app/manifest-secretless.yml |
-  sed -e "s#{{ CONJUR_ACCOUNT }}#$CONJUR_ACCOUNT#g" |
+  sed -e "s#{{ CONJUR_ACCOUNT }}#$CONJUR_ACCOUNT#g"  ./test-app/manifest-secretless.yml |
   sed -e "s#{{ CONJUR_APPLIANCE_URL }}#$CONJUR_URL#g" |
   sed -e "s#{{ CONJUR_AUTHN_URL }}#$conjur_authenticator_url#g" |
   sed -e "s#{{ SERVICE_IP }}#$SERVICE_IP#g" |
