@@ -1,5 +1,11 @@
 
 
+```
+export SERVICE_IP=$(kubectl get svc --namespace conjur \
+      conjur-oss-ingress \
+      -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+```{{execute}}
+
 # Deploy PostgresSQL 
 
 ```
@@ -16,6 +22,7 @@ kubectl create secret generic \
 ```{{execute}}
 
 ```
+export test_app_pg_image=test-app-pg
 sed -e "s#{{ TEST_APP_PG_DOCKER_IMAGE }}#$test_app_pg_image#g" ./test-app/pg/secretless-pg.yml |
   sed -e "s#{{ TEST_APP_NAMESPACE_NAME }}#$TEST_APP_NAMESPACE_NAME#g" |
   kubectl create -f -
@@ -35,12 +42,6 @@ docker run --rm -it --add-host conjur.demo.com:$SERVICE_IP -v $(pwd)/mydata/:/ro
 # Deploy Secretless App
 
 ```
-export SERVICE_IP=$(kubectl get svc --namespace conjur \
-      conjur-oss-ingress \
-      -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-```{{execute}}
-
-```
 docker run --rm -it --add-host conjur.demo.com:$SERVICE_IP \
 -v $(pwd)/mydata/:/root cyberark/conjur-cli:5 \
 policy load conjur/authn-k8s/dev/apps /root/policy/host-policy.yml
@@ -51,7 +52,6 @@ docker run --rm -it --add-host conjur.demo.com:$SERVICE_IP \
 -v $(pwd)/mydata/:/root cyberark/conjur-cli:5 \
 policy load root /root/policy/host-entitlement.yml
 ```{{execute}}
-
 
 ```
 kubectl create configmap secretless-config --from-file=test-app/secretless.yml
