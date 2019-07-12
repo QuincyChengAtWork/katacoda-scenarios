@@ -28,3 +28,9 @@ Last but not least, we will remove the embedded secrets and secret it using Conj
   - Deploy
   - Usage
   - No more embedded secrets
+
+- **Secretless App**
+  - Deploy Database
+  - Update Conjur for secretless
+  - Deploy Add with Secretless
+  - Test it!
