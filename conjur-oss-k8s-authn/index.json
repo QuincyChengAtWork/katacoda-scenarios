@@ -24,7 +24,12 @@
       { "title": "Using Secure App", "text": "secure-2.md" },
       { "title": "No More Embedded Secrets", "text": "secure-3.md" },
       
-      { "title": "Secretless", "text": "secretless.md" }
+      { "title": "Secretless", "text": "secretless-1.md" },
+      { "title": "Deploy Backend", "text": "secretless-2.md" },
+      { "title": "Update Conjur Policy", "text": "secretless-3.md" },
+      { "title": "Deploy Secretless App", "text": "secretless-4.md" },
+      { "title": "Test the App!", "text": "secretless-5.md" }
+      
 
     ],
     "intro": {
