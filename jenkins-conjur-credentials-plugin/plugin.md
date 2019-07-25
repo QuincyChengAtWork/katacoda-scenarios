@@ -31,7 +31,7 @@ echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
   <id>conjur-login</id>
   <description>Login Credential to Conjur</description>
   <username>host/jenkins-frontend/frontend-01</username>
-  <password>'$frontend_api_key'</password>
+  <password>$frontend_api_key</password>
 </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>'\
  | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ \
    create-credentials-by-xml system::system::jenkins _
