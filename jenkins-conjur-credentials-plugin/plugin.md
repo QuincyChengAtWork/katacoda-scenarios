@@ -26,13 +26,13 @@ You can create the credential by executing the following commands.
 
 ```
 docker exec -it jenkins bash
-echo '<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>                                      
+echo "<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>                                      
 <scope>GLOBAL</scope>
   <id>conjur-login</id>
   <description>Login Credential to Conjur</description>
   <username>host/jenkins-frontend/frontend-01</username>
   <password>$frontend_api_key</password>
-</com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>'\
+</com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>" \
  | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ \
    create-credentials-by-xml system::system::jenkins _
 exit
