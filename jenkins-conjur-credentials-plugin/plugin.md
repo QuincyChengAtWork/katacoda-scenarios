@@ -25,18 +25,17 @@ Update Credential plugin to v2.1.18 or above
 You can create the credential by executing the following commands.   
 
 ```
-docker exec -it jenkins bash
-echo "<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>                                      
+docker exec -it jenkins sh -c "echo \"<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl> 
 <scope>GLOBAL</scope>
   <id>conjur-login</id>
   <description>Login Credential to Conjur</description>
   <username>host/jenkins-frontend/frontend-01</username>
-  <password>$frontend_api_key</password>
-</com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>" \
+  <password>${frontend_api_key}</password>
+</com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>\" \
  | java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ \
-   create-credentials-by-xml system::system::jenkins _
-exit
+   create-credentials-by-xml system::system::jenkins _ "
 ```{{execute}}
+
 
 ** Using Jenkins Web UI**
 
