@@ -23,7 +23,7 @@ services:
     image: cyberark/demo-app
     restart: always
     environment:
-      DB_URL: postgres://postgres@database/demo_db
+      DB_URL: postgres://demo_service_account@database/demo_db
       DB_USERNAME: demo_service_account
       DB_PASSWORD: NotSoSecureSAPassword
       DB_PLATFORM: postgres
