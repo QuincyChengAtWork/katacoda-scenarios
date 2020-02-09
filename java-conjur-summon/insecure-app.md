@@ -25,7 +25,7 @@ services:
     restart: always
     container_name: database
     environment:
-      POSTGRES_PASSWORD: NotSoSecurePassword
+      POSTGRES_PASSWORD: YourStrongPGPassword
 
   app:
     image: cyberark/demo-app
@@ -35,7 +35,7 @@ services:
     environment:
       DB_URL: postgresql://database:5432/demo_db
       DB_USERNAME: demo_service_account
-      DB_PASSWORD: NotSoSecureSAPassword 
+      DB_PASSWORD: YourStrongSAPassword 
       DB_PLATFORM: postgres
     depends_on: [ database ]
 </pre>
@@ -55,7 +55,7 @@ CREATE TABLE pets (
 
 /* Create Application User */
 
-CREATE USER demo_service_account PASSWORD 'NotSoSecureSAPassword';
+CREATE USER demo_service_account PASSWORD 'YourStrongSAPassword';
 
 /* Grant Permissions */
 
