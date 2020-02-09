@@ -5,13 +5,23 @@ To setup the database, we'll perform the following steps:
 3. Spin up the app & database 
 
 
+# Prepare Dockerfile file
+
+<pre class="file" data-filename="insecure-db.Dockerfile" data-target="replace">FROM postgres:9.4
+COPY database.sql /docker-entrypoint-initdb.d/init.sql
+</pre>
+
+
 # Prepare the yml file
 
 <pre class="file" data-filename="insecure-app.docker-compose.yml" data-target="replace">version: '3.6'
 
 services:
   database:
-    image: postgres:9.4
+    build:
+      context:.
+      dockerfile:   insecure-db.Dockerfile
+    image: demo_db:1.0
     restart: always
     container_name: database
     environment:
@@ -32,7 +42,7 @@ services:
 
 # Load the schema sql
 
-<pre class="file" data-filename="init.sql" data-target="replace">CREATE DATABASE demo_db;
+<pre class="file" data-filename="database.sql" data-target="replace">CREATE DATABASE demo_db;
 
 /* connect to it */
 
