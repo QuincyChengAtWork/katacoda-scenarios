@@ -19,8 +19,8 @@ COPY database.sql /docker-entrypoint-initdb.d/init.sql
 services:
   database:
     build:
-      context:.
-      dockerfile:   insecure-db.Dockerfile
+      context: .
+      dockerfile: insecure-db.Dockerfile
     image: demo_db:1.0
     restart: always
     container_name: database
@@ -61,7 +61,6 @@ CREATE USER demo_service_account PASSWORD 'NotSoSecureSAPassword';
 
 GRANT SELECT, INSERT ON public.pets TO demo_service_account;
 GRANT USAGE, SELECT ON SEQUENCE public.pets_id_seq TO demo_service_account;
-EOSQL
 </pre>
 
 # Spin up the app & database
