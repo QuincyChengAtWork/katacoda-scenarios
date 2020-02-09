@@ -16,7 +16,7 @@ services:
     container_name: postgres_database
     environment:
       POSTGRES_PASSWORD: NotSoSecurePassword
-  volumes:
+    volumes:
     - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   app:
