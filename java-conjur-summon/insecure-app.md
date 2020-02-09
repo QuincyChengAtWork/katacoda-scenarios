@@ -13,7 +13,7 @@ services:
   database:
     image: postgres:9.4
     restart: always
-    container_name: postgres_database
+    container_name: database
     environment:
       POSTGRES_PASSWORD: NotSoSecurePassword
     volumes:
@@ -23,7 +23,7 @@ services:
     image: cyberark/demo-app
     restart: always
     environment:
-      DB_URL: postgres://demo_service_account@database/demo_db
+      DB_URL: postgresql://demo_service_account@database/demo_db
       DB_USERNAME: demo_service_account
       DB_PASSWORD: NotSoSecureSAPassword
       DB_PLATFORM: postgres
