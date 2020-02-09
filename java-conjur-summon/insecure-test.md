@@ -1,10 +1,13 @@
 
 Let's test the app!
 
-First, we'll need the application URL and setup a dictionary for random names
+First, we'll need the application URL and setup a dictionary for random names.
+Typically the URL can point to `localhost`
+On Katacoda, we have generated [an external link](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/) for you, so that you can access it remotely from internet.
+
 
 ```
-export insecure_app_url=http://localhost:8080
+export insecure_app_url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 apt install -y wamerican
 ```{{execute}}
 
