@@ -56,5 +56,5 @@ EOSQL
 
 # Spin up the app & database
 ```
-docker-compose -f insecure-app.docker-compose.yml up
+docker-compose -f insecure-app.docker-compose.yml up -d
 ```{{execute}}
