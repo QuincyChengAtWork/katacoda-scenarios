@@ -11,7 +11,7 @@
       { "title": "Setup Docker-compose file", "text": "insecure-dc.md" },
       { "title": "Test it", "text": "insecure-test.md" },
       { "title": "The Risk", "text": "insecure-risk.md" },
-      { "title": "The Secure Way", "text": "secure-risk.md" },
+      { "title": "The Secure Way", "text": "secure-intro.md" },
       { "title": "Setup Conjur", "text": "secure-conjur.md" },
       { "title": "Setup Policy", "text": "secure-policy.md" },
       { "title": "Store the secret", "text": "secure-secret.md" },
