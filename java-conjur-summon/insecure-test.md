@@ -3,7 +3,7 @@ Let's test the app!
 
 First, we'll need the application URL and setup a dictionary for random names.
 Typically the URL can point to `localhost`
-On Katacoda, we have generated [an external link](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com) for you, so that you can access it remotely from internet.
+On Katacoda, we have generated [an external link](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/pets) for you, so that you can access it remotely from internet.
 
 
 ```
