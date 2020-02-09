@@ -1,5 +1,5 @@
 {
-  "title": "Ansible Conjur Lookup Plugin",
+  "title": "Ansible-Conjur Lookup Plugin",
   "description": "Learn how to retreive secrets from Conjur to Ansible using Ansible Conjur Lookup Plugin",
   "icon": "fa-redhat",
   "details": {
