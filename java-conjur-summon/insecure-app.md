@@ -26,8 +26,6 @@ services:
     container_name: database
     environment:
       POSTGRES_PASSWORD: NotSoSecurePassword
-    volumes:
-    - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   app:
     image: cyberark/demo-app
