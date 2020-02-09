@@ -32,6 +32,8 @@ services:
   app:
     image: cyberark/demo-app
     restart: always
+    ports:
+    - "8081"
     environment:
       DB_URL: postgresql://database:5432/demo_db
       DB_USERNAME: demo_service_account
