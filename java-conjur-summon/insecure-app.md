@@ -33,9 +33,9 @@ services:
     image: cyberark/demo-app
     restart: always
     environment:
-      DB_URL: postgresql://demo_service_account@database/demo_db
+      DB_URL: postgresql://database:5432/demo_db
       DB_USERNAME: demo_service_account
-      DB_PASSWORD: NotSoSecureSAPassword
+      DB_PASSWORD: NotSoSecureSAPassword 
       DB_PLATFORM: postgres
     depends_on: [ database ]
 </pre>
