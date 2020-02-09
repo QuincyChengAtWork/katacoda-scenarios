@@ -7,7 +7,7 @@ To setup the database, we'll perform the following steps:
 
 # Prepare the yml file
 
-<pre class="file" data-filename="insecure-app.docker-compose.yml" data-target="replace">version: '2'
+<pre class="file" data-filename="insecure-app.docker-compose.yml" data-target="replace">version: '3.6'
 
 services:
   database:
