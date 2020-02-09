@@ -36,7 +36,7 @@ services:
 
 /* connect to it */
 
-\c demodb;
+\c demo_db;
 
 CREATE TABLE pets (
   id serial primary key,
