@@ -31,7 +31,7 @@
        {"file": "*.sh", "target": "/home/scrapbook/tutorial", "chmod":"+x"} 
      ] }
   },
-  "files": [ "insecure-db.Dockerfile", "insecure-app.docker-compose.yml", "database.sql", "setup.sh", "conjur.yml","db.yml", "frontend.yml","secrets.yml","secure-app.Dockerfile","secure-app.docker-compose.yml"],
+  "files": [ "insecure-db.Dockerfile", "insecure-app.docker-compose.yml", "database.sql", "setupConjur.sh", "conjur.yml","db.yml", "frontend.yml","secrets.yml","secure-app.Dockerfile","secure-app.docker-compose.yml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
