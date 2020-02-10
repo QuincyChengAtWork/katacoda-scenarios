@@ -5,7 +5,7 @@ We will summarize and fine tune the first step of the [offical Conjur tutorial](
 # Prepare the Setup script
 
 <pre class="file" data-filename="setupConjur.sh" data-target="replace">#!/bin/bash
-curl -o docker-compose.yml https://www.conjur.org/get-started/docker-compose.quickstart.yml
+curl -o docker-compose.yml https://quincycheng.github.io/docker-compose.quickstart.yml
 docker-compose pull
 docker-compose run --no-deps --rm conjur data-key generate > data_key
 export CONJUR_DATA_KEY="$(< data_key)"
