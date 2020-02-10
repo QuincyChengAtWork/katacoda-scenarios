@@ -73,8 +73,9 @@ services:
 
 # Start the app & database
 
+Now let's extend the previous setup and start the app & database
 ```
-docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up -d
+docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up app db -d
 ```{{execute}}
 
 
