@@ -52,10 +52,9 @@ docker-compose exec client conjur policy load db /tmp/db.yml
 ```{{execute}}
 
 And store the secrets to Conjur
-```
-docker-compose exec client conjur variable values add db/username demo_service_account
-docker-compose exec client conjur variable values add db/password YourStrongSAPassword
-```{{execute}}
+Username: `docker-compose exec client conjur variable values add db/username demo_service_account`{{execute}}
+
+Password: `docker-compose exec client conjur variable values add db/password YourStrongSAPassword`{{execute}}
 
 Please note that the password should be rotated regularly.   CyberArk CPM can help to archieve this.  For the list of supported devices, please refer to https://marketplace.cyberark.com
 
