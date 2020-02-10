@@ -63,7 +63,9 @@ GRANT SELECT, INSERT ON public.pets TO demo_service_account;
 GRANT USAGE, SELECT ON SEQUENCE public.pets_id_seq TO demo_service_account;
 </pre>
 
-# Spin up the app & database
+# Start the app & database
 ```
 docker-compose -f insecure-app.docker-compose.yml up -d
 ```{{execute}}
+
+It will take a few moments to download and execute both the app & database
