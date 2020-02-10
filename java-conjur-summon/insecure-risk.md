@@ -12,6 +12,7 @@ Cool! You have found the service accounts.   Apparently it is far from ideal and
 Let's clean up the environment before proceed
 ```
 docker-compose -f insecure-app.docker-compose.yml down
+docker volume prune
 ```{{execute}}
 
 Click "Continue" to start securing it. 
