@@ -71,3 +71,10 @@ services:
     depends_on: [ db ]
 </pre>
 
+# Start the app & database
+
+```
+docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up -d
+```{{execute}}
+
+
