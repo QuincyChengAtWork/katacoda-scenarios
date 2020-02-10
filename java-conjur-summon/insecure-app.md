@@ -18,7 +18,7 @@ services:
     image: demo_db:1.0
     restart: always
 
-app:
+  app:
     image: cyberark/demo-app
     restart: always
     ports:
