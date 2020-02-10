@@ -7,4 +7,9 @@ We are going to perform the following tasks:
 3. Test it
 4. Review and idenity the risk
 
-Let's get started!
+Let's create a folder and get started!
+
+```
+mkdir insecure
+cd insecure
+```{{execute}}
