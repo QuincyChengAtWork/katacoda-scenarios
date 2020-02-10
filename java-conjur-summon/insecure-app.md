@@ -36,7 +36,7 @@ services:
       DB_USERNAME: demo_service_account
       DB_PASSWORD: YourStrongSAPassword 
       DB_PLATFORM: postgres
-    depends_on: [ database ]
+    depends_on: [ db ]
 </pre>
 
 # Load the schema sql
