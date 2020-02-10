@@ -9,6 +9,7 @@ To setup the database, we'll perform the following steps:
 
 <pre class="file" data-filename="insecure-db.Dockerfile" data-target="replace">FROM postgres:9.3
 COPY database.sql /docker-entrypoint-initdb.d/init.sql
+ENV POSTGRES_PASSWORD YourStrongPGPassword
 </pre>
 
 
