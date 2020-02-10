@@ -44,7 +44,7 @@ DB_PASSWORD: !var db/password
 
 # Prepare docker-compose file
 
-<pre class="file" data-filename="secure-app.docker-compose.yml" data-target="replace">version: '3.6'
+<pre class="file" data-filename="secure-app.docker-compose.yml" data-target="replace">version: '2'
 
 services:
   db:
@@ -52,7 +52,10 @@ services:
     restart: always
 
   app:
-    image: cyberark/demo-app
+    build:
+      context: .
+      dockerfile: secure-app.Dockerfile
+    image: cyberark/secure-demo-app:1.0
     restart: always
     ports:
     - "8082:8080"
@@ -61,10 +64,10 @@ services:
       DB_PLATFORM: postgres
       DB_USERNAME: 
       DB_PASSWORD:  
-      CONJUR_APPLIANCE_URL=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
-      CONJUR_ACCOUNT=demo
-      CONJUR_AUTHN_LOGIN=host/frontend/frontend-01
-      CONJUR_AUTHN_API_KEY=${frontend_api}
+      CONJUR_APPLIANCE_URL: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+      CONJUR_ACCOUNT: demo
+      CONJUR_AUTHN_LOGIN: host/frontend/frontend-01
+      CONJUR_AUTHN_API_KEY: ${frontend_api}
     depends_on: [ db ]
 </pre>
 
