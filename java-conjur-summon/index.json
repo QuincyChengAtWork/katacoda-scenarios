@@ -1,5 +1,5 @@
 {
-  "title": "[work in progress] Conjur & Summon for Java App",
+  "title": "[Work in progress] Conjur & Summon for Java App",
   "description": "Learn how to use Conjur to protect & inject secrets to Java App using Summon",
   "icon":"fa-java",
   "difficulty": "Beginner",
@@ -25,14 +25,16 @@
       "text": "finish.md"
     }
   },
-  "files": [ "./insecure/insecure-db.Dockerfile", 
-             "./insecure/insecure-app.docker-compose.yml", 
-             "./insecure/database.sql", 
-             "./conjur/setupConjur.sh", 
-             "conjur.yml","db.yml", "frontend.yml",
-             "secrets.yml",
-             "secure-app.Dockerfile",
-             "secure-app.docker-compose.yml"],
+  "files": [ "~/tutorial/insecure/insecure-db.Dockerfile", 
+             "~/tutorial/insecure/insecure-app.docker-compose.yml", 
+             "~/tutorial/insecure/database.sql", 
+             "~/tutorial/conjur/setupConjur.sh", 
+             "~/tutorial/conjur/conjur.yml",
+             "~/tutorial/conjur/db.yml", 
+             "~/tutorial/conjur/frontend.yml",
+             "~/tutorial/secure/secrets.yml",
+             "~/tutorial/secure/secure-app.Dockerfile",
+             "~/tutorial/secure/secure-app.docker-compose.yml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
