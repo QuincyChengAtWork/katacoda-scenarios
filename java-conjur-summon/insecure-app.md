@@ -2,18 +2,11 @@
 To setup the database, we'll perform the following steps:
 1. Prepare a docker-compose file for app & database 
 2. Prepare the database schema
-3. Spin up the app & database 
+3. Prepare Dockerfile file
+4. Start the app & database 
 
 
-# Prepare Dockerfile file
-
-<pre class="file" data-filename="insecure-db.Dockerfile" data-target="replace">FROM postgres:9.3
-COPY database.sql /docker-entrypoint-initdb.d/init.sql
-ENV POSTGRES_PASSWORD YourStrongPGPassword
-</pre>
-
-
-# Prepare the yml file
+# Prepare the docker-compose.yml file
 
 <pre class="file" data-filename="insecure-app.docker-compose.yml" data-target="replace">version: '3.6'
 
@@ -24,10 +17,8 @@ services:
       dockerfile: insecure-db.Dockerfile
     image: demo_db:1.0
     restart: always
-    environment:
-      POSTGRES_PASSWORD: YourStrongPGPassword
 
-  app:
+app:
     image: cyberark/demo-app
     restart: always
     ports:
@@ -62,6 +53,14 @@ CREATE USER demo_service_account PASSWORD 'YourStrongSAPassword';
 GRANT SELECT, INSERT ON public.pets TO demo_service_account;
 GRANT USAGE, SELECT ON SEQUENCE public.pets_id_seq TO demo_service_account;
 </pre>
+
+# Prepare Dockerfile file
+
+<pre class="file" data-filename="insecure-db.Dockerfile" data-target="replace">FROM postgres:9.3
+COPY database.sql /docker-entrypoint-initdb.d/init.sql
+ENV POSTGRES_PASSWORD YourStrongPGPassword
+</pre>
+
 
 # Start the app & database
 ```
