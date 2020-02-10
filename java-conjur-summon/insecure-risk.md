@@ -9,4 +9,10 @@ Try the following command:
 
 Cool! You have found the service accounts.   Apparently it is far from ideal and definately not secure.
 
+Let's shut it down to save some resource
+
+```
+docker-compose -f insecure-app.docker-compose.yml down
+```{{execute}}
+
 Click "Continue" to start securing it. 
