@@ -3,7 +3,7 @@
   "description": "Learn how to use Conjur to protect & inject secrets to Java App using Summon",
   "icon":"fa-java",
   "difficulty": "Beginner",
-  "time": "10-20 minutes",
+  "time": "15-25 minutes",
   "details": {
     "steps": [
       { "title": "The Typical Way", "text": "insecure-intro.md" },
@@ -19,18 +19,20 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "env-init.sh",
       "credits": "https://www.conjur.org"
     },
     "finish": {
       "text": "finish.md"
-    },
-     "assets": { "host01": [ 
-       {"file": "*", "target": "/home/scrapbook/tutorial"}, 
-       {"file": "*.sh", "target": "/home/scrapbook/tutorial", "chmod":"+x"} 
-     ] }
+    }
   },
-  "files": [ "insecure-db.Dockerfile", "insecure-app.docker-compose.yml", "database.sql", "setupConjur.sh", "conjur.yml","db.yml", "frontend.yml","secrets.yml","secure-app.Dockerfile","secure-app.docker-compose.yml"],
+  "files": [ "insecure-db.Dockerfile", 
+             "insecure-app.docker-compose.yml", 
+             "database.sql", 
+             "setupConjur.sh", 
+             "conjur.yml","db.yml", "frontend.yml",
+             "secrets.yml",
+             "secure-app.Dockerfile",
+             "secure-app.docker-compose.yml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
