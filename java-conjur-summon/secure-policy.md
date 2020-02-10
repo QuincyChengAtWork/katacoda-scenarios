@@ -82,7 +82,7 @@ Note The `api_key` printed above is a unique securely random string for each hos
 
 To get the frontend api key:
 ```
-export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:frontend/frontend-01".api_key')
+export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
 ```{{execute}}
 
 # Entitlement
