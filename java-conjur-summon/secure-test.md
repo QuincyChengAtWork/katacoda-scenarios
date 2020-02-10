@@ -7,7 +7,7 @@ On Katacoda, we have generated [an external link](https://[[HOST_SUBDOMAIN]]-808
 
 
 ```
-export secure_app_url=https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com
+export secure_app_url=https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com
 ```{{execute}}
 
 To list all pet messages:
