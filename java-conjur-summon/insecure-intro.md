@@ -8,8 +8,3 @@ We are going to perform the following tasks:
 4. Review and idenity the risk
 
 Let's create a folder and get started!
-
-```
-mkdir insecure
-cd insecure
-```{{execute}}
