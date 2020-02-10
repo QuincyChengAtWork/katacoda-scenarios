@@ -13,7 +13,6 @@
       { "title": "The Secure Way", "text": "secure-intro.md" },
       { "title": "Setup Conjur", "text": "secure-conjur.md" },
       { "title": "Setup Policy", "text": "secure-policy.md" },
-      { "title": "Store the secret", "text": "secure-secret.md" },
       { "title": "Setup App & Database", "text": "secure-app.md" },
       { "title": "Test it again", "text": "secure-test.md" },
       { "title": "Summary", "text": "secure-summary.md" }
