@@ -16,7 +16,7 @@ Here is a skeleton policy for this scenario, which simply defines two empty poli
 
 Then load it using the following command:
 ```
-docker cp conjur.yml root_client_1:/tmp/
+docker cp conjur.yml tutorial_client_1:/tmp/
 docker-compose exec client conjur policy load --replace root /tmp/conjur.yml
 ```{{execute}}
 
@@ -47,7 +47,7 @@ Create the following file as “db.yml”:
 Now load it using the following command:
 
 ```
-docker cp db.yml root_client_1:/tmp/
+docker cp db.yml tutorial_client_1:/tmp/
 docker-compose exec client conjur policy load db /tmp/db.yml
 ```{{execute}}
 
@@ -74,7 +74,7 @@ Note Statically defining the hosts in a policy is appropriate for fairly static 
 Now load the frontend policy using the following command:
 
 ```
-docker cp frontend.yml root_client_1:/tmp/
+docker cp frontend.yml tutorial_client_1:/tmp/
 docker-compose exec client conjur policy load frontend /tmp/frontend.yml|tee frontend.out
 export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:frontend/frontend-01".api_key')
 ```{{execute}}
@@ -103,7 +103,7 @@ Now let's grant the access by updating the `db.yml` policy:
 
 Then load it using the CLI:
 ```
-docker cp db.yml root_client_1:/tmp/
+docker cp db.yml tutorial_client_1:/tmp/
 docker-compose exec client conjur policy load db /tmp/db.yml
 ```{{execute}}
 
