@@ -32,6 +32,6 @@ chmod +x setupConjur.sh
 
 Let's pull and setup a Conjur OSS. It will take a couple of moments 
 ```
-./setupConjur.sh https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/{{execute}}
+./setupConjur.sh https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 ```{{execute}}
 
