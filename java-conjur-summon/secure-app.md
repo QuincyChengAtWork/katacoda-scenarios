@@ -38,8 +38,8 @@ ENTRYPOINT [ "summon", "--provider", "summon-conjur", "-f", "/etc/secrets.yml", 
 </pre>
 
 # Prepare secrets.yml
-<pre class="file" data-filename="secrets.yml" data-target="replace">DB_USERNAME: !var {{ TEST_APP_NAME }}-db/username
-DB_PASSWORD: !var {{ TEST_APP_NAME }}-db/password
+<pre class="file" data-filename="secrets.yml" data-target="replace">DB_USERNAME: !var db/username
+DB_PASSWORD: !var db/password
 </pre>
 
 # Prepare docker-compose file
@@ -61,6 +61,10 @@ services:
       DB_PLATFORM: postgres
       DB_USERNAME: 
       DB_PASSWORD:  
+      CONJUR_APPLIANCE_URL=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+      CONJUR_ACCOUNT=demo
+      CONJUR_AUTHN_LOGIN=host/frontend/frontend-01
+      CONJUR_AUTHN_API_KEY=${frontend_api}
     depends_on: [ db ]
 </pre>
 
