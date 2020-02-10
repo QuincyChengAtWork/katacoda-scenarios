@@ -17,13 +17,12 @@ COPY database.sql /docker-entrypoint-initdb.d/init.sql
 <pre class="file" data-filename="insecure-app.docker-compose.yml" data-target="replace">version: '3.6'
 
 services:
-  database:
+  db:
     build:
       context: .
       dockerfile: insecure-db.Dockerfile
     image: demo_db:1.0
     restart: always
-    container_name: database
     environment:
       POSTGRES_PASSWORD: YourStrongPGPassword
 
@@ -33,7 +32,7 @@ services:
     ports:
     - "8081:8080"
     environment:
-      DB_URL: postgresql://database:5432/demo_db
+      DB_URL: postgresql://db:5432/demo_db
       DB_USERNAME: demo_service_account
       DB_PASSWORD: YourStrongSAPassword 
       DB_PLATFORM: postgres
