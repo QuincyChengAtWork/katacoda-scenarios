@@ -25,16 +25,16 @@
       "text": "finish.md"
     }
   },
-  "files": [ "~/tutorial/insecure/insecure-db.Dockerfile", 
-             "~/tutorial/insecure/insecure-app.docker-compose.yml", 
-             "~/tutorial/insecure/database.sql", 
-             "~/tutorial/conjur/setupConjur.sh", 
-             "~/tutorial/conjur/conjur.yml",
-             "~/tutorial/conjur/db.yml", 
-             "~/tutorial/conjur/frontend.yml",
-             "~/tutorial/secure/secrets.yml",
-             "~/tutorial/secure/secure-app.Dockerfile",
-             "~/tutorial/secure/secure-app.docker-compose.yml"],
+  "files": [ "insecure-db.Dockerfile", 
+             "insecure-app.docker-compose.yml", 
+             "database.sql", 
+             "setupConjur.sh", 
+             "conjur.yml",
+             "db.yml", 
+             "frontend.yml",
+             "secrets.yml",
+             "secure-app.Dockerfile",
+             "secure-app.docker-compose.yml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
