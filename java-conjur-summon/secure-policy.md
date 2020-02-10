@@ -60,7 +60,7 @@ Please note that the password should be rotated regularly.   CyberArk CPM can he
 
 # Define an Application
 For this example, the “frontend” policy will simply define a Layer and a Host. Create the following file as “frontend.yml”:
-<pre class="file" data-filename="db.yml" data-target="replace">- !layer
+<pre class="file" data-filename="frontend.yml" data-target="replace">- !layer
 
 - !host frontend-01
 
@@ -75,10 +75,15 @@ Now load the frontend policy using the following command:
 ```
 docker cp frontend.yml tutorial_client_1:/tmp/
 docker-compose exec client conjur policy load frontend /tmp/frontend.yml|tee frontend.out
-export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:frontend/frontend-01".api_key')
 ```{{execute}}
 
+
 Note The `api_key` printed above is a unique securely random string for each host. When you load the policy, you’ll see a different API key. Be sure and use this API key below.  In this tutorial, we will save the output in `frontend.out` and the api key as environment variable `frontend_api`.   Please make sure they are removed from your production environment.
+
+To get the frontend api key:
+```
+export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."quick-start:host:frontend/frontend-01".api_key')
+```{{execute}}
 
 # Entitlement
 
