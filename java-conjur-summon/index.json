@@ -1,5 +1,5 @@
 {
-  "title": "[work in progress] Conjur & Summon for Java App",
+  "title": "[Work in progress] Conjur & Summon for Java App",
   "description": "Learn how to use Conjur to protect & inject secrets to Java App using Summon",
   "icon":"fa-java",
   "difficulty": "Beginner",
@@ -39,6 +39,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "Ubuntu"
   }
 }
