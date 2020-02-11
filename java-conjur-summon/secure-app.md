@@ -64,7 +64,7 @@ services:
       DB_PLATFORM: postgres
       DB_USERNAME: 
       DB_PASSWORD:  
-      CONJUR_APPLIANCE_URL: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+      CONJUR_APPLIANCE_URL: http://conjur 
       CONJUR_ACCOUNT: demo
       CONJUR_AUTHN_LOGIN: host/frontend/frontend-01
       CONJUR_AUTHN_API_KEY: ${frontend_api}
@@ -75,7 +75,10 @@ services:
 
 Now let's extend the previous setup and start the app & database
 ```
-docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up -d app db
+docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml stop client
+docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml rm client
+docker image rm cyberark/demo-app
+docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up app db
 ```{{execute}}
 
 
