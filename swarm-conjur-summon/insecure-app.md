@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: insecure-db.Dockerfile
-    image: demo_db:1.0
+    image: 127.0.0.1:5000/demo_db:1.0
     restart: always
 
   app:
@@ -70,6 +70,8 @@ chmod +x /usr/local/bin/docker-compose
 
 # Start the app & database
 ```
+docker-compose -f insecure-app.docker-compose.yml build
+docker-compose -f insecure-app.docker-compose.yml push
 docker stack deploy --compose-file insecure-app.docker-compose.yml root
 ```{{execute}}
 
