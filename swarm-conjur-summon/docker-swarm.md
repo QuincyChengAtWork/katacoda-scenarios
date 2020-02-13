@@ -19,11 +19,9 @@ Are you sure you want to continue connecting (yes/no)? `yes`{{execute}}
 
 For demonstration purposes, we'll ask the manager what the token is via swarm join-token. In production, this token should be stored securely and only accessible by trusted individuals.
 
-`token=$(ssh -o StrictHostKeyChecking=no host01 "docker swarm join-token -q worker") && echo $token`{{execute}}
-
 On the second host, join the cluster by requesting access via the manager. The token is provided as an additional parameter.
 
-`docker swarm join host01:2377 --token $token`{{execute}}
+`token=$(ssh -o StrictHostKeyChecking=no host01 "docker swarm join-token -q worker") && docker swarm join host01:2377 --token $token`{{execute}}
 
 By default, the manager will automatically accept new nodes being added to the cluster. You can view all nodes in the cluster using docker node ls
 
