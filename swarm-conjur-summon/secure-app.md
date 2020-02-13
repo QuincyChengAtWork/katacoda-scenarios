@@ -44,7 +44,7 @@ DB_PASSWORD: !var db/password
 
 # Prepare docker-compose file
 
-<pre class="file" data-filename="secure-app.docker-compose.yml" data-target="replace">version: '2'
+<pre class="file" data-filename="secure-app.docker-compose.yml" data-target="replace">version: '3'
 
 services:
   db:
@@ -64,7 +64,7 @@ services:
       DB_PLATFORM: postgres
       DB_USERNAME: 
       DB_PASSWORD:  
-      CONJUR_APPLIANCE_URL: http://conjur 
+      CONJUR_APPLIANCE_URL: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ 
       CONJUR_ACCOUNT: demo
       CONJUR_AUTHN_LOGIN: host/frontend/frontend-01
       CONJUR_AUTHN_API_KEY: ${frontend_api}
@@ -83,6 +83,8 @@ docker-compose -f secure-app.docker-compose.yml push
 
 Now let's extend the previous setup and start the app & database
 ```
-docker stack deploy --compose-file docker-compose.yml --compose-file secure-app.docker-compose.yml root
+docker stack deploy --compose-file docker-compose.yml --compose-file secure-app.docker-compose.yml secure
 ```{{execute}}
 
+To review the service status, you can execute:
+`docker service ps secure`{{execute}}
