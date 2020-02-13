@@ -21,7 +21,10 @@ For demonstration purposes, we'll ask the manager what the token is via swarm jo
 
 On the second host, join the cluster by requesting access via the manager. The token is provided as an additional parameter.
 
-`token=$(ssh -o StrictHostKeyChecking=no host01 "docker swarm join-token -q worker") && docker swarm join host01:2377 --token $token`{{execute}}
+```
+docker swarm leave --force
+token=$(ssh -o StrictHostKeyChecking=no host01 "docker swarm join-token -q worker") && docker swarm join host01:2377 --token $token
+```{{execute}}
 
 By default, the manager will automatically accept new nodes being added to the cluster. You can view all nodes in the cluster using docker node ls
 
