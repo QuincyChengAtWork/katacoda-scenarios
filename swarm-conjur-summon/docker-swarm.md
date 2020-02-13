@@ -25,6 +25,10 @@ On the second host, join the cluster by requesting access via the manager. The t
 
 By default, the manager will automatically accept new nodes being added to the cluster. You can view all nodes in the cluster using docker node ls
 
+# Registry
+
+`docker service create --name registry --publish published=5000,target=5000 registry:2`{{execute}}
+
 Before proceeding to the next step, let's log off the worker node...
 
 `exit`{{execute}}
