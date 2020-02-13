@@ -1,5 +1,5 @@
 
-We will summarize and fine tune the first step of the [offical Conjur tutorial](https://www.conjur.org/get-started/quick-start/oss-environment/) to set up a Conjur OSS environment.  If you want to know more it, please go to https://www.conjur.org/get-started/quick-start/oss-environment/
+We will summarize and fine tune the first step of the [offical Conjur tutorial](https://www.conjur.org/get-started/quick-start/oss-environment/) to set up a Conjur OSS environment.  Please note that Conjur OSS doesn't provide enteprise features like HA.  Therefore in this tutorial we deploy Conjur OSS using docker-compose directly on Manager node .  If you want to know more, please go to https://www.conjur.org/get-started/quick-start/oss-environment/
 
 
 # Prepare the Setup script
@@ -10,8 +10,7 @@ docker-compose pull
 docker-compose run --no-deps --rm conjur data-key generate > data_key
 export CONJUR_DATA_KEY="$(< data_key)"
 
-docker stack deploy --compose-file docker-compose.yml root
-
+docker-compose up -d 
 echo "Starting Conjur.  Let's wait for 10 sec"
 sleep 10s
 docker-compose exec conjur conjurctl account create demo | tee admin.out
