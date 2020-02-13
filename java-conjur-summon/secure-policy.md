@@ -47,7 +47,7 @@ Create the following file as “db.yml”:
 Now load it using the following command:
 
 ```
-docker cp db.yml tutorial_client_1:/tmp/
+docker cp db.yml root_client_1:/tmp/
 docker-compose exec client conjur policy load db /tmp/db.yml
 ```{{execute}}
 
