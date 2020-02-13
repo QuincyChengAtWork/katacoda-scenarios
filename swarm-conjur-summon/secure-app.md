@@ -87,4 +87,4 @@ docker stack deploy --compose-file secure-app.docker-compose.yml secure
 ```{{execute}}
 
 To review the service status, you can execute:
-`docker stack ps secure`{{execute}} and `docker stack ps secure`{{execute}}
+`docker stack ls`{{execute}} and `docker stack ps secure`{{execute}}
