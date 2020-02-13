@@ -75,6 +75,6 @@ services:
 
 Now let's extend the previous setup and start the app & database
 ```
-docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up -d db app
+docker stack deploy --compose-file docker-compose.yml --compose-file secure-app.docker-compose.yml
 ```{{execute}}
 
