@@ -16,7 +16,7 @@ sleep 10s
 docker-compose exec conjur conjurctl account create demo | tee admin.out
 sleep 2s
 api_key="$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"
-conjur_ip="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tutorial_conjur_1 )"
+conjur_ip="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' root_conjur_1 )"
 
 docker-compose exec client bash -c "echo yes | conjur init -u $1 -a demo"
 docker-compose exec client conjur authn login -u admin -p "$api_key"
