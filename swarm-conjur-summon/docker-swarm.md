@@ -28,14 +28,15 @@ token=$(ssh -o StrictHostKeyChecking=no host01 "docker swarm join-token -q worke
 
 By default, the manager will automatically accept new nodes being added to the cluster. You can view all nodes in the cluster using docker node ls
 
-# Registry
-
-`docker service create --name registry --publish published=5000,target=5000 registry:2`{{execute}}
-
 Before proceeding to the next step, let's log off the worker node...
 
 `exit`{{execute}}
 
-and verify the nodes in the cluster
+# Registry
+
+We will create a Registry service to host the images
+`docker service create --name registry --publish published=5000,target=5000 registry:2`{{execute}}
+
+To verify the nodes in the cluster
 
 `docker node ls`{{execute}}
