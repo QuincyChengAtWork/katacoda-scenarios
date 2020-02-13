@@ -32,11 +32,11 @@ Before proceeding to the next step, let's log off the worker node...
 
 `exit`{{execute}}
 
+# To verify the nodes in the cluster
+
+`docker node ls`{{execute}}
+
 # Registry
 
 We will create a Registry service to host the images
 `docker service create --name registry --publish published=5000,target=5000 registry:2`{{execute}}
-
-To verify the nodes in the cluster
-
-`docker node ls`{{execute}}
