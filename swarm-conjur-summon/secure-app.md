@@ -48,14 +48,14 @@ DB_PASSWORD: !var db/password
 
 services:
   db:
-    image: demo_db:1.0
+    image: 127.0.0.1:5000/demo_db:1.0
     restart: always
 
   app:
     build:
       context: .
       dockerfile: secure-app.Dockerfile
-    image: cyberark/secure-demo-app:1.0
+    image: 127.0.0.1:5000/secure-demo-app:1.0
     restart: always
     ports:
     - "8082:8080"
@@ -72,6 +72,14 @@ services:
 </pre>
 
 # Start the app & database
+
+First, we will build the image and push it to the registry
+
+```
+docker-compose -f secure-app.docker-compose.yml build
+docker-compose -f secure-app.docker-compose.yml push
+```{{execute}}
+
 
 Now let's extend the previous setup and start the app & database
 ```
