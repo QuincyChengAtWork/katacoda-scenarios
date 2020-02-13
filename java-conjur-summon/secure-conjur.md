@@ -11,8 +11,8 @@ docker-compose run --no-deps --rm conjur data-key generate > data_key
 export CONJUR_DATA_KEY="$(< data_key)"
 
 docker-compose up -d 
-echo "wait for 30 sec"
-sleep 30s
+echo "Starting Conjur.  Let's wait for 10 sec"
+sleep 10s
 docker-compose exec conjur conjurctl account create demo | tee admin.out
 sleep 2s
 api_key="$(grep API admin.out | cut -d: -f2 | tr -d ' \r\n')"
