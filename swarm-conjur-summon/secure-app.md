@@ -64,7 +64,7 @@ services:
       DB_PLATFORM: postgres
       DB_USERNAME: 
       DB_PASSWORD:  
-      CONJUR_APPLIANCE_URL: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ 
+      CONJUR_APPLIANCE_URL: http://${conjur_ip}:8080 
       CONJUR_ACCOUNT: demo
       CONJUR_AUTHN_LOGIN: host/frontend/frontend-01
       CONJUR_AUTHN_API_KEY: ${frontend_api}
@@ -83,6 +83,7 @@ docker-compose -f secure-app.docker-compose.yml push
 
 Now let's extend the previous setup and start the app & database
 ```
+export conjur_ip=$(ifconfig ens3 | grep "inet " | awk -F'[: ]+' '{ print $4 }')
 docker stack deploy --compose-file secure-app.docker-compose.yml secure
 ```{{execute}}
 
