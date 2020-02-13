@@ -6,7 +6,11 @@ The most important one is how to initialise Swarm Mode. Initialisation is done v
 
 `docker swarm init`{{execute}}
 
-After running the command, the Docker Engine knows how to work with a cluster and becomes the manager. The results of an initialisation is a token used to add additional nodes in a secure fashion. Keep this token safe and secure for future use when scaling your cluster.
+After running the command, the Docker Engine knows how to work with a cluster and becomes the manager. 
+
+# To verify the nodes in the cluster
+
+`docker node ls`{{execute}}
 
 # Join Swarm Worker to Cluster
 
