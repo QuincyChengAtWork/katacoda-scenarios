@@ -90,6 +90,7 @@ export frontend_api=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host
 Now let's grant the access by updating the `db.yml` policy:
 <pre class="file" data-filename="db.yml" data-target="replace">- &variables
   - !variable password
+  - !variable username
 
 - !group secrets-users
 
