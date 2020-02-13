@@ -75,10 +75,7 @@ services:
 
 Now let's extend the previous setup and start the app & database
 ```
-docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml stop client
-docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml rm client
-docker image rm cyberark/demo-app conjurinc/cli5 
-docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up app db
+docker-compose -f docker-compose.yml -f secure-app.docker-compose.yml up -d db app
 ```{{execute}}
 
 
