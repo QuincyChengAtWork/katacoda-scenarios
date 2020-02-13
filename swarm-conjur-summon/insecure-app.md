@@ -72,7 +72,7 @@ chmod +x /usr/local/bin/docker-compose
 ```
 docker-compose -f insecure-app.docker-compose.yml build
 docker-compose -f insecure-app.docker-compose.yml push
-docker stack deploy --compose-file insecure-app.docker-compose.yml root
+docker stack deploy --compose-file insecure-app.docker-compose.yml insecure
 ```{{execute}}
 
 It will take a few moments to download and execute both the app & database
