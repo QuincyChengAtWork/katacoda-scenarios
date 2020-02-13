@@ -77,4 +77,4 @@ docker stack deploy --compose-file insecure-app.docker-compose.yml insecure
 
 It will take a few moments to download and execute both the app & database
 
-You can review the status by executing `docker stack ls`{{execute}}
+You can review the status by executing `docker stack ls`{{execute}} and `docker stack ps insecure`{{execute}}
