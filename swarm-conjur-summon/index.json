@@ -1,0 +1,45 @@
+{
+  "title": "Securing Java App on Docker Swarm using Conjur & Summon",
+  "description": "Learn how to use Conjur to protect & inject secrets to Java App on Docker using Summon",
+  "icon":"fa-java",
+  "difficulty": "Beginner",
+  "time": "15-25 minutes",
+  "details": {
+    "steps": [
+      { "title": "Docker Swarm", "text": "docker-swarm.md" },
+      { "title": "The Typical Way", "text": "insecure-intro.md" },
+      { "title": "Setup App & Database", "text": "insecure-app.md" },
+      { "title": "Test it", "text": "insecure-test.md" },
+      { "title": "The Risk", "text": "insecure-risk.md" },
+      { "title": "The Secure Way", "text": "secure-intro.md" },
+      { "title": "Setup Conjur", "text": "secure-conjur.md" },
+      { "title": "Setup Policy", "text": "secure-policy.md" },
+      { "title": "Setup App & Database", "text": "secure-app.md" },
+      { "title": "Test it again", "text": "secure-test.md" },
+      { "title": "Summary", "text": "secure-summary.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "https://www.conjur.org"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [ "insecure-db.Dockerfile", 
+             "insecure-app.docker-compose.yml", 
+             "database.sql", 
+             "setupConjur.sh", 
+             "conjur.yml",
+             "db.yml", 
+             "frontend.yml",
+             "secrets.yml",
+             "secure-app.Dockerfile",
+             "secure-app.docker-compose.yml"],
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "swarm"
+  }
+}
