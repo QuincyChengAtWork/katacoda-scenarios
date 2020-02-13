@@ -61,6 +61,12 @@ COPY database.sql /docker-entrypoint-initdb.d/init.sql
 ENV POSTGRES_PASSWORD YourStrongPGPassword
 </pre>
 
+# Install docker-compose
+```
+curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+```{{execute}}
+
 
 # Start the app & database
 ```
