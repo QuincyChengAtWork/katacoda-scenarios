@@ -83,6 +83,6 @@ docker-compose -f secure-app.docker-compose.yml push
 
 Now let's extend the previous setup and start the app & database
 ```
-docker stack deploy --compose-file docker-compose.yml --compose-file secure-app.docker-compose.yml
+docker stack deploy --compose-file docker-compose.yml --compose-file secure-app.docker-compose.yml root
 ```{{execute}}
 
