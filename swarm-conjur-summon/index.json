@@ -1,5 +1,5 @@
 {
-  "title": "(work in progress)Securing Java App on Docker Swarm using Conjur & Summon",
+  "title": "Securing Java App on Docker Swarm using Conjur & Summon",
   "description": "Learn how to use Conjur to protect & inject secrets to Java App on Docker using Summon",
   "icon":"fa-java",
   "difficulty": "Beginner",
