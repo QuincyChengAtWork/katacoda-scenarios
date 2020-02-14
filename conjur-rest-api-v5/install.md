@@ -12,7 +12,7 @@ To verify, we can display its usage by `curl --help`{{execute}}
 We will install a Conjur OSS environment as the server.   It will take a few moments.
 
 ```
-wget https://github.com/QuincyChengAtWork/katacoda-scenarios/blob/master/conjur-rest-api-v5/assets/setupConjur.sh
+wget https://raw.githubusercontent.com/QuincyChengAtWork/katacoda-scenarios/master/conjur-rest-api-v5/assets/setupConjur.sh
 wget https://raw.githubusercontent.com/QuincyChengAtWork/katacoda-scenarios/master/conjur-rest-api-v5/assets/showSettings.sh
 chmod +x *.sh
 source ./setupConjur.sh https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
