@@ -14,7 +14,7 @@ If you are using your own environment, the password can be found via `docker exe
 
 ### Download & install the plugin
 Download Conjur secrets plugin
-`docker exec -it jenkins curl https://github.com/cyberark/conjur-credentials-plugin/releases/download/v0.8.0/Conjur.hpi -o /var/jenkins_home/plugins/conjur.hpi`{{execute}}
+`docker exec -it jenkins curl -L https://github.com/cyberark/conjur-credentials-plugin/releases/download/v0.8.0/Conjur.hpi -o /var/jenkins_home/plugins/conjur.hpi`{{execute}}
 
 Update Credential plugin to v2.1.18 or above
 `docker exec -it jenkins java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://admin:344827fbdbfb40d5aac067c7a07b9230@localhost:8080/ install-plugin credentials -deploy`{{execute}}
