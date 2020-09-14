@@ -2,11 +2,13 @@
 Launch Jenkins as a Docker Container with the following command:
 
 ```
+
 docker run -d -u root --name jenkins \
     -p 8181:8080 -p 50000:50000 \
-    -v /root/jenkins_2112:/var/jenkins_home \
-    jenkins
+    -v jenkins_home:/var/jenkins_home \
+    jenkins/jenkins:lts
 ```{{execute}}
+
 
 ** It will take a few minutes to start Jenkins.   Meanwhile, let's move on to next step and start deploying Conjur **
 
@@ -20,4 +22,4 @@ In the next screen, select **Install suggested plugins**
 
 If any of the plugin failed to be installed, don't worry, we will make sure the necessary plugins work properly in the next few steps.
 
-Create an user called "admin" & password "344827fbdbfb40d5aac067c7a07b9230" to complete the setup
+Create an user called `admin`{{copy}} & password `344827fbdbfb40d5aac067c7a07b9230` to complete the setup
