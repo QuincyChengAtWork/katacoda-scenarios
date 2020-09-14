@@ -21,4 +21,4 @@ In the next screen, select **Install suggested plugins**
 
 If any of the plugin failed to be installed, don't worry, we will make sure the necessary plugins work properly in the next few steps.
 
-Create an user called `admin`{{copy}} & password `344827fbdbfb40d5aac067c7a07b9230` to complete the setup
+Create an user called `admin`{{copy}} & password `344827fbdbfb40d5aac067c7a07b9230`{{copy}} to complete the setup
