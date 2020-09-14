@@ -2,13 +2,12 @@
 Launch Jenkins as a Docker Container with the following command:
 
 ```
-
+mkdir jenkins_home
 docker run -d -u root --name jenkins \
     -p 8181:8080 -p 50000:50000 \
-    -v jenkins_home:/var/jenkins_home \
+    -v ${pwd}/jenkins_home:/var/jenkins_home \
     jenkins/jenkins:lts
 ```{{execute}}
-
 
 ** It will take a few minutes to start Jenkins.   Meanwhile, let's move on to next step and start deploying Conjur **
 
