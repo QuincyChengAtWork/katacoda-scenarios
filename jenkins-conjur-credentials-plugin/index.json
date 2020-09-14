@@ -1,5 +1,5 @@
 {
-    "title": "Securing Jenkins using Conjur by Jenkins Conjur Credential plugin",
+    "title": "[Updating] Securing Jenkins using Conjur by Jenkins Conjur Credential plugin",
     "description": "Learn how to configure Jenkins Conjur Credential plugin to retrieve secrets & secure the pipelines",
     "difficulty": "Intermediate",
     "time": "15-20 minutes",
