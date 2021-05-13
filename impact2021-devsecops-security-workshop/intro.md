@@ -1,5 +1,4 @@
 
-# Welcome to DevSecOps Security Workshop
 
 ```
 TODO
