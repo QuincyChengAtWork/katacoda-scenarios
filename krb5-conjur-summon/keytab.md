@@ -1,4 +1,4 @@
-We will now create an user principle and corresponding keytab file 
+We will now create a user principle and corresponding keytab file 
 
 ### Create a new User Principle
 
