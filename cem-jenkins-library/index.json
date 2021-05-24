@@ -19,6 +19,10 @@
   },
   "environment": {
     "hideintro": true,
+    "showdashboard": true,
+    "dashboards": [{"name": "CyberArk CEM", "href": "https://cem.cyberark.com/integrations/api-keys"},
+        {"name": "Jenkins", "port": 80},
+        {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"}],
     "uilayout": "terminal"
   },
   "backend": {
