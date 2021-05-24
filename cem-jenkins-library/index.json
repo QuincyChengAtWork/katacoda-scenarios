@@ -1,0 +1,27 @@
+{
+  "title": "CEM Jenkins Library",
+  "description": "Demo Jenkins pipeline using Shared Library for ",
+  "details": {
+    "steps": [
+      {
+        "title": "Get API Key",
+        "text": "cemapi.md"
+      },
+      
+      {
+        "title": "Execute Pipeline",
+        "text": "pipeline.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": true,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
