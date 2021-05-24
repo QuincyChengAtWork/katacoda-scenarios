@@ -1,6 +1,6 @@
 {
   "title": "CEM Jenkins Library",
-  "description": "Demo Jenkins pipeline using Shared Library for ",
+  "description": "Demo Jenkins pipeline using Shared Library for CyberArk Cloud Entitlements Manager",
   "details": {
     "steps": [
       {
