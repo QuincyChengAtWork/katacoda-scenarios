@@ -1,7 +1,7 @@
-In this step, we will setup a Conjur OSS container, load some policies and create a machine identity for the host
+In this step, we will setup a Conjur OSS container, load some policies and create a machine identity for the host.
 
 ### Install Conjur
-Let's pull and setup a Conjur OSS.   It will take a couple of moments
+Let's pull and setup a Conjur OSS.   It will take a couple of moments.
 `./setupConjur.sh https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 ### Prepare Conjur Policy
@@ -45,7 +45,7 @@ Run `cat frontend.yml`{{execute}} to review the root policy
 ```
 ### Load Conjur Policies
 
-Now let's copy the policy files to Conjur CLI container and load them
+Now let's copy the policy files to Conjur CLI container and load them.
 
 **Load Root Policy**
 
@@ -67,7 +67,7 @@ docker-compose exec client conjur policy load krb5 /tmp/krb5.yml
 ```{{execute}}
 
 ### Add Keytab as variables
-Copy the `user.keytab` file to Conjur CLI container and add to Conjur as a variable
+Copy the `user.keytab` file to Conjur CLI container and add to Conjur as a variable.
 
 ```
 docker cp user.keytab root_client_1:/tmp/
@@ -75,7 +75,7 @@ docker-compose exec client bash -c "head -c1024 /tmp/user.keytab | conjur variab
 ```{{execute}}
 
 ### Cleanup 
-It's time to remove the keytab files
+It's time to remove the keytab files.
 
 ```
 rm user.keytab
