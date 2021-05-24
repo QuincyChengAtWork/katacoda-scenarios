@@ -107,7 +107,7 @@ docker exec \
    root_client_1 \
   conjur variable value db/password
 ```{{execute}}
-`926c6e5622889763c9490ca3` <- Password printed here
+`926c6e5622889763c9490ca3` <- Password printed here.
 Success! The host has the necessary (and minimal) set of privileges it needs to fetch the database password.
 
 ### Modify the secret with non-human ID
