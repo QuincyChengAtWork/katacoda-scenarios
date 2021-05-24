@@ -1,4 +1,4 @@
-We will make use of the host as the client and create a container as Kerberos KDC
+We will make use of the host as the client and create a container as Kerberos KDC.
 
 ### Install Kerberos Client
 First, we install Kerberos client on the host
