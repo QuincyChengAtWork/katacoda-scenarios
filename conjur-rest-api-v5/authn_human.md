@@ -36,7 +36,7 @@ export access_token=$(echo -n $response | base64 | tr -d '\r\n') && echo $access
 
 ### Refresh the token
 
-In this tutorial, a script is prepared for displaying the details and refresh the `refresh token`
+In this tutorial, a script is prepared for displaying the details and refreshing the `refresh token`
 
 To execute, `source showSettings.sh`{{execute}}
 
