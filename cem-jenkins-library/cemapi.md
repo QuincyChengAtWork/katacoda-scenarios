@@ -10,3 +10,9 @@ To create a API Key to access CEM service:
 3. Select `Admin` and enter a name for the key, e.g. `jenkins-api`{{copy}}
 
 4. Click `Create an API key`
+
+5. Once the API key is created, click `Copy` button and save it securely.
+
+```
+Please note that you cannot recover or view this key again
+```
