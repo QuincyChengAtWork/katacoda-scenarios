@@ -14,7 +14,7 @@ cp -f summon-conjur /usr/local/lib/summon/
 
 ### Configure Summon
 Let's configure summon by using environmental variables.
-For more details, please refer to [Conjur provider for Summon](https://github.com/cyberark/summon-conjur)
+For more details, please refer to [Conjur provider for Summon.](https://github.com/cyberark/summon-conjur)
 ```
 export CONJUR_MAJOR_VERSION=5
 export CONJUR_ACCOUNT=demo
@@ -23,7 +23,7 @@ export CONJUR_AUTHN_LOGIN=host/frontend/frontend-01
 export CONJUR_AUTHN_API_KEY=$(tail -n +2 frontend.out | jq -r '.created_roles."demo:host:frontend/frontend-01".api_key')
 ```{{execute}}
 
-We will make sure of `secrets.yml` file for injecting the keytab file
+We will make sure of `secrets.yml` file for injecting the keytab file.
 To review it, run `cat secrets.yml`{{execute}}
 ```
 KEYTAB: !var:file krb5/keytab
@@ -38,7 +38,7 @@ And we can verify it by running:
 
 `klist`{{execute}}
 
-To summon keytab, we can get the path to memeory-mapped keytab files using the environment variable `KEYTAB`, which defined in `secrets.yml`
+To summon keytab, we can get the path to memeory-mapped keytab files using the environment variable `KEYTAB`, which is defined in `secrets.yml`
 
 `summon bash -c 'kinit quincy@CYBERARKDEMO.COM -k -t $KEYTAB'`{{execute}}
 
@@ -55,7 +55,7 @@ Valid starting       Expires              Service principal
         renew until 2018-12-15 15:12:55
 ```
 
-This way the keytab is not stored in environment except Conjur.  To verify it, we can review the `KEYTAB` variable
+This way the keytab is not stored in any environment except Conjur.  To verify it, we can review the `KEYTAB` variable
 
 `echo $KEYTAB`{{execute}}
 
