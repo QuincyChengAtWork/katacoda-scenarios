@@ -1,7 +1,7 @@
 
 To create a API Key to access CEM service:
 
-1. Visit https://cem.cyberark.com/integrations/api-keys
+1. Visit & sign in to https://cem.cyberark.com/integrations/api-keys
 
 2. Click `Create`
 
