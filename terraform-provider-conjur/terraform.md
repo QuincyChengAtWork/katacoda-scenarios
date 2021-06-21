@@ -2,14 +2,14 @@
 ### Download Terraform
 
 ```
-curl -sO https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
+curl -sO https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip
 ```{{execute}}
 
 
 ### Extract 
 
 ```
-unzip terraform_0.11.13_linux_amd64.zip
+unzip terraform_1.0.0_linux_amd64.zip
 export PATH=$PATH:$(pwd)
 ```{{execute}}
 
