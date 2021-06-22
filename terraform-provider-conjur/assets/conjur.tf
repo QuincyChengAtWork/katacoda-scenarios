@@ -11,8 +11,8 @@ terraform {
  }
 }
 
-provider "conjur" {}
-
-data "conjur_secret" "admin-password" {
-   name = "postgres/admin-password"
+provider "conjur" {
+  appliance_url = "https://2886795281-8080-jago01.environments.katacoda.com"
+  account = "demo"
 }
+
