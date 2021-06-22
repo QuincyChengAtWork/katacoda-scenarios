@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "conjur" {
-  appliance_url = "https://2886795281-8080-jago01.environments.katacoda.com"
+  appliance_url = "http://localhost:8080"
   account = "demo"
 }
 
