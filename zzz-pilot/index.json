@@ -24,6 +24,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "conjur-docker"
+    "imageid": "openshift-4-7"
   }
 }
