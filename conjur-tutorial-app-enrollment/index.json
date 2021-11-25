@@ -21,12 +21,12 @@
     "client": [
       {
         "file": "start.sh",
-        "target": "~/tutorial",
+        "target": "/root/",
         "chmod":"+x"
       },
       {
         "file": "conjur",
-        "target": "~/.bin",
+        "target": "/usr/local/bin/",
         "chmod":"+x"
       }
     ]
