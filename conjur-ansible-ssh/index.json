@@ -12,6 +12,14 @@
         "title": "Install Ansible",
         "text": "ansible.md"
       },
+            {
+        "title": "The Risk",
+        "text": "risk.md"
+      },
+            {
+        "title": "The Plan",
+        "text": "plan.md"
+      },
        {
         "title": "Setting Up Role & Lookup Plugin",
         "text": "galaxy.md"
