@@ -1,11 +1,11 @@
 {
-  "title": "Using Conjur to secure SSH secrets for Ansible",
-  "description": "Learn how to retreive SSH secrets from Conjur for Ansible connecting to multiple hosts",
+  "title": "Secure Ansible Playbook Secrets with Conjur",
+  "description": "With this fully interactive hosted tutorial you will learn how to secure Ansible automation by keeping unsecured secrets out of Playbooks with Conjur open source secrets management.",
   "icon": "fa-redhat",
   "details": {
     "steps": [
       {
-        "title": "Setup Accounts",
+        "title": "The Setup",
         "text": "accounts.md"
       },
       {
@@ -30,7 +30,9 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "background.sh",
+      "code": "foreground.sh"
     },
     "finish": {
       "text": "finish.md"
